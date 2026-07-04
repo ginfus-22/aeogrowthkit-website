@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resources — AEO Growth Kit</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@400;500;600;700&family=Spline+Sans+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="canonical" href="https://aeogrowthkit.com/resources">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="AEO Growth Kit">
+  <meta property="og:title" content="Resources — AEO Growth Kit">
+  <meta property="og:description" content="">
+  <meta property="og:url" content="https://aeogrowthkit.com/resources">
+  <meta property="og:image" content="https://aeogrowthkit.com/og-image.png">
+  <link rel="stylesheet" href="aeo-ds.css">
+  <link rel="stylesheet" href="website.css">
+  <style>
+    body { background: var(--bg); }
+    
+    main {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: var(--s-8) var(--s-4);
+    }
+    
+    .page-hero {
+      margin-bottom: var(--s-8);
+      text-align: center;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    .page-hero h1 {
+      font-size: var(--t-h1);
+      margin-bottom: var(--s-3);
+    }
+    
+    .page-hero p {
+      font-size: var(--t-body-l);
+      color: var(--text-2);
+      line-height: 1.6;
+    }
+    
+    .filter-bar {
+      display: flex;
+      align-items: center;
+      gap: var(--s-4);
+      margin-bottom: var(--s-6);
+      flex-wrap: wrap;
+      padding-bottom: var(--s-4);
+      border-bottom: 1px solid var(--border);
+    }
+    
+    .filter-label {
+      font-size: var(--t-sm);
+      font-weight: 600;
+      color: var(--text-2);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+    
+    .filter-pills {
+      display: flex;
+      gap: var(--s-2);
+      flex-wrap: wrap;
+    }
+    
+    .filter-pill {
+      font-family: var(--sans);
+      font-size: var(--t-sm);
+      padding: 8px 14px;
+      border-radius: var(--r-pill);
+      border: 1px solid var(--border);
+      background: transparent;
+      color: var(--text-2);
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    
+    .filter-pill:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+    
+    .filter-pill.active {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: var(--on-accent);
+    }
+    
+    .articles-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: var(--s-5);
+      margin-bottom: var(--s-8);
+    }
+    
+    .article-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--r-lg);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: all 0.2s ease;
+      text-decoration: none;
+      color: inherit;
+      cursor: pointer;
+    }
+    
+    .article-card:hover {
+      border-color: var(--accent);
+      box-shadow: var(--sh-md);
+      transform: translateY(-2px);
+    }
+    
+    .article-card-image {
+      width: 100%;
+      height: 180px;
+      background: var(--surface-2);
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 48px;
+      color: var(--text-3);
+    }
+    
+    .article-card-content {
+      padding: var(--s-4);
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+    
+    .article-card .tag {
+      display: inline-block;
+      font-size: var(--t-xs);
+      color: var(--accent);
+      font-weight: 600;
+      margin-bottom: var(--s-2);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+    
+    .article-card .title {
+      font-family: var(--serif);
+      font-size: var(--t-h4);
+      margin-bottom: var(--s-2);
+      line-height: 1.3;
+      flex: 1;
+    }
+    
+    .article-card .excerpt {
+      font-size: var(--t-sm);
+      color: var(--text-2);
+      line-height: 1.6;
+      margin-bottom: var(--s-3);
+    }
+    
+    .article-card .meta {
+      display: flex;
+      align-items: center;
+      gap: var(--s-3);
+      font-size: var(--t-xs);
+      color: var(--text-3);
+    }
+    
+    .category-tag {
+      display: inline-block;
+      padding: 4px 10px;
+      border-radius: var(--r-md);
+      background: var(--accent-soft);
+      color: var(--accent);
+      font-size: var(--t-xs);
+      font-weight: 600;
+    }
+    
+    .empty-state {
+      text-align: center;
+      padding: var(--s-8);
+      color: var(--text-2);
+    }
+    
+    .empty-state p {
+      font-size: var(--t-body-l);
+      margin: var(--s-3) 0;
+    }
+    
+  </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="header-content">
+    <a href="index.html" class="site-logo">
+      <span class="dots brand" aria-hidden="true"><i></i><i></i><i></i></span>
+      <span class="brand-text">AEO Growth Kit</span>
+    </a>
+    <div class="header-right">
+      <nav class="main-nav">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li class="nav-has-dropdown"><a href="product.html">Product <span class="nav-caret">▾</span></a><ul class="nav-dropdown"><li><a href="recover.html">Recover</a></li><li><a href="build.html">Build</a></li><li><a href="maintain.html">Maintain</a></li><li class="nav-divider"></li><li><a href="ai-mirror-test.html">The AI Mirror Test</a></li></ul></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li class="nav-has-dropdown"><a href="resources.html" class="active">Resources <span class="nav-caret">▾</span></a><ul class="nav-dropdown"><li><a href="resources.html">Blog</a></li><li><a href="https://audit.aeogrowthkit.com">Free Audit</a></li><li><a href="faq.html">FAQ</a></li></ul></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <button class="mobile-menu-btn">☰</button>
+      </nav>
+      <a href="https://app.aeogrowthkit.com" class="btn btn-header-login">Log in</a>
+      <a href="https://calendly.com/steve-aeogrowthkit/30min" class="btn btn-primary btn-header-cta">Book a call</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="page-hero">
+    <h1>Resources</h1>
+    <p>Learn everything you need to know about AI-Powered Entity Optimization and how to implement AEO for your business.</p>
+  </div>
+  
+  <div class="filter-bar">
+    <span class="filter-label">Category:</span>
+    <div class="filter-pills">
+      <button class="filter-pill active" data-filter="all">All Articles</button>
+      <button class="filter-pill" data-filter="strategy">Strategy</button>
+      <button class="filter-pill" data-filter="optimization">Optimization</button>
+      <button class="filter-pill" data-filter="tools">Tools &amp; Resources</button>
+      <button class="filter-pill" data-filter="case-study">Case Studies</button>
+    </div>
+  </div>
+  
+  <div class="articles-grid">
+    <!-- Strategy Articles -->
+    <a href="article-template.html" class="article-card" data-category="strategy">
+      <div class="article-card-image">📊</div>
+      <div class="article-card-content">
+        <div class="tag">Strategy</div>
+        <div class="title">How AI-Powered Search Is Reshaping Customer Discovery</div>
+        <div class="excerpt">Understanding the shift from traditional SEO to AI-Powered Entity Optimization and how your business can adapt.</div>
+        <div class="meta">
+          <span>May 15, 2024</span>
+          <span>8 min read</span>
+        </div>
+      </div>
+    </a>
+    
+    <a href="#" class="article-card" data-category="strategy">
+      <div class="article-card-image">🎯</div>
+      <div class="article-card-content">
+        <div class="tag">Strategy</div>
+        <div class="title">The AEO Roadmap: Your 90-Day Plan</div>
+        <div class="excerpt">A step-by-step guide to implementing AI-Powered Entity Optimization for your business with measurable milestones.</div>
+        <div class="meta">
+          <span>May 10, 2024</span>
+          <span>12 min read</span>
+        </div>
+      </div>
+    </a>
+    
+    <a href="#" class="article-card" data-category="strategy">
+      <div class="article-card-image">🔄</div>
+      <div class="article-card-content">
+        <div class="tag">Strategy</div>
+        <div class="title">AEO vs SEO: Understanding the New Landscape</div>
+        <div class="excerpt">A comprehensive comparison of traditional SEO and AI-Powered Entity Optimization to help you align your marketing strategy.</div>
+        <div class="meta">
+          <span>May 1, 2024</span>
+          <span>10 min read</span>
+        </div>
+      </div>
+    </a>
+    
+    <!-- Optimization Articles -->
+    <a href="#" class="article-card" data-category="optimization">
+      <div class="article-card-image">🏗️</div>
+      <div class="article-card-content">
+        <div class="tag">Optimization</div>
+        <div class="title">Building Your Entity Profile from Scratch</div>
+        <div class="excerpt">Learn how to create comprehensive, authoritative entity data that AI systems trust and reference when answering queries.</div>
+        <div class="meta">
+          <span>April 28, 2024</span>
+          <span>9 min read</span>
+        </div>
+      </div>
+    </a>
+    
+    <a href="#" class="article-card" data-category="optimization">
+      <div class="article-card-image">✅</div>
+      <div class="article-card-content">
+        <div class="tag">Optimization</div>
+        <div class="title">Entity Data Quality: Checklist and Best Practices</div>
+        <div class="excerpt">An actionable checklist to ensure your entity information is complete, accurate, and optimized for AI systems.</div>
+        <div class="meta">
+          <span>April 20, 2024</span>
+          <span>7 min read</span>
+        </div>
+      </div>
+    </a>
+    
+    <a href="#" class="article-card" data-category="optimization">
+      <div class="article-card-image">📈</div>
+      <div class="article-card-content">
+        <div class="tag">Optimization</div>
+        <div class="title">Measuring AEO Success: Key Metrics to Track</div>
+        <div class="excerpt">Understand which metrics matter most for AEO and how to set up tracking to measure your progress.</div>
+        <div class="meta">
+          <span>April 15, 2024</span>
+          <span>8 min read</span>
+        </div>
+      </div>
+    </a>
+    
+    <!-- Tools & Resources -->
+    <a href="#" class="article-card" data-category="tools">
+      <div class="article-card-image">🛠️</div>
+      <div class="article-card-content">
+        <div class="tag">Tools &amp; Resources</div>
+        <div class="title">AEO Tools Comparison Guide</div>
+        <div class="excerpt">Compare the leading platforms for monitoring and optimizing your entity across AI systems and knowledge bases.</div>
+        <div class="meta">
+          <span>April 10, 2024</span>
+          <span>11 min read</span>
+        </div>
+      </div>
+    </a>
+    
+    <a href="#" class="article-card" data-category="tools">
+      <div class="article-card-image">📚</div>
+      <div class="article-card-content">
+        <div class="tag">Tools &amp; Resources</div>
+        <div class="title">The AEO Glossary: Key Terms Explained</div>
+        <div class="excerpt">A comprehensive glossary of AI-Powered Entity Optimization terminology to help you navigate the AEO landscape.</div>
+        <div class="meta">
+          <span>April 5, 2024</span>
+          <span>6 min read</span>
+        </div>
+      </div>
+    </a>
+    
+    <!-- Case Studies -->
+    <a href="#" class="article-card" data-category="case-study">
+      <div class="article-card-image">🎓</div>
+      <div class="article-card-content">
+        <div class="tag">Case Study</div>
+        <div class="title">EdTech Company Increases AI-Discovered Leads by 165%</div>
+        <div class="excerpt">How a B2B SaaS platform implemented AEO and saw dramatic improvements in organic discovery through AI search.</div>
+        <div class="meta">
+          <span>March 25, 2024</span>
+          <span>10 min read</span>
+        </div>
+      </div>
+    </a>
+    
+    <a href="#" class="article-card" data-category="case-study">
+      <div class="article-card-image">🏪</div>
+      <div class="article-card-content">
+        <div class="tag">Case Study</div>
+        <div class="title">E-Commerce Brand Recovers Lost AI Search Visibility</div>
+        <div class="excerpt">A story of how incorrect entity data was impacting AI search visibility and the recovery process that followed.</div>
+        <div class="meta">
+          <span>March 20, 2024</span>
+          <span>9 min read</span>
+        </div>
+      </div>
+    </a>
+    
+    <a href="#" class="article-card" data-category="case-study">
+      <div class="article-card-image">🏢</div>
+      <div class="article-card-content">
+        <div class="tag">Case Study</div>
+        <div class="title">B2B Services Firm Establishes Authority Through AEO</div>
+        <div class="excerpt">How a professional services firm used AEO to become the go-to source for expertise in their vertical.</div>
+        <div class="meta">
+          <span>March 15, 2024</span>
+          <span>11 min read</span>
+        </div>
+      </div>
+    </a>
+  </div>
+</main>
+
+
+
+<script>
+  // Simple filter functionality
+  document.querySelectorAll('.filter-pill').forEach(pill => {
+    pill.addEventListener('click', () => {
+      // Update active state
+      document.querySelectorAll('.filter-pill').forEach(p => p.classList.remove('active'));
+      pill.classList.add('active');
+      
+      // Filter articles
+      const filter = pill.dataset.filter;
+      const cards = document.querySelectorAll('.article-card');
+      
+      cards.forEach(card => {
+        if (filter === 'all' || card.dataset.category === filter) {
+          card.style.display = '';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  });
+</script>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-content">
+      <div class="footer-section">
+        <div style="display: flex; flex-direction: column; align-items: flex-start; gap: var(--s-4);">
+          <div style="display: flex; align-items: center; gap: var(--s-3);">
+            <span class="dots" style="font-size: 24px;" aria-hidden="true"><i class="sage"></i><i class="paper"></i><i class="coral"></i></span>
+            <span style="font-family: var(--serif); font-weight: 400; letter-spacing: -0.015em; font-size: var(--t-h4); color: var(--text);">AEO Growth Kit</span>
+          </div>
+          <div style="font-family: var(--sans); font-size: var(--t-sm); color: var(--text-2); letter-spacing: .08em; text-transform: uppercase; font-weight: 500;">Recover · Build · Maintain</div>
+          <div class="footer-social" style="margin-top: var(--s-2);">
+            <a href="[LINKEDIN_URL]" class="social-link" title="LinkedIn" aria-label="LinkedIn"><svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5A2.5 2.5 0 1 1 0 3.5a2.5 2.5 0 0 1 4.98 0zM.25 8.25h4.5V24h-4.5V8.25zM8.25 8.25h4.31v2.15h.06c.6-1.14 2.07-2.34 4.26-2.34 4.56 0 5.4 3 5.4 6.9V24h-4.5v-6.94c0-1.66-.03-3.79-2.31-3.79-2.31 0-2.67 1.8-2.67 3.67V24h-4.5V8.25z"/></svg></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-section">
+        <h4 class="footer-title">Product</h4>
+        <ul class="footer-links">
+          <li><a href="recover.html">Recover</a></li>
+          <li><a href="build.html">Build</a></li>
+          <li><a href="maintain.html">Maintain</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h4 class="footer-title">Resources</h4>
+        <ul class="footer-links">
+          <li><a href="resources.html">Blog</a></li>
+          <li><a href="https://audit.aeogrowthkit.com">Free Audit</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h4 class="footer-title">Company</h4>
+        <ul class="footer-links">
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h4 class="footer-title">Legal</h4>
+        <ul class="footer-links">
+          <li><a href="terms-of-service.html">Terms</a></li>
+          <li><a href="privacy-policy.html">Privacy</a></li>
+          <li><a href="cookies-policy.html">Cookies</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section footer-newsletter">
+        <h4 class="footer-title">Updates</h4>
+        <p class="footer-desc">Subscribe for AEO tips and platform updates.</p>
+        <form class="newsletter-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+          <input type="hidden" name="form-name" value="contact">
+          <input type="hidden" name="bot-field">
+          <input type="email" name="email" placeholder="your@email.com" required class="newsletter-input">
+          <button type="submit" class="newsletter-btn">→</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 AEO Growth Kit. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    background: var(--bg);
+    border-top: 1px solid var(--border);
+    margin-top: 0;
+    padding: var(--s-8) var(--s-4);
+  }
+  .footer-container { max-width: 1400px; margin: 0 auto; padding: 0 var(--s-6); }
+  .footer-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1.5fr;
+    gap: var(--s-7);
+    margin-bottom: var(--s-6);
+  }
+  .footer-section { display: flex; flex-direction: column; }
+  .footer-newsletter { grid-column: auto; }
+  @media (max-width: 980px) { .footer-newsletter { grid-column: auto; } }
+  .footer-title {
+    font-family: var(--serif);
+    font-size: var(--t-h4);
+    font-weight: 400;
+    color: var(--text);
+    margin: 0 0 var(--s-3) 0;
+    letter-spacing: -0.015em;
+  }
+  .footer-desc { font-size: var(--t-sm); color: var(--text-2); line-height: 1.6; margin: 0; }
+  .footer-links { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: var(--s-2); }
+  .footer-links a { font-size: var(--t-sm); color: var(--text-2); text-decoration: none; transition: color 0.2s ease; }
+  .footer-links a:hover { color: var(--accent); }
+  .footer-social { display: flex; gap: var(--s-3); margin-top: var(--s-4); }
+  .social-link {
+    width: 36px; height: 36px; border-radius: var(--r-md);
+    background: transparent; border: none;
+    display: flex; align-items: center; justify-content: center;
+    color: var(--text-2); text-decoration: none; font-size: 16px; transition: all 0.2s ease;
+  }
+  .social-link:hover { background: transparent; border-color: transparent; color: var(--accent); }
+  .newsletter-form { display: flex; gap: var(--s-2); margin-top: var(--s-3); }
+  .newsletter-input {
+    flex: 1; font-family: var(--sans); font-size: var(--t-sm);
+    padding: calc(10px * var(--density)) 12px;
+    border: 1px solid var(--border-2); border-radius: var(--r-md);
+    background: var(--bg); color: var(--text); transition: border-color 0.2s ease;
+  }
+  .newsletter-input::placeholder { color: var(--text-3); }
+  .newsletter-input:focus { outline: none; border-color: var(--accent); }
+  .newsletter-btn {
+    font-family: var(--sans); font-size: var(--t-sm); font-weight: 600;
+    padding: calc(10px * var(--density)) 16px;
+    border: 1px solid var(--accent); border-radius: var(--r-md);
+    background: transparent; color: var(--accent); cursor: pointer; transition: all 0.2s ease;
+  }
+  .newsletter-btn:hover { background: var(--accent-soft); }
+  .footer-bottom {
+    text-align: center; padding-top: var(--s-5);
+    border-top: 1px solid var(--border); font-size: var(--t-sm); color: var(--text-2);
+  }
+  @media (max-width: 768px) {
+    .footer-content { grid-template-columns: 1fr; gap: var(--s-5); }
+    .newsletter-form { flex-direction: column; }
+  }
+</style>
+
+<script src="mobile-nav.js"></script>
+</body>
+</html>

@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="title" content="Contact — AEO Growth Kit">
+  <meta name="description" content="Get in touch with the AEO Growth Kit team. Questions? Schedule a demo or email us directly.">
+  <title>Contact — AEO Growth Kit</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@400;500;600;700&family=Spline+Sans+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="canonical" href="https://aeogrowthkit.com/contact">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="AEO Growth Kit">
+  <meta property="og:title" content="Contact — AEO Growth Kit">
+  <meta property="og:description" content="Get in touch with the AEO Growth Kit team. Questions? Schedule a demo or email us directly.">
+  <meta property="og:url" content="https://aeogrowthkit.com/contact">
+  <meta property="og:image" content="https://aeogrowthkit.com/og-image.png">
+  <link rel="stylesheet" href="aeo-ds.css">
+  <link rel="stylesheet" href="website.css">
+  <style>
+    section { padding: var(--s-8) var(--s-5); }
+    .container { max-width: 1120px; margin: 0 auto; }
+    
+    .hero-v2 { padding: var(--s-9) var(--s-5); }
+    .hero-h1 { font-family: var(--serif); font-size: var(--t-display); line-height: 1.15; color: var(--text); margin-bottom: var(--s-5); max-width: 80ch; }
+    .hero-subhead { font-family: var(--sans); font-size: var(--t-body-l); line-height: 1.6; color: var(--text-2); margin-bottom: var(--s-6); max-width: 75ch; }
+    
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--s-8);
+      margin-top: var(--s-6);
+    }
+    
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: var(--s-4);
+    }
+    
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: var(--s-2);
+    }
+    
+    .form-group label {
+      font-family: var(--sans);
+      font-size: var(--t-sm);
+      font-weight: 500;
+      color: var(--text-2);
+    }
+    
+    .form-group input,
+    .form-group textarea {
+      font-family: var(--sans);
+      font-size: var(--t-body);
+      background: var(--surface);
+      border: 1px solid var(--border-2);
+      border-radius: var(--r-md);
+      padding: 12px 16px;
+      color: var(--text);
+      transition: border-color 0.2s ease;
+    }
+    
+    .form-group input::placeholder,
+    .form-group textarea::placeholder {
+      color: var(--text-3);
+    }
+    
+    .form-group input:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px var(--accent-soft);
+    }
+    
+    .form-group textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+    
+    .form-note {
+      font-family: var(--sans);
+      font-size: var(--t-xs);
+      color: var(--text-3);
+    }
+    
+    .contact-info {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--r-lg);
+      padding: var(--s-6);
+      display: flex;
+      flex-direction: column;
+      gap: var(--s-6);
+    }
+    
+    .info-block h3 {
+      font-family: var(--serif);
+      font-size: var(--t-h4);
+      color: var(--text);
+      margin-bottom: var(--s-2);
+    }
+    
+    .info-block p {
+      font-family: var(--sans);
+      font-size: var(--t-body);
+      color: var(--text-2);
+      line-height: 1.6;
+      margin: 0;
+    }
+    
+    .info-block a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    
+    .info-block a:hover {
+      text-decoration: underline;
+    }
+    
+    .response-message {
+      display: none;
+      padding: var(--s-4);
+      border-radius: var(--r-md);
+      margin-bottom: var(--s-4);
+    }
+    
+    .response-message.success {
+      background: var(--ok-bg);
+      color: var(--ok);
+      border: 1px solid var(--ok);
+      display: block;
+    }
+    
+    .response-message.error {
+      background: var(--err-bg);
+      color: var(--err);
+      border: 1px solid var(--err);
+      display: block;
+    }
+    
+    .faq-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: var(--s-6);
+      margin-top: var(--s-6);
+    }
+    
+    .faq-item {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--r-lg);
+      padding: var(--s-5);
+    }
+    
+    .faq-item h4 {
+      font-family: var(--serif);
+      font-size: var(--t-h4);
+      color: var(--text);
+      margin-bottom: var(--s-2);
+    }
+    
+    .faq-item p {
+      font-family: var(--sans);
+      font-size: var(--t-body);
+      color: var(--text-2);
+      line-height: 1.6;
+      margin: 0;
+    }
+    
+    @media (max-width: 768px) {
+      .hero-h1 { font-size: var(--t-h1); }
+      section { padding: var(--s-6) var(--s-4); }
+      .hero-v2 { padding: var(--s-7) var(--s-4); }
+      .contact-grid { grid-template-columns: 1fr; }
+      .faq-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="header-content">
+    <a href="index.html" class="site-logo">
+      <span class="dots brand" aria-hidden="true"><i></i><i></i><i></i></span>
+      <span class="brand-text">AEO Growth Kit</span>
+    </a>
+    <div class="header-right">
+      <nav class="main-nav">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li class="nav-has-dropdown"><a href="product.html">Product <span class="nav-caret">▾</span></a><ul class="nav-dropdown"><li><a href="recover.html">Recover</a></li><li><a href="build.html">Build</a></li><li><a href="maintain.html">Maintain</a></li><li class="nav-divider"></li><li><a href="ai-mirror-test.html">The AI Mirror Test</a></li></ul></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li class="nav-has-dropdown"><a href="resources.html">Resources <span class="nav-caret">▾</span></a><ul class="nav-dropdown"><li><a href="resources.html">Blog</a></li><li><a href="https://audit.aeogrowthkit.com">Free Audit</a></li><li><a href="faq.html">FAQ</a></li></ul></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+        <button class="mobile-menu-btn">☰</button>
+      </nav>
+      <a href="https://app.aeogrowthkit.com" class="btn btn-header-login">Log in</a>
+      <a href="https://calendly.com/steve-aeogrowthkit/30min" class="btn btn-primary btn-header-cta">Book a call</a>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero-v2">
+  <div class="container">
+    <h1 class="hero-h1">Get in touch.</h1>
+    <p class="hero-subhead">Have questions about AEO? Want to schedule a demo? Or just want to chat about AI answer engines? We're here.</p>
+  </div>
+</section>
+
+<!-- CONTACT FORM & INFO -->
+<section>
+  <div class="container">
+    <div class="contact-grid">
+      <!-- FORM -->
+      <form class="contact-form" id="contactForm" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="contact">
+        <p style="position:absolute; left:-9999px;">
+          <label>Don't fill this out if you're human: <input name="bot-field"></label>
+        </p>
+        <div id="responseMessage" class="response-message"></div>
+        
+        <div class="form-group">
+          <label for="name">Your name</label>
+          <input type="text" id="name" name="name" placeholder="Jane or John" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="email">Email address</label>
+          <input type="email" id="email" name="email" placeholder="you@company.com" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="company">Company name</label>
+          <input type="text" id="company" name="company" placeholder="Your company" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="subject">Subject</label>
+          <select id="subject" name="subject" style="appearance: none; background: var(--surface); border: 1px solid var(--border-2); border-radius: var(--r-md); padding: 12px 16px; color: var(--text); font-family: var(--sans); font-size: var(--t-body);">
+            <option value="">Select a topic...</option>
+            <option value="demo">Schedule a demo</option>
+            <option value="question">General question</option>
+            <option value="support">Support request</option>
+            <option value="partnership">Partnership inquiry</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" placeholder="Tell us what's on your mind..." required></textarea>
+        </div>
+        
+        <div class="form-group">
+          <label class="check" style="font-size: var(--t-sm); color: var(--text-2);">
+            <input type="checkbox" id="privacy" name="privacy" required>
+            <span>I agree to the <a href="privacy-policy.html" style="color: var(--accent);">privacy policy</a></span>
+          </label>
+        </div>
+        
+        <button type="submit" class="btn btn-primary btn-lg">Send message →</button>
+        <p class="form-note">I'll get back to you within 24 hours.</p>
+      </form>
+      
+      <!-- CONTACT INFO -->
+      <div class="contact-info">
+        <div class="info-block">
+          <h3>Email</h3>
+          <p><a href="mailto:steve@aeogrowthkit.com">steve@aeogrowthkit.com</a></p>
+          <p style="font-size: var(--t-sm); margin-top: var(--s-2);">For urgent support, reach out directly. I read every message.</p>
+        </div>
+        
+        <div class="info-block">
+          <h3>Phone</h3>
+          <p><a href="tel:+33780507346">(+33) 7 80 50 73 46</a></p>
+          <p style="font-size: var(--t-sm); margin-top: var(--s-2);">Mon–Fri, 9am–6pm CET. Leave a voicemail anytime.</p>
+        </div>
+        
+        <div class="info-block">
+          <h3>Quick calls</h3>
+          <p>Need a 15-minute intro call? <a href="https://calendly.com/steve-aeogrowthkit/30min">Schedule one here</a></p>
+        </div>
+        
+        <div class="info-block">
+          <h3>Social</h3>
+          <p>Follow us on <a href="[LINKEDIN_URL]">LinkedIn</a> for AEO tips and product updates.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section style="background: var(--surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+  <div class="container">
+    <h2 style="font-family: var(--serif); font-size: var(--t-h2); color: var(--text); margin-bottom: var(--s-6);">Still have questions?</h2>
+    
+    <div class="faq-grid">
+      <div class="faq-item">
+        <h4>How do I get started?</h4>
+        <p>Run the free 5-page audit to see where you stand, or book a call if you'd rather talk it through first.</p>
+      </div>
+      
+      <div class="faq-item">
+        <h4>Does it cost anything to talk to you?</h4>
+        <p>No. The call is free, and so is the 5-page audit. You only pay if you decide to go ahead with full access.</p>
+      </div>
+      
+      <div class="faq-item">
+        <h4>What happens on a call?</h4>
+        <p>A straight conversation about where you stand with AI, what's getting in your way, and whether AEO Growth Kit is the right fit. No hard sell.</p>
+      </div>
+      
+      <div class="faq-item">
+        <h4>How quickly will I hear back?</h4>
+        <p>Within one working day.</p>
+      </div>
+      
+      <div class="faq-item">
+        <h4>Can you just do it all for me?</h4>
+        <p>Full access is self-serve, but a full done-for-you service is available. Mention it on your call and you'll get a quote.</p>
+      </div>
+      
+      <div class="faq-item">
+        <h4>Is AEO Growth Kit right for my business?</h4>
+        <p>If your buyers ask AI for recommendations and you don't have a marketing team to chase it, yes. It's built for product-proven small and mid-sized businesses.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-content">
+      <div class="footer-section">
+        <div style="display: flex; flex-direction: column; align-items: flex-start; gap: var(--s-4);">
+          <div style="display: flex; align-items: center; gap: var(--s-3);">
+            <span class="dots" style="font-size: 24px;" aria-hidden="true"><i class="sage"></i><i class="paper"></i><i class="coral"></i></span>
+            <span style="font-family: var(--serif); font-weight: 400; letter-spacing: -0.015em; font-size: var(--t-h4); color: var(--text);">AEO Growth Kit</span>
+          </div>
+          <div style="font-family: var(--sans); font-size: var(--t-sm); color: var(--text-2); letter-spacing: .08em; text-transform: uppercase; font-weight: 500;">Recover · Build · Maintain</div>
+          <div class="footer-social" style="margin-top: var(--s-2);">
+            <a href="[LINKEDIN_URL]" class="social-link" title="LinkedIn" aria-label="LinkedIn"><svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5A2.5 2.5 0 1 1 0 3.5a2.5 2.5 0 0 1 4.98 0zM.25 8.25h4.5V24h-4.5V8.25zM8.25 8.25h4.31v2.15h.06c.6-1.14 2.07-2.34 4.26-2.34 4.56 0 5.4 3 5.4 6.9V24h-4.5v-6.94c0-1.66-.03-3.79-2.31-3.79-2.31 0-2.67 1.8-2.67 3.67V24h-4.5V8.25z"/></svg></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-section">
+        <h4 class="footer-title">Product</h4>
+        <ul class="footer-links">
+          <li><a href="recover.html">Recover</a></li>
+          <li><a href="build.html">Build</a></li>
+          <li><a href="maintain.html">Maintain</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h4 class="footer-title">Resources</h4>
+        <ul class="footer-links">
+          <li><a href="resources.html">Blog</a></li>
+          <li><a href="https://audit.aeogrowthkit.com">Free Audit</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h4 class="footer-title">Company</h4>
+        <ul class="footer-links">
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h4 class="footer-title">Legal</h4>
+        <ul class="footer-links">
+          <li><a href="terms-of-service.html">Terms</a></li>
+          <li><a href="privacy-policy.html">Privacy</a></li>
+          <li><a href="cookies-policy.html">Cookies</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section footer-newsletter">
+        <h4 class="footer-title">Updates</h4>
+        <p class="footer-desc">Subscribe for AEO tips and platform updates.</p>
+        <form class="newsletter-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+          <input type="hidden" name="form-name" value="contact">
+          <input type="hidden" name="bot-field">
+          <input type="email" name="email" placeholder="your@email.com" required class="newsletter-input">
+          <button type="submit" class="newsletter-btn">→</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 AEO Growth Kit. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    background: var(--bg);
+    border-top: 1px solid var(--border);
+    margin-top: 0;
+    padding: var(--s-8) var(--s-4);
+  }
+  .footer-container { max-width: 1400px; margin: 0 auto; padding: 0 var(--s-6); }
+  .footer-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1.5fr;
+    gap: var(--s-7);
+    margin-bottom: var(--s-6);
+  }
+  .footer-section { display: flex; flex-direction: column; }
+  .footer-newsletter { grid-column: auto; }
+  @media (max-width: 980px) { .footer-newsletter { grid-column: auto; } }
+  .footer-title {
+    font-family: var(--serif);
+    font-size: var(--t-h4);
+    font-weight: 400;
+    color: var(--text);
+    margin: 0 0 var(--s-3) 0;
+    letter-spacing: -0.015em;
+  }
+  .footer-desc { font-size: var(--t-sm); color: var(--text-2); line-height: 1.6; margin: 0; }
+  .footer-links { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: var(--s-2); }
+  .footer-links a { font-size: var(--t-sm); color: var(--text-2); text-decoration: none; transition: color 0.2s ease; }
+  .footer-links a:hover { color: var(--accent); }
+  .footer-social { display: flex; gap: var(--s-3); margin-top: var(--s-4); }
+  .social-link {
+    width: 36px; height: 36px; border-radius: var(--r-md);
+    background: transparent; border: none;
+    display: flex; align-items: center; justify-content: center;
+    color: var(--text-2); text-decoration: none; font-size: 16px; transition: all 0.2s ease;
+  }
+  .social-link:hover { background: transparent; border-color: transparent; color: var(--accent); }
+  .newsletter-form { display: flex; gap: var(--s-2); margin-top: var(--s-3); }
+  .newsletter-input {
+    flex: 1; font-family: var(--sans); font-size: var(--t-sm);
+    padding: calc(10px * var(--density)) 12px;
+    border: 1px solid var(--border-2); border-radius: var(--r-md);
+    background: var(--bg); color: var(--text); transition: border-color 0.2s ease;
+  }
+  .newsletter-input::placeholder { color: var(--text-3); }
+  .newsletter-input:focus { outline: none; border-color: var(--accent); }
+  .newsletter-btn {
+    font-family: var(--sans); font-size: var(--t-sm); font-weight: 600;
+    padding: calc(10px * var(--density)) 16px;
+    border: 1px solid var(--accent); border-radius: var(--r-md);
+    background: transparent; color: var(--accent); cursor: pointer; transition: all 0.2s ease;
+  }
+  .newsletter-btn:hover { background: var(--accent-soft); }
+  .footer-bottom {
+    text-align: center; padding-top: var(--s-5);
+    border-top: 1px solid var(--border); font-size: var(--t-sm); color: var(--text-2);
+  }
+  @media (max-width: 768px) {
+    .footer-content { grid-template-columns: 1fr; gap: var(--s-5); }
+    .newsletter-form { flex-direction: column; }
+  }
+</style>
+
+<script src="mobile-nav.js"></script>
+</body>
+</html>

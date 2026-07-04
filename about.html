@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en-GB" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="title" content="About AEO Growth Kit — Why it exists and who built it">
+  <meta name="description" content="The rules of being found just changed. AEO Growth Kit was built to even things up for product-proven businesses the old rules left behind.">
+  <title>About AEO Growth Kit</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="canonical" href="https://aeogrowthkit.com/about">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="AEO Growth Kit">
+  <meta property="og:title" content="About AEO Growth Kit — Why it exists and who built it">
+  <meta property="og:description" content="The rules of being found just changed. AEO Growth Kit was built to even things up for product-proven businesses the old rules left behind.">
+  <meta property="og:url" content="https://aeogrowthkit.com/about">
+  <meta property="og:image" content="https://aeogrowthkit.com/og-image.png">
+  <link rel="stylesheet" href="aeo-ds.css">
+  <link rel="stylesheet" href="website.css">
+  <script src="image-slot.js"></script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "AEO Growth Kit",
+    "description": "A system for Answer Engine Optimization: measuring whether AI recommends your business today, and providing the expertise to become the source it cites.",
+    "founder": {
+      "@type": "Person",
+      "name": "Steve Gillson",
+      "jobTitle": "Founder",
+      "affiliation": {
+        "@type": "EducationalOrganization",
+        "name": "Excelia Business School"
+      },
+      "knowsAbout": ["Answer Engine Optimization", "SEO", "Digital Marketing", "E-commerce", "EdTech"]
+    },
+    "knowsAbout": ["Answer Engine Optimization", "AEO", "AI visibility", "Content strategy"]
+  }
+  </script>
+
+  <style>
+    /* ---- Page frame ---- */
+    body { background: #211F1C; }
+
+    .about-wrap {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 0 var(--s-5);
+    }
+
+    .about-wrap-wide {
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 0 var(--s-5);
+    }
+
+    /* ---- Divider ---- */
+    .section-rule {
+      border: none;
+      border-top: 1px solid rgba(247,244,239,.10);
+      margin: 0;
+    }
+
+    /* ---- Hero ---- */
+    .about-hero {
+      padding: 88px var(--s-5) 72px;
+    }
+
+    .hero-h1 {
+      font-family: var(--serif);
+      font-weight: 400;
+      letter-spacing: -0.015em;
+      font-size: clamp(34px, 5.5vw, 48px);
+      line-height: 1.12;
+      color: #F0EADB;
+      margin: 0 0 36px;
+      text-wrap: balance;
+    }
+
+    .about-prose p {
+      font-family: var(--sans);
+      font-size: 17px;
+      line-height: 1.8;
+      color: #C2B9A8;
+      margin: 0 0 22px;
+    }
+    .about-prose p:last-child { margin-bottom: 0; }
+
+    /* ---- Sections ---- */
+    .about-section {
+      padding: 64px var(--s-5);
+    }
+
+    .section-h2 {
+      font-family: var(--serif);
+      font-weight: 400;
+      letter-spacing: -0.015em;
+      font-size: 28px;
+      line-height: 1.2;
+      color: #F0EADB;
+      margin: 0 0 28px;
+    }
+
+    .section-h2-center {
+      text-align: center;
+      margin: 0 0 40px;
+    }
+
+    /* ---- Why it exists: two-card layout ---- */
+    .why-cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+    }
+
+    .why-card {
+      border: 1px solid rgba(247,244,239,.12);
+      padding: 36px 32px;
+    }
+
+    .why-card-eyebrow {
+      font-family: var(--sans);
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: #CB7E68;
+      margin: 0 0 16px;
+    }
+
+    .why-card h3 {
+      font-family: var(--serif);
+      font-weight: 400;
+      letter-spacing: -0.01em;
+      font-size: 22px;
+      line-height: 1.25;
+      color: #F0EADB;
+      margin: 0 0 14px;
+    }
+
+    .why-card p {
+      font-family: var(--sans);
+      font-size: 16px;
+      line-height: 1.75;
+      color: #C2B9A8;
+      margin: 0;
+    }
+
+    /* ---- Founder row ---- */
+    .founder-row {
+      display: grid;
+      grid-template-columns: 72px 1fr;
+      gap: 24px;
+      align-items: start;
+    }
+
+    .founder-headshot {
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      box-shadow: 0 2px 8px rgba(0,0,0,.4);
+      flex-shrink: 0;
+    }
+
+    /* ---- Close / CTA ---- */
+    .about-close {
+      padding: 72px var(--s-5) 88px;
+      text-align: center;
+    }
+
+    .close-line {
+      font-family: var(--sans);
+      font-size: 17px;
+      line-height: 1.7;
+      color: #C2B9A8;
+      margin: 0 0 20px;
+      text-wrap: balance;
+    }
+
+    .close-link {
+      font-family: var(--sans);
+      font-size: 15px;
+      font-weight: 500;
+      color: #CB7E68;
+      text-decoration: none;
+      letter-spacing: .01em;
+      border-bottom: 1px solid rgba(203,126,104,.35);
+      padding-bottom: 2px;
+      transition: border-color .16s ease, color .16s ease;
+    }
+    .close-link:hover {
+      color: #D99480;
+      border-color: rgba(203,126,104,.7);
+      text-decoration: none;
+      opacity: 1;
+    }
+
+    @media (max-width: 700px) {
+      .why-cards { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 600px) {
+      .about-hero { padding-top: 60px; padding-bottom: 52px; }
+      .about-section { padding: 52px var(--s-4); }
+      .about-hero { padding-left: var(--s-4); padding-right: var(--s-4); }
+      .about-close { padding: 52px var(--s-4) 64px; }
+      .founder-row { grid-template-columns: 60px 1fr; gap: 18px; }
+      .founder-headshot { width: 60px; height: 60px; }
+      .why-card { padding: 28px 24px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="header-content">
+    <a href="index.html" class="site-logo">
+      <span class="dots brand" aria-hidden="true"><i></i><i></i><i></i></span>
+      <span class="brand-text">AEO Growth Kit</span>
+    </a>
+    <div class="header-right">
+      <nav class="main-nav">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li class="nav-has-dropdown">
+            <a href="product.html">Product <span class="nav-caret">▾</span></a>
+            <ul class="nav-dropdown">
+              <li><a href="recover.html">Recover</a></li>
+              <li><a href="build.html">Build</a></li>
+              <li><a href="maintain.html">Maintain</a></li>
+              <li class="nav-divider"></li>
+              <li><a href="ai-mirror-test.html">The AI Mirror Test</a></li>
+            </ul>
+          </li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li class="nav-has-dropdown">
+            <a href="resources.html">Resources <span class="nav-caret">▾</span></a>
+            <ul class="nav-dropdown">
+              <li><a href="resources.html">Blog</a></li>
+              <li><a href="https://audit.aeogrowthkit.com">Free Audit</a></li>
+              <li><a href="faq.html">FAQ</a></li>
+            </ul>
+          </li>
+          <li><a href="about.html" class="active">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <button class="mobile-menu-btn" aria-label="Open menu">☰</button>
+      </nav>
+      <a href="https://app.aeogrowthkit.com" class="btn btn-header-login">Log in</a>
+      <a href="https://calendly.com/steve-aeogrowthkit/30min" class="btn btn-primary btn-header-cta">Book a call</a>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <!-- 1. HERO -->
+  <section class="about-hero" data-screen-label="Hero">
+    <div class="about-wrap">
+      <h1 class="hero-h1">The rules of being found just changed.</h1>
+      <div class="about-prose">
+        <p>For twenty years, getting found meant ranking on Google. Now your buyers ask ChatGPT, Claude or Perplexity, and AI hands back two or three names. Being one of them is the difference between growing and going unseen. And it comes down to something most businesses struggle to keep up with: a steady stream of genuinely good content.</p>
+      </div>
+    </div>
+  </section>
+
+  <hr class="section-rule">
+
+  <!-- 2. WHY AEO GROWTH KIT EXISTS -->
+  <section class="about-section" data-screen-label="Why AEO Growth Kit exists">
+    <div class="about-wrap-wide">
+      <h2 class="section-h2 section-h2-center">Why AEO Growth Kit exists</h2>
+      <div class="why-cards">
+        <div class="why-card">
+          <h3>The problem</h3>
+          <p>Growing your visibility means publishing content, and doing it properly takes real skill. You need the SEO and structure right, and the substance worth reading. Most busy founders have the time for neither. So they hand it to an LLM, which churns out a vanilla article that ticks a box and reads like everyone else's. Research takes time. Forming a real opinion takes time. Good writing takes time. The volume tools skip all of it, and end up spamming the web with content that quietly damages your brand.</p>
+        </div>
+        <div class="why-card">
+          <h3>The solution</h3>
+          <p>AEO Growth Kit is the considered alternative: a low-lift, high-quality, sustainable way to make content that earns its place. It combines proven SEO, GEO and AEO principles so every piece lands on both presentation and substance, fills the specific gaps where AI is leaving you out, and keeps your brand visible as AI search takes over. Higher quality, in your voice, in far less of your time.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="section-rule">
+
+  <!-- 3. WHO'S BEHIND IT -->
+  <section class="about-section" data-screen-label="Who's behind it">
+    <div class="about-wrap">
+      <h2 class="section-h2">Who's behind it</h2>
+      <div class="founder-row">
+        <image-slot
+          id="founder-headshot"
+          class="founder-headshot"
+          shape="circle"
+          placeholder="Steve headshot"
+        ></image-slot>
+        <div class="about-prose">
+          <p>AEO Growth Kit is built on methods its founder, Steve Gillson, has spent four years teaching at a Financial Times top-40 business school and applying with real businesses. If a tactic doesn't hold up in the lecture hall and then deliver in practice, it doesn't make it into the product.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="section-rule">
+
+  <!-- 4. BUILT TO BE MENTIONED -->
+  <section class="about-section" data-screen-label="Built to be mentioned">
+    <div class="about-wrap">
+      <h2 class="section-h2">Built to be mentioned</h2>
+      <div class="about-prose">
+        <p>A small proof of the approach: this page is built so AI can read it, work out who is behind it, and recommend it correctly. That is the same job AEO Growth Kit does for your business.</p>
+      </div>
+    </div>
+  </section>
+
+  <hr class="section-rule">
+
+  <!-- 5. CLOSE -->
+  <section class="about-close" data-screen-label="Close">
+    <div class="about-wrap">
+      <p class="close-line">Curious where you stand? Run a free 5-page audit and see whether AI is recommending you yet.</p>
+      <a href="https://audit.aeogrowthkit.com" class="close-link">Run my free audit</a>
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-content">
+      <div class="footer-section">
+        <div style="display: flex; flex-direction: column; align-items: flex-start; gap: var(--s-4);">
+          <div style="display: flex; align-items: center; gap: var(--s-3);">
+            <span class="dots brand" style="font-size: 22px;" aria-hidden="true"><i></i><i></i><i></i></span>
+            <span style="font-family: var(--serif); font-weight: 400; letter-spacing: -0.015em; font-size: var(--t-h4); color: var(--text);">AEO Growth Kit</span>
+          </div>
+          <div style="font-family: var(--sans); font-size: var(--t-sm); color: var(--text-2); letter-spacing: .08em; text-transform: uppercase; font-weight: 500;">Recover · Build · Maintain</div>
+          <div style="margin-top: var(--s-2);">
+            <a href="[LINKEDIN_URL]" title="LinkedIn" aria-label="LinkedIn" style="color: var(--text-2); text-decoration: none; transition: color .2s; display: inline-flex; align-items: center; justify-content: center; width: 34px; height: 34px;">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5A2.5 2.5 0 1 1 0 3.5a2.5 2.5 0 0 1 4.98 0zM.25 8.25h4.5V24h-4.5V8.25zM8.25 8.25h4.31v2.15h.06c.6-1.14 2.07-2.34 4.26-2.34 4.56 0 5.4 3 5.4 6.9V24h-4.5v-6.94c0-1.66-.03-3.79-2.31-3.79-2.31 0-2.67 1.8-2.67 3.67V24h-4.5V8.25z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-section">
+        <h4 class="footer-title">Product</h4>
+        <ul class="footer-links">
+          <li><a href="recover.html">Recover</a></li>
+          <li><a href="build.html">Build</a></li>
+          <li><a href="maintain.html">Maintain</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h4 class="footer-title">Resources</h4>
+        <ul class="footer-links">
+          <li><a href="resources.html">Blog</a></li>
+          <li><a href="https://audit.aeogrowthkit.com">Free Audit</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h4 class="footer-title">Company</h4>
+        <ul class="footer-links">
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h4 class="footer-title">Legal</h4>
+        <ul class="footer-links">
+          <li><a href="terms-of-service.html">Terms</a></li>
+          <li><a href="privacy-policy.html">Privacy</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h4 class="footer-title">Updates</h4>
+        <p class="footer-desc">Subscribe for AEO tips and platform updates.</p>
+        <form class="newsletter-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+          <input type="hidden" name="form-name" value="contact">
+          <input type="hidden" name="bot-field">
+          <input type="email" name="email" placeholder="your@email.com" required class="newsletter-input">
+          <button type="submit" class="newsletter-btn">→</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 AEO Growth Kit. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    background: var(--bg);
+    border-top: 1px solid var(--border);
+    margin-top: 0;
+    padding: var(--s-8) var(--s-4);
+  }
+  .footer-container { max-width: 1400px; margin: 0 auto; padding: 0 var(--s-6); }
+  .footer-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1.5fr;
+    gap: var(--s-7);
+    margin-bottom: var(--s-6);
+  }
+  .footer-section { display: flex; flex-direction: column; }
+  .footer-title {
+    font-family: var(--serif);
+    font-size: var(--t-body);
+    font-weight: 400;
+    color: var(--text);
+    margin: 0 0 var(--s-3) 0;
+    letter-spacing: -0.015em;
+  }
+  .footer-desc { font-size: var(--t-sm); color: var(--text-2); line-height: 1.6; margin: 0 0 var(--s-3); }
+  .footer-links { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: var(--s-2); }
+  .footer-links a { font-size: var(--t-sm); color: var(--text-2); text-decoration: none; transition: color 0.2s ease; }
+  .footer-links a:hover { color: var(--accent); opacity: 1; text-decoration: none; }
+  .newsletter-form { display: flex; gap: var(--s-2); }
+  .newsletter-input {
+    flex: 1; font-family: var(--sans); font-size: var(--t-sm);
+    padding: 10px 12px;
+    border: 1px solid var(--border-2); border-radius: var(--r-md);
+    background: var(--bg); color: var(--text); transition: border-color 0.2s ease;
+  }
+  .newsletter-input::placeholder { color: var(--text-3); }
+  .newsletter-input:focus { outline: none; border-color: var(--accent); }
+  .newsletter-btn {
+    font-family: var(--sans); font-size: var(--t-sm); font-weight: 600;
+    padding: 10px 16px;
+    border: 1px solid var(--accent); border-radius: var(--r-md);
+    background: transparent; color: var(--accent); cursor: pointer; transition: all 0.2s ease;
+  }
+  .newsletter-btn:hover { background: var(--accent-soft); }
+  .footer-bottom {
+    text-align: center; padding-top: var(--s-5);
+    border-top: 1px solid var(--border); font-size: var(--t-sm); color: var(--text-3);
+  }
+  @media (max-width: 960px) {
+    .footer-content { grid-template-columns: repeat(3, 1fr); }
+  }
+  @media (max-width: 600px) {
+    .footer-content { grid-template-columns: repeat(2, 1fr); gap: var(--s-5); }
+    .newsletter-form { flex-direction: column; }
+    .footer-container { padding: 0 var(--s-4); }
+  }
+</style>
+
+<script src="mobile-nav.js"></script>
+</body>
+</html>

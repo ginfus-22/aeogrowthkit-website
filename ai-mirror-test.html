@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en-GB" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="title" content="The AI Mirror Test — AEO Growth Kit">
+  <meta name="description" content="The AI Mirror Test puts your real buyer questions to four leading AI models and counts how often you're named. One honest number for where you stand, measured the same way every time.">
+  <title>The AI Mirror Test — AEO Growth Kit</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@400;500;600;700&family=Spline+Sans+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="canonical" href="https://aeogrowthkit.com/ai-mirror-test">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="AEO Growth Kit">
+  <meta property="og:title" content="The AI Mirror Test — AEO Growth Kit">
+  <meta property="og:description" content="The AI Mirror Test puts your real buyer questions to four leading AI models and counts how often you're named. One honest number for where you stand, measured the same way every time.">
+  <meta property="og:url" content="https://aeogrowthkit.com/ai-mirror-test">
+  <meta property="og:image" content="https://aeogrowthkit.com/og-image.png">
+  <link rel="stylesheet" href="aeo-ds.css">
+  <link rel="stylesheet" href="website.css">
+
+  <style>
+    /* ===== AI MIRROR TEST PAGE ===== */
+    .mirror-main { padding-bottom: 0; }
+
+    .wrap       { max-width: 1120px; margin: 0 auto; padding: 0 var(--s-6); }
+    .wrap-960   { max-width: 960px;  margin: 0 auto; padding: 0 var(--s-6); }
+    .wrap-720   { max-width: 720px;  margin: 0 auto; padding: 0 var(--s-6); }
+
+    section.rsec { padding: var(--s-9) 0; }
+    .rule { border: 0; border-top: 1px solid var(--border); margin: 0; }
+
+    .section-h2 {
+      font-family: var(--serif); font-weight: 400; letter-spacing: -0.015em;
+      font-size: var(--t-h2); line-height: 1.18; color: var(--text);
+      margin: 0 0 var(--s-6); text-wrap: balance;
+    }
+
+    /* ---- coral line icons ---- */
+    .ico-line { width: 26px; height: 26px; display: block; stroke: var(--accent); fill: none; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+
+    /* ===== BUTTONS ===== */
+    .btn-coral {
+      background: var(--accent); color: var(--on-accent);
+      padding: calc(14px * var(--density)) 26px; font-family: var(--sans);
+      font-size: var(--t-body); font-weight: 600; border-radius: var(--r-md);
+      border: none; cursor: pointer; text-decoration: none; display: inline-flex;
+      align-items: center; gap: 9px; transition: background .16s ease;
+    }
+    .btn-coral:hover { background: var(--accent-strong); }
+
+    .link-coral {
+      background: transparent; color: var(--accent); border: none; padding: 0;
+      font-family: var(--sans); font-size: var(--t-body); font-weight: 500;
+      cursor: pointer; text-decoration: none; transition: opacity .16s ease;
+      display: inline-flex; align-items: center; gap: 7px;
+    }
+    .link-coral:hover { opacity: .82; }
+    .link-coral .arr { transition: transform .16s ease; }
+    .link-coral:hover .arr { transform: translateX(3px); }
+
+    /* ===== 1. HERO ===== */
+    .hero { padding: calc(var(--s-9) + var(--s-5)) 0 var(--s-9); }
+    .hero-h1 {
+      font-family: var(--serif); font-weight: 400; letter-spacing: -0.015em;
+      font-size: var(--t-display); line-height: 1.1; color: var(--text);
+      margin: 0 0 var(--s-6); text-wrap: balance; max-width: 18ch;
+    }
+    .hero-p {
+      font-family: var(--sans); font-size: var(--t-body-l); line-height: 1.75;
+      color: var(--text-2); margin: 0 0 var(--s-7); max-width: 62ch;
+    }
+    .cta-row { display: flex; align-items: center; gap: var(--s-5); flex-wrap: wrap; }
+
+    /* ===== 2. WHY MEASUREMENT ===== */
+    .prose-col p {
+      font-family: var(--sans); font-size: var(--t-body-l); line-height: 1.8;
+      color: var(--text-2); margin: 0 0 var(--s-5);
+    }
+    .prose-col p:last-child { margin-bottom: 0; }
+    .prose-col p strong { color: var(--text); font-weight: 600; }
+    .stat-inline {
+      font-family: var(--serif); font-weight: 700; color: var(--accent);
+      font-size: 1.1em; letter-spacing: -0.02em;
+    }
+
+    /* ===== 3. HOW IT WORKS — 4 STEPS ===== */
+    .steps-row {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: var(--s-5);
+    }
+    .step-card {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: var(--r-lg); padding: var(--s-6); display: flex;
+      flex-direction: column; gap: var(--s-4);
+      box-shadow: var(--sh-sm);
+    }
+    .step-num {
+      font-family: var(--serif); font-weight: 400; color: var(--accent);
+      font-size: 40px; line-height: 1; letter-spacing: -0.03em;
+    }
+    .step-card h3 {
+      font-family: var(--serif); font-weight: 400; letter-spacing: -0.015em;
+      font-size: var(--t-h4); color: var(--text); margin: 0;
+    }
+    .step-card p {
+      font-family: var(--sans); font-size: var(--t-body); line-height: 1.7;
+      color: var(--text-2); margin: 0;
+    }
+
+    /* ===== 4. WHAT YOU GET BACK — 3 CARDS ===== */
+    .output-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--s-5);
+    }
+    .output-card {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: var(--r-lg); padding: var(--s-6);
+      box-shadow: var(--sh-sm);
+      display: flex; flex-direction: column; gap: var(--s-4);
+    }
+    .output-ico {
+      width: 40px; height: 40px; background: var(--accent-soft);
+      border-radius: var(--r-md); display: flex; align-items: center;
+      justify-content: center;
+    }
+    .output-ico .ico-line { width: 20px; height: 20px; stroke-width: 1.8; }
+    .output-card h3 {
+      font-family: var(--serif); font-weight: 400; letter-spacing: -0.015em;
+      font-size: var(--t-h3); color: var(--text); margin: 0;
+    }
+    .output-card p {
+      font-family: var(--sans); font-size: var(--t-body); line-height: 1.7;
+      color: var(--text-2); margin: 0;
+    }
+
+    /* ===== 5. RANK TRACKING ===== */
+    .bigstat {
+      font-family: var(--serif); font-weight: 400; color: var(--accent);
+      font-size: 96px; line-height: .9; letter-spacing: -0.04em;
+      white-space: nowrap;
+    }
+    .bigstat-cap {
+      font-family: var(--sans); font-size: var(--t-sm); color: var(--text-3);
+      line-height: 1.5; margin-top: var(--s-3); max-width: 22ch;
+    }
+    .rank-grid {
+      display: grid; grid-template-columns: 1fr auto;
+      gap: var(--s-8); align-items: start;
+    }
+
+    /* ===== 6. INSTRUMENT STRIP ===== */
+    .instrument-intro {
+      font-family: var(--sans); font-size: var(--t-body-l); line-height: 1.75;
+      color: var(--text-2); margin: 0 0 var(--s-7); max-width: 62ch;
+    }
+    .phase-strip {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: var(--s-4); margin-bottom: var(--s-7);
+    }
+    .phase-item {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: var(--r-lg); padding: var(--s-5);
+      box-shadow: var(--sh-sm);
+    }
+    .phase-label {
+      font-family: var(--mono); font-size: var(--t-sm); font-weight: 500;
+      color: var(--accent); letter-spacing: 0; margin: 0 0 var(--s-3);
+      display: flex; align-items: center; gap: var(--s-2);
+    }
+    .phase-label .ico-line { width: 16px; height: 16px; stroke-width: 1.8; }
+    .phase-item p {
+      font-family: var(--sans); font-size: var(--t-body); line-height: 1.65;
+      color: var(--text-2); margin: 0;
+    }
+    .closing-line {
+      font-family: var(--sans); font-size: var(--t-body); line-height: 1.7;
+      color: var(--text-3); max-width: 60ch; font-style: italic;
+    }
+
+    /* ===== 7. CTA BAND ===== */
+    .cta-band { background: var(--surface); border-top: 1px solid var(--border); text-align: center; }
+    .cta-h {
+      font-family: var(--serif); font-weight: 400; letter-spacing: -0.015em;
+      font-size: var(--t-h1); line-height: 1.15; color: var(--text);
+      margin: 0 0 var(--s-6); text-wrap: balance;
+    }
+    .cta-band .cta-row { justify-content: center; }
+    .cta-note { font-family: var(--sans); font-size: var(--t-sm); color: var(--text-3); margin: var(--s-5) 0 0; line-height: 1.6; }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 960px) {
+      .steps-row { grid-template-columns: repeat(2, 1fr); }
+      .output-grid { grid-template-columns: repeat(2, 1fr); }
+      .rank-grid { grid-template-columns: 1fr; }
+      .bigstat { font-size: 72px; }
+      .phase-strip { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 640px) {
+      .wrap, .wrap-960, .wrap-720 { padding: 0 var(--s-4); }
+      section.rsec { padding: var(--s-8) 0; }
+      .hero { padding: var(--s-8) 0; }
+      .hero-h1 { font-size: var(--t-h1); }
+      .steps-row { grid-template-columns: 1fr; }
+      .output-grid { grid-template-columns: 1fr; }
+      .cta-h { font-size: var(--t-h2); }
+      .cta-band .cta-row { flex-direction: column; align-items: center; }
+      .btn-coral { width: 100%; justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="header-content">
+    <a href="index.html" class="site-logo">
+      <span class="dots brand" aria-hidden="true"><i></i><i></i><i></i></span>
+      <span class="brand-text">AEO Growth Kit</span>
+    </a>
+    <div class="header-right">
+      <nav class="main-nav">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li class="nav-has-dropdown"><a href="product.html">Product <span class="nav-caret">▾</span></a><ul class="nav-dropdown"><li><span class="nav-sublabel">The three steps</span></li><li><a href="recover.html">Recover</a></li><li><a href="build.html">Build</a></li><li><a href="maintain.html">Maintain</a></li><li class="nav-divider"></li><li><span class="nav-sublabel">The instrument</span></li><li><a href="ai-mirror-test.html">The AI Mirror Test</a></li></ul></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li class="nav-has-dropdown"><a href="resources.html">Resources <span class="nav-caret">▾</span></a><ul class="nav-dropdown"><li><a href="resources.html">Blog</a></li><li><a href="https://audit.aeogrowthkit.com">Free Audit</a></li><li><a href="faq.html">FAQ</a></li></ul></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <button class="mobile-menu-btn">☰</button>
+      </nav>
+      <a href="https://app.aeogrowthkit.com" class="btn btn-header-login">Log in</a>
+      <a href="contact.html" class="btn btn-primary btn-header-cta">Book a call</a>
+    </div>
+  </div>
+</header>
+
+<main class="mirror-main">
+
+  <!-- 1) HERO -->
+  <section class="hero" data-screen-label="Hero">
+    <div class="wrap">
+      <h1 class="hero-h1">When your buyers ask AI, do you show up or get skipped?</h1>
+      <p class="hero-p">Most businesses are guessing whether AI mentions them. The AI Mirror Test asks the real questions your buyers ask across the four big models and shows, in plain numbers, where you show up, where you're missing, and who gets named instead. Those gaps become the brief for content that gets you noticed.</p>
+      <div class="cta-row">
+        <button class="btn-coral">
+          <svg class="ico-line" viewBox="0 0 24 24" aria-hidden="true" style="width:17px;height:17px;stroke:var(--on-accent);"><path d="M5 12h13M13 6l6 6-6 6"/></svg>
+          Run my free audit
+        </button>
+        <a href="contact.html" class="link-coral">Or book a call <span class="arr">→</span></a>
+      </div>
+    </div>
+  </section>
+
+  <hr class="rule" />
+
+  <!-- 2) WHY MEASUREMENT COMES FIRST -->
+  <section class="rsec" data-screen-label="Why measurement comes first">
+    <div class="wrap-720">
+      <h2 class="section-h2">Why measurement comes first</h2>
+      <div class="prose-col">
+        <p>Only <span class="stat-inline">16%</span> of brands track how they show up in AI search, even as McKinsey estimates <span class="stat-inline">$750bn</span> in spend will flow through it by 2028. Most businesses are flying blind into the channel their buyers already use, and treating $750bn as a projection rather than a fact doesn't change the direction of travel.</p>
+        <p>Here's the thing about AI answers: you can't see them at scale by hand. You could type one question into ChatGPT and check, but your buyers ask hundreds of variations across four different models, and the answers change week to week. Guessing whether you're named is the old habit. The Mirror Test replaces it with a count.</p>
+      </div>
+    </div>
+  </section>
+
+  <hr class="rule" />
+
+  <!-- 3) HOW THE MIRROR TEST WORKS -->
+  <section class="rsec" data-screen-label="How the Mirror Test works">
+    <div class="wrap-960">
+      <h2 class="section-h2">How the Mirror Test works</h2>
+      <div class="steps-row">
+        <div class="step-card">
+          <div class="step-num">01</div>
+          <h3>Your real buyer questions</h3>
+          <p>Not vanity keywords. The actual questions a buyer asks when they're trying to solve the problem you solve, framed the way they'd really type them.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-num">02</div>
+          <h3>Four leading models</h3>
+          <p>Every question goes to ChatGPT, Claude, Perplexity and Gemini. Real models, real answers, not a simulation.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-num">03</div>
+          <h3>The count</h3>
+          <p>The Mirror Test records how often you're named, how often a competitor is named in your place, and which questions you're missing entirely.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-num">04</div>
+          <h3>The number</h3>
+          <p>You get one clear citation rate: out of the questions you should own, how many name you today. That figure is the baseline everything else is measured against.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="rule" />
+
+  <!-- 4) WHAT YOU GET BACK -->
+  <section class="rsec" data-screen-label="What you get back">
+    <div class="wrap-960">
+      <h2 class="section-h2">What you get back</h2>
+      <div class="output-grid">
+        <div class="output-card">
+          <div class="output-ico">
+            <svg class="ico-line" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+          </div>
+          <h3>Your visibility score</h3>
+          <p>A single, honest number. Low to start is normal, and it's a starting line, not a verdict. What matters is that it's real and you can move it.</p>
+        </div>
+        <div class="output-card">
+          <div class="output-ico">
+            <svg class="ico-line" viewBox="0 0 24 24" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <h3>Who's named instead</h3>
+          <p>Every time an answer names a competitor and not you, that's recorded. You see exactly who's winning the answers you want, and which questions they own.</p>
+        </div>
+        <div class="output-card">
+          <div class="output-ico">
+            <svg class="ico-line" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+          </div>
+          <h3>Your gap analysis</h3>
+          <p>The questions where you're absent become a ranked list of what to fix. That list is the content gap analysis Build turns into briefs.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="rule" />
+
+  <!-- 5) RANK TRACKING MEASURES THE WRONG GAME -->
+  <section class="rsec" data-screen-label="Rank tracking measures the wrong game">
+    <div class="wrap">
+      <div class="rank-grid">
+        <div>
+          <h2 class="section-h2">Rank tracking measures the wrong game</h2>
+          <div class="prose-col">
+            <p>A keyword rank tool tells you where a page sits on Google. Useful for the old playbook. But an AI answer doesn't show ten blue links, it gives two or three names, and the page that ranks first often isn't one of them. When Google shows an AI summary, only <span class="stat-inline">8%</span> of searches now lead to a website click, down from <span class="stat-inline">15%</span> without one.</p>
+            <p>So the question worth measuring has changed. Not "where do I rank?" but "when my buyer asks, does the AI name me?" That second question is the one the Mirror Test answers, and it's the one that decides whether AI sends you customers.</p>
+          </div>
+        </div>
+        <div>
+          <div class="bigstat">8%</div>
+          <p class="bigstat-cap">of searches lead to a click when Google shows an AI summary</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="rule" />
+
+  <!-- 6) THE INSTRUMENT THAT RUNS THROUGH EVERYTHING -->
+  <section class="rsec" data-screen-label="The instrument that runs through everything">
+    <div class="wrap-720">
+      <h2 class="section-h2">The instrument that runs through everything</h2>
+      <p class="instrument-intro">The Mirror Test does more than run once. It's the gauge, read at two moments and used in between.</p>
+      <div class="phase-strip">
+        <div class="phase-item">
+          <div class="phase-label">
+            <svg class="ico-line" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12a9 9 0 1 0 18 0A9 9 0 0 0 3 12z"/><path d="M9 12l2 2 4-4"/></svg>
+            Recover
+          </div>
+          <p>It sets your baseline and exposes the gaps.</p>
+        </div>
+        <div class="phase-item">
+          <div class="phase-label">
+            <svg class="ico-line" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5z"/></svg>
+            Build
+          </div>
+          <p>Those gaps become the briefs and drafts that close them.</p>
+        </div>
+        <div class="phase-item">
+          <div class="phase-label">
+            <svg class="ico-line" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 18l5-5 4 3 7-9"/><path d="M17 7h4v4"/></svg>
+            Maintain
+          </div>
+          <p>You re-run it each month to watch your visibility climb and catch new gaps early.</p>
+        </div>
+      </div>
+      <p class="closing-line">Same test, same questions, every time. That consistency is what turns a single snapshot into a trend you can trust.</p>
+    </div>
+  </section>
+
+  <!-- 7) CTA BAND -->
+  <section class="rsec cta-band" data-screen-label="CTA">
+    <div class="wrap-720">
+      <h2 class="cta-h">See how often AI names you today.</h2>
+      <div class="cta-row">
+        <button class="btn-coral">
+          <svg class="ico-line" viewBox="0 0 24 24" aria-hidden="true" style="width:17px;height:17px;stroke:var(--on-accent);"><path d="M5 12h13M13 6l6 6-6 6"/></svg>
+          Run my free audit
+        </button>
+        <a href="contact.html" class="link-coral">Or book a call <span class="arr">→</span></a>
+      </div>
+      <p class="cta-note">Start free with a 5-page audit. The full Mirror Test comes with full access.</p>
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-content">
+      <div class="footer-section">
+        <div style="display: flex; flex-direction: column; align-items: flex-start; gap: var(--s-4);">
+          <div style="display: flex; align-items: center; gap: var(--s-3);">
+            <span class="dots" style="font-size: 24px;" aria-hidden="true"><i class="sage"></i><i class="paper"></i><i class="coral"></i></span>
+            <span style="font-family: var(--serif); font-weight: 400; letter-spacing: -0.015em; font-size: var(--t-h4); color: var(--text);">AEO Growth Kit</span>
+          </div>
+          <div style="font-family: var(--sans); font-size: var(--t-sm); color: var(--text-2); letter-spacing: .08em; text-transform: uppercase; font-weight: 500;">Recover · Build · Maintain</div>
+        </div>
+      </div>
+
+      <div class="footer-section">
+        <h4 class="footer-title">Product</h4>
+        <ul class="footer-links">
+          <li><a href="recover.html">Recover</a></li>
+          <li><a href="build.html">Build</a></li>
+          <li><a href="maintain.html">Maintain</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h4 class="footer-title">Resources</h4>
+        <ul class="footer-links">
+          <li><a href="resources.html">Blog</a></li>
+          <li><a href="https://audit.aeogrowthkit.com">Free Audit</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h4 class="footer-title">Company</h4>
+        <ul class="footer-links">
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h4 class="footer-title">Legal</h4>
+        <ul class="footer-links">
+          <li><a href="terms-of-service.html">Terms</a></li>
+          <li><a href="privacy-policy.html">Privacy</a></li>
+          <li><a href="cookies-policy.html">Cookies</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section footer-newsletter">
+        <h4 class="footer-title">Updates</h4>
+        <p class="footer-desc">Subscribe for AEO tips and platform updates.</p>
+        <form class="newsletter-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+          <input type="hidden" name="form-name" value="contact">
+          <input type="hidden" name="bot-field">
+          <input type="email" name="email" placeholder="your@email.com" required class="newsletter-input">
+          <button type="submit" class="newsletter-btn">→</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 AEO Growth Kit. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    background: var(--bg);
+    border-top: 1px solid var(--border);
+    margin-top: 0;
+    padding: var(--s-8) var(--s-4);
+  }
+  .footer-container { max-width: 1400px; margin: 0 auto; padding: 0 var(--s-6); }
+  .footer-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1.5fr;
+    gap: var(--s-7);
+    margin-bottom: var(--s-6);
+  }
+  .footer-section { display: flex; flex-direction: column; }
+  .footer-newsletter { grid-column: auto; }
+  @media (max-width: 980px) { .footer-newsletter { grid-column: auto; } }
+  .footer-title {
+    font-family: var(--serif);
+    font-size: var(--t-h4);
+    font-weight: 400;
+    color: var(--text);
+    margin: 0 0 var(--s-3) 0;
+    letter-spacing: -0.015em;
+  }
+  .footer-desc { font-size: var(--t-sm); color: var(--text-2); line-height: 1.6; margin: 0; }
+  .footer-links { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: var(--s-2); }
+  .footer-links a { font-size: var(--t-sm); color: var(--text-2); text-decoration: none; transition: color 0.2s ease; }
+  .footer-links a:hover { color: var(--accent); }
+  .newsletter-form { display: flex; gap: var(--s-2); margin-top: var(--s-3); }
+  .newsletter-input {
+    flex: 1; font-family: var(--sans); font-size: var(--t-sm);
+    padding: calc(10px * var(--density)) 12px;
+    border: 1px solid var(--border-2); border-radius: var(--r-md);
+    background: var(--surface-2); color: var(--text);
+  }
+  .newsletter-input::placeholder { color: var(--text-3); }
+  .newsletter-input:focus { outline: none; border-color: var(--accent); }
+  .newsletter-btn {
+    font-family: var(--sans); font-size: var(--t-sm); font-weight: 600;
+    padding: calc(10px * var(--density)) 16px;
+    border: 1px solid var(--accent); border-radius: var(--r-md);
+    background: transparent; color: var(--accent); cursor: pointer;
+    transition: background .16s ease;
+  }
+  .newsletter-btn:hover { background: var(--accent-soft); }
+  .footer-bottom {
+    border-top: 1px solid var(--border);
+    padding-top: var(--s-5);
+    display: flex; justify-content: space-between;
+    align-items: center;
+  }
+  .footer-bottom p { font-size: var(--t-xs); color: var(--text-3); margin: 0; }
+  @media (max-width: 768px) {
+    .footer-content { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 480px) {
+    .footer-content { grid-template-columns: 1fr; }
+  }
+</style>
+
+<script src="mobile-nav.js"></script>
+</body>
+</html>

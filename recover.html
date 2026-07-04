@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html lang="en-GB" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="title" content="Recover — AEO Growth Kit">
+  <meta name="description" content="Recover finds every gap stopping AI from reading you and hands you the exact fix. A forensic technical audit plus the AI Mirror Test across ChatGPT, Claude, Perplexity and Gemini.">
+  <title>Recover — AEO Growth Kit</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@400;500;600;700&family=Spline+Sans+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="canonical" href="https://aeogrowthkit.com/product/recover">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="AEO Growth Kit">
+  <meta property="og:title" content="Recover — AEO Growth Kit">
+  <meta property="og:description" content="Recover finds every gap stopping AI from reading you and hands you the exact fix. A forensic technical audit plus the AI Mirror Test across ChatGPT, Claude, Perplexity and Gemini.">
+  <meta property="og:url" content="https://aeogrowthkit.com/product/recover">
+  <meta property="og:image" content="https://aeogrowthkit.com/og-image.png">
+  <link rel="stylesheet" href="aeo-ds.css">
+  <link rel="stylesheet" href="website.css">
+
+  <style>
+    /* ===== RECOVER V2 ===== */
+    .recover-main { padding-bottom: 0; }
+
+    .wrap { max-width: 1120px; margin: 0 auto; padding: 0 var(--s-6); }
+    .col-text { max-width: 720px; }
+
+    section.rsec { padding: var(--s-9) 0; }
+    .rule { border: 0; border-top: 1px solid var(--border); margin: 0; }
+
+    .section-h2 {
+      font-family: var(--serif); font-weight: 400; letter-spacing: -0.015em;
+      font-size: var(--t-h2); line-height: 1.18; color: var(--text);
+      margin: 0 0 var(--s-6); text-wrap: balance;
+    }
+
+    /* ---- coral line icons ---- */
+    .ico-line { width: 26px; height: 26px; display: block; stroke: var(--accent); fill: none; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+    .ico-line.sm { width: 18px; height: 18px; stroke-width: 1.7; }
+
+    /* ===== 1. HERO ===== */
+    .hero { padding: calc(var(--s-9) + var(--s-5)) 0 var(--s-9); }
+    .hero-h1 {
+      font-family: var(--serif); font-weight: 400; letter-spacing: -0.015em;
+      font-size: var(--t-display); line-height: 1.1; color: var(--text);
+      margin: 0 0 var(--s-6); text-wrap: balance; max-width: 16ch;
+    }
+    .hero-p {
+      font-family: var(--sans); font-size: var(--t-body-l); line-height: 1.75;
+      color: var(--text-2); margin: 0 0 var(--s-7); max-width: 62ch;
+    }
+    .hero-p strong { color: var(--text); font-weight: 600; }
+    .hero-p .nm { color: var(--accent); font-weight: 500; }
+
+    .cta-row { display: flex; align-items: center; gap: var(--s-5); flex-wrap: wrap; }
+
+    .btn-coral {
+      background: var(--accent); color: var(--on-accent);
+      padding: calc(14px * var(--density)) 26px; font-family: var(--sans);
+      font-size: var(--t-body); font-weight: 600; border-radius: var(--r-md);
+      border: none; cursor: pointer; text-decoration: none; display: inline-flex;
+      align-items: center; gap: 9px; transition: background .16s ease;
+    }
+    .btn-coral:hover { background: var(--accent-strong); }
+    .btn-coral .ico-line { stroke: var(--on-accent); width: 17px; height: 17px; }
+
+    .link-coral {
+      background: transparent; color: var(--accent); border: none; padding: 0;
+      font-family: var(--sans); font-size: var(--t-body); font-weight: 500;
+      cursor: pointer; text-decoration: none; transition: opacity .16s ease;
+      display: inline-flex; align-items: center; gap: 7px;
+    }
+    .link-coral:hover { opacity: .82; }
+    .link-coral .arr { transition: transform .16s ease; }
+    .link-coral:hover .arr { transform: translateX(3px); }
+
+    /* ===== 2. PROBLEM ===== */
+    .problem-grid {
+      display: grid; grid-template-columns: 1fr auto; gap: var(--s-8);
+      align-items: start;
+    }
+    .problem-grid .prose p {
+      font-family: var(--sans); font-size: var(--t-body-l); line-height: 1.8;
+      color: var(--text-2); margin: 0 0 var(--s-5); max-width: 60ch;
+    }
+    .problem-grid .prose p:last-child { margin-bottom: 0; }
+    .problem-grid .prose strong { color: var(--text); font-weight: 600; }
+    .bigfig {
+      font-family: var(--serif); font-weight: 400; color: var(--accent);
+      font-size: 132px; line-height: .9; letter-spacing: -0.04em;
+      white-space: nowrap;
+    }
+    .bigfig-cap {
+      font-family: var(--sans); font-size: var(--t-sm); color: var(--text-3);
+      line-height: 1.5; margin-top: var(--s-3); max-width: 22ch;
+    }
+
+    /* ===== JOB BLOCKS ===== */
+    .job-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: var(--s-8);
+      align-items: center;
+    }
+    .job-eyebrow {
+      font-family: var(--mono); font-size: var(--t-sm); font-weight: 500;
+      color: var(--accent); letter-spacing: 0; margin: 0 0 var(--s-3);
+    }
+    .job-copy h2 { margin-bottom: var(--s-5); }
+    .job-copy p {
+      font-family: var(--sans); font-size: var(--t-body-l); line-height: 1.8;
+      color: var(--text-2); margin: 0 0 var(--s-4); max-width: 54ch;
+    }
+    .job-copy p:last-child { margin-bottom: 0; }
+    .job-copy strong { color: var(--text); font-weight: 600; }
+
+    /* ---- fix card mockup ---- */
+    .mock { display: flex; justify-content: center; }
+    .fix-card {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: var(--r-lg); box-shadow: var(--sh-md);
+      width: 100%; max-width: 440px; overflow: hidden;
+    }
+    .fix-head {
+      display: flex; align-items: center; justify-content: space-between;
+      gap: var(--s-3); padding: var(--s-4) var(--s-5);
+      border-bottom: 1px solid var(--border);
+    }
+    .fix-path {
+      font-family: var(--mono); font-size: var(--t-body); color: var(--text);
+      display: inline-flex; align-items: center; gap: 9px;
+    }
+    .fix-path .ico-line { stroke: var(--text-3); }
+    .fix-tag {
+      font-family: var(--sans); font-size: var(--t-xs); font-weight: 600;
+      letter-spacing: .04em; padding: 4px 10px; border-radius: var(--r-pill);
+      background: var(--err-bg); color: #E59A86;
+    }
+    .fix-issue {
+      display: flex; align-items: center; gap: 9px;
+      padding: var(--s-4) var(--s-5); border-bottom: 1px solid var(--border);
+      font-family: var(--sans); font-size: var(--t-sm); color: var(--text-2);
+    }
+    .fix-issue .dot-err { width: 7px; height: 7px; border-radius: 999px; background: #C8674E; flex: none; }
+    .fix-issue b { color: var(--text); font-weight: 600; }
+    .fix-code {
+      position: relative; background: #1B1A17; padding: var(--s-5);
+    }
+    .fix-code pre {
+      margin: 0; font-family: var(--mono); font-size: 12.5px; line-height: 1.7;
+      color: var(--text-2); white-space: pre; overflow-x: auto;
+    }
+    .fix-code .k { color: #9CB8AD; }
+    .fix-code .s { color: var(--accent); }
+    .copy-btn {
+      position: absolute; top: var(--s-4); right: var(--s-4);
+      display: inline-flex; align-items: center; gap: 6px;
+      font-family: var(--sans); font-size: var(--t-xs); font-weight: 600;
+      color: var(--accent); background: rgba(203,126,104,.12);
+      border: 1px solid rgba(203,126,104,.34); border-radius: var(--r-sm);
+      padding: 5px 10px; cursor: pointer; transition: background .16s ease;
+    }
+    .copy-btn:hover { background: rgba(203,126,104,.2); }
+    .copy-btn .ico-line { stroke: var(--accent); width: 13px; height: 13px; }
+
+    /* ---- inset callout ---- */
+    .inset {
+      margin-top: var(--s-7);
+      background: var(--surface-2); border: 1px solid var(--border);
+      border-radius: var(--r-lg); padding: var(--s-5) var(--s-6);
+      display: flex; align-items: center; gap: var(--s-5); flex-wrap: wrap;
+    }
+    .inset .ico-line { flex: none; }
+    .inset p {
+      margin: 0; font-family: var(--sans); font-size: var(--t-body);
+      color: var(--text-2); flex: 1; min-width: 240px; line-height: 1.6;
+    }
+    .inset p strong { color: var(--text); font-weight: 600; }
+
+    /* ---- mirror test flow mockup ---- */
+    .flow {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: var(--r-lg); box-shadow: var(--sh-md);
+      padding: var(--s-6); width: 100%; max-width: 460px;
+      display: flex; flex-direction: column; align-items: center; gap: var(--s-3);
+    }
+    .flow-chip {
+      display: inline-flex; align-items: center; gap: 9px;
+      font-family: var(--sans); font-size: var(--t-sm); font-weight: 600;
+      color: var(--text); background: var(--surface-2);
+      border: 1px solid var(--border-2); border-radius: var(--r-pill);
+      padding: 8px 16px;
+    }
+    .flow-chip .ico-line { stroke: var(--accent); }
+    .flow-arrow { width: 1.6px; height: var(--s-5); background: var(--border-2); }
+    .flow-arrow.tri::after {
+      content: ""; display: block; position: relative; left: -3.2px; bottom: -1px;
+      width: 7px; height: 7px; border-right: 1.6px solid var(--border-2);
+      border-bottom: 1.6px solid var(--border-2); transform: rotate(45deg);
+    }
+    .flow-qs {
+      width: 100%; display: flex; flex-direction: column; gap: var(--s-2);
+    }
+    .flow-q {
+      font-family: var(--sans); font-size: var(--t-sm); color: var(--text-2);
+      background: var(--surface-2); border: 1px solid var(--border);
+      border-radius: var(--r-md); padding: 10px 14px;
+      display: flex; align-items: center; gap: 10px;
+    }
+    .flow-q .qn { font-family: var(--mono); font-size: var(--t-xs); color: var(--text-3); flex: none; }
+    .flow-q .more { color: var(--text-3); font-style: italic; }
+    .flow-models { display: flex; gap: var(--s-3); flex-wrap: wrap; justify-content: center; }
+    .model-mark {
+      display: inline-flex; align-items: center; gap: 7px;
+      font-family: var(--sans); font-size: var(--t-xs); font-weight: 600;
+      color: var(--text-2); background: var(--surface-2);
+      border: 1px solid var(--border); border-radius: var(--r-pill);
+      padding: 7px 13px;
+    }
+    .model-mark .glyph { width: 8px; height: 8px; border-radius: 2px; background: var(--text-3); flex: none; }
+    .flow-fan { display: flex; gap: var(--s-7); }
+    .flow-fan .flow-arrow.lean1 { transform: rotate(-22deg); }
+    .flow-fan .flow-arrow.lean2 { transform: rotate(22deg); }
+    .result-bar { width: 100%; display: flex; flex-direction: column; gap: var(--s-3); margin-top: var(--s-2); }
+    .res-row { display: flex; align-items: center; gap: var(--s-3); }
+    .res-label { font-family: var(--sans); font-size: var(--t-sm); color: var(--text-2); width: 142px; flex: none; }
+    .res-label b { color: var(--text); font-weight: 600; }
+    .res-track { flex: 1; height: 12px; border-radius: 999px; background: var(--sunken); overflow: hidden; }
+    .res-track > i { display: block; height: 100%; border-radius: 999px; }
+    .res-track > i.you { background: var(--accent); }
+    .res-track > i.comp { background: var(--text-3); }
+    .res-val { font-family: var(--mono); font-size: var(--t-sm); color: var(--text-2); width: 36px; text-align: right; flex: none; }
+
+    /* ===== 5. HOW IT WORKS ===== */
+    .steps {
+      display: grid; grid-template-columns: repeat(2, 1fr);
+      gap: var(--s-7) var(--s-8);
+    }
+    .step {
+      display: grid; grid-template-columns: auto 1fr; gap: var(--s-5);
+      align-items: start; padding-bottom: var(--s-6);
+      border-bottom: 1px solid var(--border);
+    }
+    .step:last-child { border-bottom: 0; }
+    .step-n {
+      font-family: var(--serif); font-weight: 400; color: var(--accent);
+      font-size: 44px; line-height: 1; letter-spacing: -0.03em;
+    }
+    .step h3 {
+      font-family: var(--serif); font-weight: 400; letter-spacing: -0.015em;
+      font-size: var(--t-h3); color: var(--text); margin: 0 0 var(--s-2);
+    }
+    .step p {
+      font-family: var(--sans); font-size: var(--t-body); line-height: 1.65;
+      color: var(--text-2); margin: 0;
+    }
+
+    /* ===== 6. WALK AWAY ===== */
+    .walk {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--s-7);
+    }
+    .walk-item { display: flex; flex-direction: column; gap: var(--s-4); }
+    .walk-ico {
+      display: flex; align-items: center; justify-content: flex-start;
+    }
+    .walk-ico .ico-line { width: 40px; height: 40px; stroke-width: 1.4; }
+    .walk-item h3 {
+      font-family: var(--serif); font-weight: 400; letter-spacing: -0.015em;
+      font-size: var(--t-h3); color: var(--text); margin: 0;
+    }
+    .walk-item p {
+      font-family: var(--sans); font-size: var(--t-body); line-height: 1.7;
+      color: var(--text-2); margin: 0;
+    }
+
+    /* ===== 7. THEN YOU BUILD ===== */
+    .build-block { max-width: 760px; }
+    .build-block p {
+      font-family: var(--sans); font-size: var(--t-body-l); line-height: 1.8;
+      color: var(--text-2); margin: 0;
+    }
+    .build-block strong { color: var(--text); font-weight: 600; }
+    .build-block .link-coral { margin-top: var(--s-5); }
+
+    /* ===== 8. CTA BAND ===== */
+    .cta-band { background: var(--surface); border-top: 1px solid var(--border); text-align: center; }
+    .cta-h {
+      font-family: var(--serif); font-weight: 400; letter-spacing: -0.015em;
+      font-size: var(--t-h1); line-height: 1.15; color: var(--text);
+      margin: 0 0 var(--s-6); text-wrap: balance;
+    }
+    .cta-band .cta-row { justify-content: center; }
+    .cta-note { font-family: var(--sans); font-size: var(--t-sm); color: var(--text-3); margin: var(--s-6) 0 0; line-height: 1.6; }
+
+    /* ===== ADD-ON: TOP PAGES AUDIT ===== */
+    .addon {
+      background: var(--surface-2); border: 1px solid var(--border);
+      border-radius: var(--r-lg); padding: var(--s-8);
+    }
+    .addon-tag {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-family: var(--mono); font-size: var(--t-xs); font-weight: 500;
+      letter-spacing: .04em; color: var(--accent);
+      background: rgba(203,126,104,.12);
+      border: 1px solid rgba(203,126,104,.34);
+      border-radius: var(--r-pill); padding: 5px 12px; margin-bottom: var(--s-5);
+    }
+    .addon-tag .ico-line { width: 13px; height: 13px; }
+    .addon .job-copy p { max-width: 50ch; }
+    .addon-cap {
+      font-family: var(--sans); font-size: var(--t-sm); color: var(--text-3);
+      line-height: 1.6; margin: var(--s-7) 0 0; max-width: 72ch;
+    }
+    .addon-cap strong { color: var(--text-2); font-weight: 600; }
+
+    /* ---- top pages mockup ---- */
+    .tp-card {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: var(--r-lg); box-shadow: var(--sh-md);
+      width: 100%; max-width: 440px; overflow: hidden;
+    }
+    .tp-head {
+      display: flex; gap: 8px; flex-wrap: wrap;
+      padding: var(--s-4) var(--s-5); border-bottom: 1px solid var(--border);
+    }
+    .conn-chip {
+      display: inline-flex; align-items: center; gap: 7px;
+      font-family: var(--sans); font-size: var(--t-xs); font-weight: 600;
+      color: var(--text-2); background: var(--surface-2);
+      border: 1px solid var(--border); border-radius: var(--r-pill); padding: 6px 11px;
+    }
+    .conn-chip .dot-ok { width: 7px; height: 7px; border-radius: 999px; background: #5C9080; flex: none; }
+    .tp-row {
+      padding: var(--s-4) var(--s-5); border-bottom: 1px solid var(--border);
+      display: flex; flex-direction: column; gap: 10px;
+    }
+    .tp-row:last-child { border-bottom: 0; }
+    .tp-top { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+    .tp-title { font-family: var(--sans); font-size: var(--t-sm); font-weight: 500; color: var(--text); }
+    .tp-traffic { font-family: var(--mono); font-size: var(--t-xs); color: var(--text-3); flex: none; white-space: nowrap; }
+    .tp-fixes { display: flex; gap: 6px; flex-wrap: wrap; }
+    .fix-chip {
+      font-family: var(--sans); font-size: var(--t-xs); font-weight: 600;
+      color: var(--accent); background: rgba(203,126,104,.12);
+      border: 1px solid rgba(203,126,104,.34); border-radius: var(--r-sm); padding: 4px 9px;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 920px) {
+      .job-grid { grid-template-columns: 1fr; gap: var(--s-7); }
+      .job-grid .mock { order: -1; }
+      .job-grid.alt .mock { order: 0; }
+      .problem-grid { grid-template-columns: 1fr; gap: var(--s-6); }
+      .bigfig { font-size: 104px; }
+      .steps { grid-template-columns: 1fr; gap: var(--s-6); }
+      .walk { grid-template-columns: 1fr; gap: var(--s-6); }
+    }
+    @media (max-width: 600px) {
+      .wrap { padding: 0 var(--s-5); }
+      section.rsec { padding: var(--s-8) 0; }
+      .hero { padding: var(--s-8) 0; }
+      .hero-h1 { font-size: var(--t-h1); }
+      .cta-h { font-size: var(--t-h2); }
+      .cta-row { width: 100%; }
+      .btn-coral { width: 100%; justify-content: center; }
+      .bigfig { font-size: 88px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="header-content">
+    <a href="index.html" class="site-logo">
+      <span class="dots brand" aria-hidden="true"><i></i><i></i><i></i></span>
+      <span class="brand-text">AEO Growth Kit</span>
+    </a>
+    <div class="header-right">
+      <nav class="main-nav">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li class="nav-has-dropdown"><a href="product.html" class="active">Product <span class="nav-caret">▾</span></a><ul class="nav-dropdown"><li><a href="recover.html">Recover</a></li><li><a href="build.html">Build</a></li><li><a href="maintain.html">Maintain</a></li><li class="nav-divider"></li><li><a href="ai-mirror-test.html">The AI Mirror Test</a></li></ul></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li class="nav-has-dropdown"><a href="resources.html">Resources <span class="nav-caret">▾</span></a><ul class="nav-dropdown"><li><a href="resources.html">Blog</a></li><li><a href="https://audit.aeogrowthkit.com">Free Audit</a></li><li><a href="faq.html">FAQ</a></li></ul></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <button class="mobile-menu-btn">☰</button>
+      </nav>
+      <a href="https://app.aeogrowthkit.com" class="btn btn-header-login">Log in</a>
+      <a href="https://calendly.com/steve-aeogrowthkit/30min" class="btn btn-primary btn-header-cta">Book a call</a>
+    </div>
+  </div>
+</header>
+
+<main class="recover-main">
+
+  <!-- 1) HERO -->
+  <section class="hero" data-screen-label="Hero">
+    <div class="wrap">
+      <h1 class="hero-h1">See what AI says about you, then get the fixes for every gap.</h1>
+      <p class="hero-p">Recover does two jobs. First, a <strong>forensic technical audit</strong> that tells you, page by page, what's stopping AI from reading you, and hands you the fix to paste straight in. Second, the <strong>AI Mirror Test</strong>: it asks the questions your buyers actually ask across ChatGPT, Claude, Perplexity and Gemini and shows you where you're <span class="nm">named</span> and where you're invisible. You leave with a clear score and a ranked plan, not a vague to-do list.</p>
+      <div class="cta-row">
+        <button class="btn-coral">
+          <svg class="ico-line" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg>
+          Run my free audit
+        </button>
+        <a href="contact.html" class="link-coral">Or book a call <span class="arr">→</span></a>
+      </div>
+    </div>
+  </section>
+
+  <hr class="rule" />
+
+  <!-- 2) THE PROBLEM -->
+  <section class="rsec" data-screen-label="The Problem">
+    <div class="wrap">
+      <div class="problem-grid">
+        <div class="prose">
+          <h2 class="section-h2">The problem</h2>
+          <p>Most businesses have never checked whether AI mentions them. They optimised for Google for years and assumed it carried over. It doesn't. Ranking on Google and getting cited in an AI answer are different games, read off different signals, and the page that wins the search result is often the one the AI ignores.</p>
+          <p>Only <strong>16% of brands</strong> track how they show up in AI search. So the first move isn't to fix anything. It's to find out, precisely, where you stand.</p>
+        </div>
+        <div>
+          <div class="bigfig">16%</div>
+          <p class="bigfig-cap">of brands track how they show up in AI search.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="rule" />
+
+  <!-- 3) JOB ONE — TECHNICAL AUDIT -->
+  <section class="rsec" data-screen-label="Job one — Technical audit">
+    <div class="wrap">
+      <div class="job-grid">
+        <div class="job-copy">
+          <p class="job-eyebrow">Job one</p>
+          <h2 class="section-h2">Job one: the technical audit</h2>
+          <p>This isn't a score and a shrug. The audit crawls your site the way an AI answer bot does and reports, page by page, exactly what's holding you back: missing or broken schema, blocked crawlers, robots.txt rules shutting the answer bots out, structured-data gaps, indexability problems.</p>
+          <p>Then it hands you the fix. For schema, that means a clean block of code written for your page, <strong>ready to copy and paste in</strong>. No theory, no "consider implementing structured data". The actual markup, on the actual page, with the actual problem named.</p>
+          <p>Not comfortable pasting code into your site? You don't have to. A done-for-you fixing service is available, so if any of it feels like too much, you get in touch and it gets handled.</p>
+        </div>
+        <div class="mock">
+          <div class="fix-card">
+            <div class="fix-head">
+              <span class="fix-path">
+                <svg class="ico-line sm" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h9l5 5v11a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1Z"/><path d="M14 4v5h5"/></svg>
+                /pricing
+              </span>
+              <span class="fix-tag">Critical</span>
+            </div>
+            <div class="fix-issue">
+              <span class="dot-err"></span>
+              <span><b>Missing:</b> Organization schema</span>
+            </div>
+            <div class="fix-code">
+              <button class="copy-btn">
+                <svg class="ico-line" viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="1.5"/><path d="M5 15V5a1 1 0 0 1 1-1h10"/></svg>
+                Copy
+              </button>
+<pre>{
+  <span class="k">"@context"</span>: <span class="s">"https://schema.org"</span>,
+  <span class="k">"@type"</span>: <span class="s">"Organization"</span>,
+  <span class="k">"name"</span>: <span class="s">"Acme Co"</span>,
+  <span class="k">"url"</span>: <span class="s">"https://acme.co"</span>,
+  <span class="k">"logo"</span>: <span class="s">"https://acme.co/logo.png"</span>
+}</pre>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="inset">
+        <svg class="ico-line" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 4v5c0 4.5-3.2 7.8-8 9-4.8-1.2-8-4.5-8-9V7l8-4Z"/><path d="M9.5 12l1.8 1.8L15 10"/></svg>
+        <p><strong>Don't want to touch the code?</strong> Ask about the done-for-you fixing service and it gets handled for you.</p>
+        <a href="contact.html" class="link-coral">Ask about fixing <span class="arr">→</span></a>
+      </div>
+    </div>
+  </section>
+
+  <hr class="rule" />
+
+  <!-- 4) JOB TWO — AI MIRROR TEST -->
+  <section class="rsec" data-screen-label="Job two — AI Mirror Test">
+    <div class="wrap">
+      <div class="job-grid alt">
+        <div class="mock">
+          <div class="flow">
+            <div class="flow-chip">
+              <svg class="ico-line sm" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-3.3 3.6-6 8-6s8 2.7 8 6"/></svg>
+              Your profile
+            </div>
+            <div class="flow-arrow tri"></div>
+            <div class="flow-qs">
+              <div class="flow-q"><span class="qn">01</span> What's the best tool for AEO?</div>
+              <div class="flow-q"><span class="qn">02</span> Who helps brands show up in AI search?</div>
+              <div class="flow-q"><span class="qn">03</span> Top platforms for AI answer optimisation?</div>
+              <div class="flow-q"><span class="more">+ 50–60 buyer questions</span></div>
+            </div>
+            <div class="flow-arrow tri"></div>
+            <div class="flow-models">
+              <span class="model-mark"><span class="glyph"></span>ChatGPT</span>
+              <span class="model-mark"><span class="glyph"></span>Claude</span>
+              <span class="model-mark"><span class="glyph"></span>Perplexity</span>
+              <span class="model-mark"><span class="glyph"></span>Gemini</span>
+            </div>
+            <div class="flow-arrow tri"></div>
+            <div class="result-bar">
+              <div class="res-row">
+                <span class="res-label">Named: <b>you</b></span>
+                <span class="res-track"><i class="you" style="width:34%"></i></span>
+                <span class="res-val">34%</span>
+              </div>
+              <div class="res-row">
+                <span class="res-label">Named: competitor</span>
+                <span class="res-track"><i class="comp" style="width:66%"></i></span>
+                <span class="res-val">66%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="job-copy">
+          <p class="job-eyebrow">Job two</p>
+          <h2 class="section-h2">Job two: the AI Mirror Test</h2>
+          <p>Here's where most tools stop short. They check your tags and call it a day. The Mirror Test checks something harder: when a real buyer asks an AI about your category, <strong>does it name you?</strong></p>
+          <p>It works off your profile. Once you've told Recover who you are and who you sell to, it works out the questions your ideal customers are likely to ask an LLM. You can narrow those to specific niches or markets, or, if you're just starting out, ask for a set of foundational questions to get you going.</p>
+          <p>From that, it generates 50 to 60 questions. You can edit them, add your own, cut the ones that miss. Then it fires every question at each of the four leading models, ChatGPT, Claude, Perplexity and Gemini, and waits for the answers. Fair warning: running that many questions across four models takes a while, so this isn't instant.</p>
+          <p>When it's done, the results are analysed into a plain picture: which questions name you, which name a competitor instead, and which return someone else entirely. That picture becomes a <strong>content gap analysis</strong>, the questions you should own but don't, which is the start of your content strategy. Build picks it up from there.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="rule" />
+
+  <!-- 4b) ADD-ON: TOP PAGES AUDIT -->
+  <section class="rsec" data-screen-label="Top Pages Audit">
+    <div class="wrap">
+      <div class="addon">
+        <span class="addon-tag">
+          <svg class="ico-line" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.2 4.5 5 .7-3.6 3.5.8 4.9L12 14.8 7.6 16.6l.8-4.9L4.8 8.2l5-.7L12 3Z"/></svg>
+          For existing content
+        </span>
+        <div class="job-grid alt">
+          <div class="job-copy">
+            <h2 class="section-h2">Already publishing? The Top Pages Audit</h2>
+            <p>If you've been publishing for a while, you're sitting on pages that could be doing more. The Top Pages Audit finds them and puts them to work.</p>
+            <p>Connect Google Search Console and Google Analytics, and Recover pulls your <strong>best-performing pages</strong>, the ones already earning traffic. It works through them one by one and tells you exactly how to make each more citable: the schema to add, the structure to tighten, and specific ways to strengthen the content itself, like adding stats or extending a thin section that's punching below its weight.</p>
+            <p>It's the difference between starting from a blank page and getting more from what you've already earned. The pages people already find on Google become pages <strong>AI is willing to mention.</strong></p>
+          </div>
+          <div class="mock">
+            <div class="tp-card">
+              <div class="tp-head">
+                <span class="conn-chip"><span class="dot-ok"></span>GSC connected</span>
+                <span class="conn-chip"><span class="dot-ok"></span>GA4 connected</span>
+              </div>
+              <div class="tp-row">
+                <div class="tp-top">
+                  <span class="tp-title">The complete guide to AEO</span>
+                  <span class="tp-traffic">3,420/mo</span>
+                </div>
+                <div class="tp-fixes"><span class="fix-chip">Add schema</span><span class="fix-chip">Add stats</span></div>
+              </div>
+              <div class="tp-row">
+                <div class="tp-top">
+                  <span class="tp-title">How AI search picks sources</span>
+                  <span class="tp-traffic">1,910/mo</span>
+                </div>
+                <div class="tp-fixes"><span class="fix-chip">Extend section</span></div>
+              </div>
+              <div class="tp-row">
+                <div class="tp-top">
+                  <span class="tp-title">Schema markup checklist</span>
+                  <span class="tp-traffic">1,265/mo</span>
+                </div>
+                <div class="tp-fixes"><span class="fix-chip">Add schema</span><span class="fix-chip">Extend section</span></div>
+              </div>
+              <div class="tp-row">
+                <div class="tp-top">
+                  <span class="tp-title">Why Google ranking isn't enough</span>
+                  <span class="tp-traffic">880/mo</span>
+                </div>
+                <div class="tp-fixes"><span class="fix-chip">Add stats</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="addon-cap"><strong>Needs an existing back-catalogue.</strong> Brand-new site with little content yet? Skip this one and head to Build.</p>
+      </div>
+    </div>
+  </section>
+
+  <hr class="rule" />
+
+  <!-- 5) HOW IT WORKS -->
+  <section class="rsec" data-screen-label="How it works">
+    <div class="wrap">
+      <h2 class="section-h2">How it works</h2>
+      <div class="steps">
+        <div class="step">
+          <div class="step-n">01</div>
+          <div>
+            <h3>Point it at your site</h3>
+            <p>The technical audit crawls your live site the way an AI answer bot reads it.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-n">02</div>
+          <div>
+            <h3>Build your profile</h3>
+            <p>Tell Recover who you are and who you sell to. Narrow to niches or markets, or pick foundational questions if you're new.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-n">03</div>
+          <div>
+            <h3>The Mirror Test runs</h3>
+            <p>Recover generates 50 to 60 buyer questions, you edit them, then it fires them at all four models. This part takes a while.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-n">04</div>
+          <div>
+            <h3>Everything gets analysed</h3>
+            <p>Page-by-page technical issues with copy-paste fixes, plus where you're named across the models and where you're not.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-n">05</div>
+          <div>
+            <h3>You get a ranked plan</h3>
+            <p>What to fix first, in order of impact: technical blockers, then the content gaps the Mirror Test exposed.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="rule" />
+
+  <!-- 6) WHAT YOU WALK AWAY WITH -->
+  <section class="rsec" data-screen-label="What you walk away with">
+    <div class="wrap">
+      <h2 class="section-h2">What you walk away with</h2>
+      <div class="walk">
+        <div class="walk-item">
+          <div class="walk-ico">
+            <svg class="ico-line" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h8l4 4v14a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1Z"/><path d="M14 3v4h4"/><path d="M8.5 12.5h7M8.5 16h7"/></svg>
+          </div>
+          <h3>A page-by-page fix list</h3>
+          <p>Every technical issue located on the exact page it lives on, each with the fix written out and ready to paste. Or hand it to the fixing service.</p>
+        </div>
+        <div class="walk-item">
+          <div class="walk-ico">
+            <svg class="ico-line" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="0.6"/></svg>
+          </div>
+          <h3>A clear score for where you stand</h3>
+          <p>One honest number for how often AI names you today across the four models. It's the line every future month is measured against. Low to start is normal, and it's a starting line, not a verdict.</p>
+        </div>
+        <div class="walk-item">
+          <div class="walk-ico">
+            <svg class="ico-line" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6h10M9 12h10M9 18h10"/><path d="M4.5 6h.01M4.5 12h.01M4.5 18h.01"/></svg>
+          </div>
+          <h3>Your content gap analysis</h3>
+          <p>The questions you should own but don't, ranked by impact. This is your content strategy on a plate, and it's exactly what Build turns into briefs and drafts.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="rule" />
+
+  <!-- 7) THEN YOU BUILD -->
+  <section class="rsec" data-screen-label="Then you Build">
+    <div class="wrap">
+      <div class="build-block">
+        <h2 class="section-h2">Then you Build</h2>
+        <p>Recover tells you what's broken and what's missing. <strong>Build closes the gap.</strong> It refines your voice and your real opinions, then turns that content gap analysis into rich, specific content that gets you noticed next time the AI is asked, the kind that stands out from the generic AI slop everyone else is publishing.</p>
+        <a href="product.html" class="link-coral">See what Build does <span class="arr">→</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="rsec" data-screen-label="FAQ">
+    <div class="wrap-720">
+      <div class="faq-head" style="text-align:center; margin-bottom: var(--s-7);">
+        <h2 style="font-family:var(--serif);font-weight:400;letter-spacing:-0.015em;font-size:var(--t-h1);color:var(--text);">Questions</h2>
+      </div>
+      <div class="recover-faq-list">
+        <div class="recover-faq-item">
+          <button class="recover-faq-q">How long does the audit take?<span class="recover-sign">+</span></button>
+          <div class="recover-faq-a"><div><p>The technical checks are quick. The full AI Mirror Test takes a while, because it fires 50 to 60 questions across four models and waits for the answers.</p></div></div>
+        </div>
+        <div class="recover-faq-item">
+          <button class="recover-faq-q">Will I need a developer to apply the fixes?<span class="recover-sign">+</span></button>
+          <div class="recover-faq-a"><div><p>No. The fixes are cut-and-paste, written for your specific pages.</p></div></div>
+        </div>
+        <div class="recover-faq-item">
+          <button class="recover-faq-q">What does the audit actually check?<span class="recover-sign">+</span></button>
+          <div class="recover-faq-a"><div><p>Your technical readiness, schema, crawler access, robots.txt and indexability, plus, on full access, where AI mentions you across the four models.</p></div></div>
+        </div>
+        <div class="recover-faq-item">
+          <button class="recover-faq-q">What if I don't want to do the fixes myself?<span class="recover-sign">+</span></button>
+          <div class="recover-faq-a"><div><p>A full done-for-you service is available. <a href="contact.html" style="color:var(--accent);text-decoration:underline;text-underline-offset:3px;">Book a call</a> for a quote. It's separate from full access.</p></div></div>
+        </div>
+        <div class="recover-faq-item">
+          <button class="recover-faq-q">What's included in the free audit versus full access?<span class="recover-sign">+</span></button>
+          <div class="recover-faq-a"><div><p>See the full breakdown on the <a href="pricing.html" style="color:var(--accent);text-decoration:underline;text-underline-offset:3px;">Pricing page</a>.</p></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <style>
+    .recover-faq-list { border-top: 1px solid var(--border); }
+    .recover-faq-item { border-bottom: 1px solid var(--border); }
+    .recover-faq-q {
+      width: 100%; text-align: left; background: none; border: none; cursor: pointer;
+      font-family: var(--serif); font-weight: 400; letter-spacing: -0.015em;
+      font-size: var(--t-h4); color: var(--text); line-height: 1.4;
+      padding: var(--s-5) var(--s-5); display: flex; justify-content: space-between; align-items: center; gap: var(--s-4);
+      transition: color .15s ease;
+    }
+    .recover-faq-q:hover { color: var(--accent); }
+    .recover-sign { color: var(--accent); font-family: var(--sans); font-size: 24px; line-height: 1; flex-shrink: 0; transition: transform .2s ease; }
+    .recover-faq-item.open .recover-sign { transform: rotate(45deg); }
+    .recover-faq-a {
+      font-family: var(--sans); font-size: var(--t-body); line-height: 1.7;
+      color: var(--text-2); display: grid; grid-template-rows: 0fr;
+      transition: grid-template-rows .25s ease;
+    }
+    .recover-faq-item.open .recover-faq-a { grid-template-rows: 1fr; }
+    .recover-faq-a > div { overflow: hidden; }
+    .recover-faq-a p { margin: 0; padding: 0 var(--s-5) var(--s-5); }
+  </style>
+
+  <script>
+    document.querySelectorAll('.recover-faq-q').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        var item = btn.parentElement;
+        var isOpen = item.classList.contains('open');
+        document.querySelectorAll('.recover-faq-item.open').forEach(function(el) { el.classList.remove('open'); });
+        if (!isOpen) item.classList.add('open');
+      });
+    });
+  </script>
+
+  <hr class="rule" />
+
+  <!-- 8) CTA BAND -->
+  <section class="rsec cta-band" data-screen-label="CTA">
+    <div class="wrap">
+      <h2 class="cta-h">See where you stand today.</h2>
+      <div class="cta-row">
+        <button class="btn-coral">
+          <svg class="ico-line" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg>
+          Run my free audit
+        </button>
+        <a href="contact.html" class="link-coral">Or book a call <span class="arr">→</span></a>
+      </div>
+      <p class="cta-note">Free technical audit and AI Mirror Test. No credit card, just a clear picture of where you stand.</p>
+    </div>
+  </section>
+
+
+
+</main>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-content">
+      <div class="footer-section">
+        <div style="display: flex; flex-direction: column; align-items: flex-start; gap: var(--s-4);">
+          <div style="display: flex; align-items: center; gap: var(--s-3);">
+            <span class="dots" style="font-size: 24px;" aria-hidden="true"><i class="sage"></i><i class="paper"></i><i class="coral"></i></span>
+            <span style="font-family: var(--serif); font-weight: 400; letter-spacing: -0.015em; font-size: var(--t-h4); color: var(--text);">AEO Growth Kit</span>
+          </div>
+          <div style="font-family: var(--sans); font-size: var(--t-sm); color: var(--text-2); letter-spacing: .08em; text-transform: uppercase; font-weight: 500;">Recover · Build · Maintain</div>
+        </div>
+      </div>
+
+      <div class="footer-section">
+        <h4 class="footer-title">Product</h4>
+        <ul class="footer-links">
+          <li><a href="recover.html">Recover</a></li>
+          <li><a href="build.html">Build</a></li>
+          <li><a href="maintain.html">Maintain</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h4 class="footer-title">Resources</h4>
+        <ul class="footer-links">
+          <li><a href="resources.html">Blog</a></li>
+          <li><a href="https://audit.aeogrowthkit.com">Free Audit</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h4 class="footer-title">Company</h4>
+        <ul class="footer-links">
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h4 class="footer-title">Legal</h4>
+        <ul class="footer-links">
+          <li><a href="terms-of-service.html">Terms</a></li>
+          <li><a href="privacy-policy.html">Privacy</a></li>
+          <li><a href="cookies-policy.html">Cookies</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section footer-newsletter">
+        <h4 class="footer-title">Updates</h4>
+        <p class="footer-desc">Subscribe for AEO tips and platform updates.</p>
+        <form class="newsletter-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+          <input type="hidden" name="form-name" value="contact">
+          <input type="hidden" name="bot-field">
+          <input type="email" name="email" placeholder="your@email.com" required class="newsletter-input">
+          <button type="submit" class="newsletter-btn">→</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 AEO Growth Kit. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    background: var(--bg);
+    border-top: 1px solid var(--border);
+    margin-top: 0;
+    padding: var(--s-8) var(--s-4);
+  }
+  .footer-container { max-width: 1400px; margin: 0 auto; padding: 0 var(--s-6); }
+  .footer-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1.5fr;
+    gap: var(--s-7);
+    margin-bottom: var(--s-6);
+  }
+  .footer-section { display: flex; flex-direction: column; }
+  .footer-newsletter { grid-column: auto; }
+  @media (max-width: 980px) { .footer-newsletter { grid-column: auto; } }
+  .footer-title {
+    font-family: var(--serif);
+    font-size: var(--t-h4);
+    font-weight: 400;
+    color: var(--text);
+    margin: 0 0 var(--s-3) 0;
+    letter-spacing: -0.015em;
+  }
+  .footer-desc { font-size: var(--t-sm); color: var(--text-2); line-height: 1.6; margin: 0; }
+  .footer-links { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: var(--s-2); }
+  .footer-links a { font-size: var(--t-sm); color: var(--text-2); text-decoration: none; transition: color 0.2s ease; }
+  .footer-links a:hover { color: var(--accent); }
+  .newsletter-form { display: flex; gap: var(--s-2); margin-top: var(--s-3); }
+  .newsletter-input {
+    flex: 1; font-family: var(--sans); font-size: var(--t-sm);
+    padding: calc(10px * var(--density)) 12px;
+    border: 1px solid var(--border-2); border-radius: var(--r-md);
+    background: var(--bg); color: var(--text); transition: border-color 0.2s ease;
+  }
+  .newsletter-input::placeholder { color: var(--text-3); }
+  .newsletter-input:focus { outline: none; border-color: var(--accent); }
+  .newsletter-btn {
+    font-family: var(--sans); font-size: var(--t-sm); font-weight: 600;
+    padding: calc(10px * var(--density)) 16px;
+    border: 1px solid var(--accent); border-radius: var(--r-md);
+    background: transparent; color: var(--accent); cursor: pointer; transition: all 0.2s ease;
+  }
+  .newsletter-btn:hover { background: var(--accent-soft); }
+  .footer-bottom {
+    text-align: center; padding-top: var(--s-5);
+    border-top: 1px solid var(--border); font-size: var(--t-sm); color: var(--text-2);
+  }
+  @media (max-width: 768px) {
+    .footer-content { grid-template-columns: 1fr; gap: var(--s-5); }
+    .newsletter-form { flex-direction: column; }
+  }
+</style>
+
+<script src="mobile-nav.js"></script>
+</body>
+</html>
