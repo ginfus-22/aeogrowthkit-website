@@ -41,11 +41,34 @@
       }
     });
 
-    // Reset when returning to desktop width.
+    // Reset when returning to desktop width (matches the 900px header/nav
+    // collapse breakpoint in website.css).
     window.addEventListener('resize', function () {
-      if (window.innerWidth > 768) {
+      if (window.innerWidth > 900) {
         header.classList.remove('nav-open');
         if (btn) btn.setAttribute('aria-expanded', 'false');
+      }
+    });
+
+    // Click-to-stick dropdowns (desktop). Supplements the existing CSS
+    // :hover/:focus-within so a click on the caret keeps the dropdown open
+    // for precise sub-item selection, without a mouse-hover regression.
+    // Clicking the rest of the parent link still navigates normally.
+    var dropdowns = header.querySelectorAll('.nav-has-dropdown');
+    dropdowns.forEach(function (dd) {
+      var caret = dd.querySelector('.nav-caret');
+      if (!caret) return;
+      caret.addEventListener('click', function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        var isOpen = dd.classList.contains('open');
+        dropdowns.forEach(function (other) { other.classList.remove('open'); });
+        if (!isOpen) dd.classList.add('open');
+      });
+    });
+    document.addEventListener('click', function (e) {
+      if (!e.target.closest('.nav-has-dropdown')) {
+        dropdowns.forEach(function (dd) { dd.classList.remove('open'); });
       }
     });
   }

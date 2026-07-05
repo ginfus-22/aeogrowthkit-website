@@ -184,21 +184,16 @@
       font-family: var(--serif); font-weight: 400; letter-spacing: -0.015em;
       font-size: var(--t-h2); color: var(--text); margin: 0;
     }
-    .faq-item { border-bottom: 1px solid var(--border); }
-    .faq-q {
-      width: 100%; text-align: left; background: none; border: none; cursor: pointer;
+    .faq-item { border-bottom: 1px solid var(--border); padding: var(--s-5) 0; }
+    .faq-question {
       font-family: var(--serif); font-weight: 400; letter-spacing: -0.015em;
-      font-size: var(--t-h4); color: var(--text);
-      padding: var(--s-5) 0; display: flex; justify-content: space-between; align-items: center; gap: var(--s-4);
+      font-size: var(--t-h4); color: var(--text); margin: 0 0 var(--s-3);
     }
-    .faq-q .sign { color: var(--accent); font-family: var(--sans); font-size: 24px; line-height: 1; flex-shrink: 0; transition: transform .2s ease; }
-    .faq-item.open .faq-q .sign { transform: rotate(45deg); }
-    .faq-a {
+    .faq-answer {
       font-family: var(--sans); font-size: var(--t-body); line-height: 1.7;
       color: var(--text-2); max-width: 64ch;
-      overflow: hidden; height: 0;
     }
-    .faq-a p { margin: 0 0 var(--s-5); }
+    .faq-answer p { margin: 0; }
 
     /* CTA BAND */
     .cta-band { text-align: center; }
@@ -302,7 +297,7 @@
           <li><span class="tick"><svg viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Monthly re-testing so you can watch your visibility climb</span></li>
         </ul>
         <div class="plan-cta">
-          <a href="[STRIPE_LINK]" class="btn btn-primary btn-lg">Claim your founding spot</a>
+          <a href="https://buy.stripe.com/9B63cx8SB0F1fpQetofUQ01" class="btn btn-primary btn-lg">Claim your founding spot</a>
         </div>
         <p class="plan-fineprint">Want the whole thing done for you? A full done-for-you service is available. <a href="contact.html">Book a call</a> for a quote. It's separate from full access.</p>
       </div>
@@ -378,24 +373,24 @@
     </div>
     <div class="faq-list">
       <div class="faq-item">
-        <button class="faq-q">Do I have to sign a contract?<span class="sign">+</span></button>
-        <div class="faq-a"><div><p>No. Pay monthly and cancel whenever you like.</p></div></div>
+        <h3 class="faq-question">Do I have to sign a contract?</h3>
+        <div class="faq-answer"><p>No. Pay monthly and cancel whenever you like.</p></div>
       </div>
       <div class="faq-item">
-        <button class="faq-q">Is there a free trial?<span class="sign">+</span></button>
-        <div class="faq-a"><div><p>The free 5-page audit is your trial. Run it, see where you stand, then decide. No countdown, no card.</p></div></div>
+        <h3 class="faq-question">Is there a free trial?</h3>
+        <div class="faq-answer"><p>The free 5-page audit is your trial. Run it, see where you stand, then decide. No countdown, no card.</p></div>
       </div>
       <div class="faq-item">
-        <button class="faq-q">What's in the free audit vs full access?<span class="sign">+</span></button>
-        <div class="faq-a"><div><p>The free audit covers up to 5 pages: your AEO readiness score and cut-and-paste fixes for your top issues. Full access is the whole-site audit, the full AI Mirror Test and the content engine.</p></div></div>
+        <h3 class="faq-question">What's in the free audit vs full access?</h3>
+        <div class="faq-answer"><p>The free audit covers up to 5 pages: your AEO readiness score and cut-and-paste fixes for your top issues. Full access is the whole-site audit, the full AI Mirror Test and the content engine.</p></div>
       </div>
       <div class="faq-item">
-        <button class="faq-q">Can you just do it all for me?<span class="sign">+</span></button>
-        <div class="faq-a"><div><p>Full access is self-serve, with cut-and-paste fixes you apply yourself. If you'd rather hand the whole thing over, a full done-for-you service is available. Book a call for a quote. It's separate from full access.</p></div></div>
+        <h3 class="faq-question">Can you just do it all for me?</h3>
+        <div class="faq-answer"><p>Full access is self-serve, with cut-and-paste fixes you apply yourself. If you'd rather hand the whole thing over, a full done-for-you service is available. Book a call for a quote. It's separate from full access.</p></div>
       </div>
       <div class="faq-item">
-        <button class="faq-q">How many founding spots are there?<span class="sign">+</span></button>
-        <div class="faq-a"><div><p>Founding pricing is limited to the first 30 members at <span class="price-amount-inline" data-usd="99">$99</span>/mo, locked as the price rises to <span class="price-amount-inline" data-usd="199">$199</span> at launch.</p></div></div>
+        <h3 class="faq-question">How many founding spots are there?</h3>
+        <div class="faq-answer"><p>Founding pricing is limited to the first 30 members at <span class="price-amount-inline" data-usd="99">$99</span>/mo, locked as the price rises to <span class="price-amount-inline" data-usd="199">$199</span> at launch.</p></div>
       </div>
     </div>
   </div>
@@ -425,7 +420,7 @@
           </div>
           <div style="font-family: var(--sans); font-size: var(--t-sm); color: var(--text-2); letter-spacing: .08em; text-transform: uppercase; font-weight: 500;">Recover · Build · Maintain</div>
           <div class="footer-social" style="margin-top: var(--s-2);">
-            <a href="[LINKEDIN_URL]" class="social-link" title="LinkedIn" aria-label="LinkedIn"><svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5A2.5 2.5 0 1 1 0 3.5a2.5 2.5 0 0 1 4.98 0zM.25 8.25h4.5V24h-4.5V8.25zM8.25 8.25h4.31v2.15h.06c.6-1.14 2.07-2.34 4.26-2.34 4.56 0 5.4 3 5.4 6.9V24h-4.5v-6.94c0-1.66-.03-3.79-2.31-3.79-2.31 0-2.67 1.8-2.67 3.67V24h-4.5V8.25z"/></svg></a>
+            <a href="https://www.linkedin.com/in/stevejgillson/" class="social-link" title="LinkedIn" aria-label="LinkedIn"><svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5A2.5 2.5 0 1 1 0 3.5a2.5 2.5 0 0 1 4.98 0zM.25 8.25h4.5V24h-4.5V8.25zM8.25 8.25h4.31v2.15h.06c.6-1.14 2.07-2.34 4.26-2.34 4.56 0 5.4 3 5.4 6.9V24h-4.5v-6.94c0-1.66-.03-3.79-2.31-3.79-2.31 0-2.67 1.8-2.67 3.67V24h-4.5V8.25z"/></svg></a>
           </div>
         </div>
       </div>
@@ -510,17 +505,6 @@
     .newsletter-form { flex-direction: column; }
   }
 </style>
-
-<script>
-  document.querySelectorAll('.faq-q').forEach(function (btn) {
-    btn.addEventListener('click', function () {
-      var item = btn.parentElement;
-      var panel = item.querySelector('.faq-a');
-      var isOpen = item.classList.toggle('open');
-      panel.style.height = isOpen ? 'auto' : '0px';
-    });
-  });
-</script>
 
 <!-- FAQPage JSON-LD -->
 <script type="application/ld+json">

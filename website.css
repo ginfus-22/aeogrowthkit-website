@@ -164,11 +164,13 @@ nav.main-nav {
 }
 
 .nav-has-dropdown:hover .nav-dropdown,
-.nav-has-dropdown:focus-within .nav-dropdown {
+.nav-has-dropdown:focus-within .nav-dropdown,
+.nav-has-dropdown.open .nav-dropdown {
   display: block;
 }
 
-.nav-has-dropdown:hover .nav-caret {
+.nav-has-dropdown:hover .nav-caret,
+.nav-has-dropdown.open .nav-caret {
   transform: rotate(180deg);
 }
 
@@ -532,12 +534,16 @@ a:hover {
 /* mobile-only CTA items injected into the nav panel (hidden on desktop) */
 .nav-cta-mobile { display: none; }
 
-@media (max-width: 768px) {
+/* Header/nav collapse — deliberately wider than the general 768px breakpoint
+   below, so tablet-portrait widths (iPad class, ~768-900px) get the mobile
+   menu instead of a cramped desktop nav + CTA buttons fighting for space. */
+@media (max-width: 900px) {
   .header-content { position: relative; }
 
   .mobile-menu-btn {
     display: block;
     z-index: 120;
+    margin-right: var(--s-2);
   }
 
   /* hide the desktop CTA buttons — duplicated into the menu panel instead */
@@ -588,10 +594,20 @@ a:hover {
   .nav-dropdown li a { padding: var(--s-2) 0; color: var(--text-3); }
   .nav-caret { display: none; }
 
-  /* injected CTA links sit at the bottom of the panel */
-  .nav-cta-mobile { display: block; }
-  .nav-cta-mobile a { color: var(--accent); font-weight: 600; }
+  /* injected CTA links sit at the bottom of the panel, styled as real buttons
+     rather than plain text so they're not easy to miss or mistake for clipped */
+  .nav-cta-mobile { display: block; padding: var(--s-2) 0; }
+  .nav-cta-mobile a {
+    display: inline-block;
+    color: var(--on-accent);
+    background: var(--accent);
+    font-weight: 600;
+    padding: 10px 20px;
+    border-radius: var(--r-md);
+  }
+}
 
+@media (max-width: 768px) {
   .hero h1 {
     font-size: 42px;
   }

@@ -21,7 +21,6 @@
   <meta property="og:image" content="https://aeogrowthkit.com/og-image.png">
   <link rel="stylesheet" href="aeo-ds.css">
   <link rel="stylesheet" href="website.css">
-  <script src="image-slot.js"></script>
 
   <script type="application/ld+json">
   {
@@ -165,6 +164,7 @@
       border-radius: 50%;
       box-shadow: 0 2px 8px rgba(0,0,0,.4);
       flex-shrink: 0;
+      object-fit: cover;
     }
 
     /* ---- Close / CTA ---- */
@@ -296,12 +296,11 @@
     <div class="about-wrap">
       <h2 class="section-h2">Who's behind it</h2>
       <div class="founder-row">
-        <image-slot
-          id="founder-headshot"
+        <img
+          src="images/founder-headshot.webp"
+          alt="Steve Gillson, founder"
           class="founder-headshot"
-          shape="circle"
-          placeholder="Steve headshot"
-        ></image-slot>
+        >
         <div class="about-prose">
           <p>AEO Growth Kit is built on methods its founder, Steve Gillson, has spent four years teaching at a Financial Times top-40 business school and applying with real businesses. If a tactic doesn't hold up in the lecture hall and then deliver in practice, it doesn't make it into the product.</p>
         </div>
@@ -345,7 +344,7 @@
           </div>
           <div style="font-family: var(--sans); font-size: var(--t-sm); color: var(--text-2); letter-spacing: .08em; text-transform: uppercase; font-weight: 500;">Recover · Build · Maintain</div>
           <div style="margin-top: var(--s-2);">
-            <a href="[LINKEDIN_URL]" title="LinkedIn" aria-label="LinkedIn" style="color: var(--text-2); text-decoration: none; transition: color .2s; display: inline-flex; align-items: center; justify-content: center; width: 34px; height: 34px;">
+            <a href="https://www.linkedin.com/in/stevejgillson/" title="LinkedIn" aria-label="LinkedIn" style="color: var(--text-2); text-decoration: none; transition: color .2s; display: inline-flex; align-items: center; justify-content: center; width: 34px; height: 34px;">
               <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5A2.5 2.5 0 1 1 0 3.5a2.5 2.5 0 0 1 4.98 0zM.25 8.25h4.5V24h-4.5V8.25zM8.25 8.25h4.31v2.15h.06c.6-1.14 2.07-2.34 4.26-2.34 4.56 0 5.4 3 5.4 6.9V24h-4.5v-6.94c0-1.66-.03-3.79-2.31-3.79-2.31 0-2.67 1.8-2.67 3.67V24h-4.5V8.25z"/></svg>
             </a>
           </div>

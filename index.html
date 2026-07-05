@@ -425,8 +425,23 @@
         border-bottom: 1px solid var(--border);
       }
       .comp-row:last-child { border-bottom: 1px solid var(--border); }
-      .comp-old { border-right: none; border-bottom: 1px solid var(--border); }
-      .comp-new { border-left: 3px solid var(--accent); margin-left: 0; }
+      .comp-old { border-right: none; border-bottom: 1px solid var(--border); flex-wrap: wrap; }
+      .comp-new { border-left: 3px solid var(--accent); margin-left: 0; flex-wrap: wrap; }
+      /* the shared header row is hidden above, so each stacked block gets
+         its own inline label instead — otherwise "old vs new" only reads
+         via opacity/border-color, which is unclear once stacked vertically */
+      .comp-old::before,
+      .comp-new::before {
+        content: attr(data-label);
+        flex: 0 0 100%;
+        font-family: var(--sans);
+        font-size: var(--t-xs);
+        font-weight: 600;
+        letter-spacing: .06em;
+        text-transform: uppercase;
+        opacity: 0.7;
+        margin-bottom: var(--s-2);
+      }
     }
 
     /* HOW IT WORKS */
@@ -706,22 +721,22 @@
       </div>
 
       <div class="comp-row">
-        <div class="comp-old">
+        <div class="comp-old" data-label="Old SEO playbook">
           <span class="comp-icon-old">&mdash;</span>
           Chase keyword rankings
         </div>
-        <div class="comp-new">
+        <div class="comp-new" data-label="The AEO Growth Kit way">
           <span class="comp-icon-new">&#10003;</span>
           <div class="comp-new-content">Measure how often AI actually names you</div>
         </div>
       </div>
 
       <div class="comp-row">
-        <div class="comp-old">
+        <div class="comp-old" data-label="Old SEO playbook">
           <span class="comp-icon-old">&mdash;</span>
           Optimise for Google's crawler
         </div>
-        <div class="comp-new">
+        <div class="comp-new" data-label="The AEO Growth Kit way">
           <span class="comp-icon-new">&#10003;</span>
           <div class="comp-new-content">
             Open the door to AI answer bots
@@ -735,22 +750,22 @@
       </div>
 
       <div class="comp-row">
-        <div class="comp-old">
+        <div class="comp-old" data-label="Old SEO playbook">
           <span class="comp-icon-old">&mdash;</span>
           Write for word count
         </div>
-        <div class="comp-new">
+        <div class="comp-new" data-label="The AEO Growth Kit way">
           <span class="comp-icon-new">&#10003;</span>
           <div class="comp-new-content">Write clear, well-structured answers with real expertise</div>
         </div>
       </div>
 
       <div class="comp-row">
-        <div class="comp-old">
+        <div class="comp-old" data-label="Old SEO playbook">
           <span class="comp-icon-old">&mdash;</span>
           Hope it's working
         </div>
-        <div class="comp-new">
+        <div class="comp-new" data-label="The AEO Growth Kit way">
           <span class="comp-icon-new">&#10003;</span>
           <div class="comp-new-content">Re-test monthly and see the trend</div>
         </div>
@@ -854,7 +869,7 @@
           </div>
           <div style="font-family: var(--sans); font-size: var(--t-sm); color: var(--text-2); letter-spacing: .08em; text-transform: uppercase; font-weight: 500;">Recover · Build · Maintain</div>
           <div class="footer-social" style="margin-top: var(--s-2);">
-            <a href="[LINKEDIN_URL]" class="social-link" title="LinkedIn" aria-label="LinkedIn"><svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5A2.5 2.5 0 1 1 0 3.5a2.5 2.5 0 0 1 4.98 0zM.25 8.25h4.5V24h-4.5V8.25zM8.25 8.25h4.31v2.15h.06c.6-1.14 2.07-2.34 4.26-2.34 4.56 0 5.4 3 5.4 6.9V24h-4.5v-6.94c0-1.66-.03-3.79-2.31-3.79-2.31 0-2.67 1.8-2.67 3.67V24h-4.5V8.25z"/></svg></a>
+            <a href="https://www.linkedin.com/in/stevejgillson/" class="social-link" title="LinkedIn" aria-label="LinkedIn"><svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5A2.5 2.5 0 1 1 0 3.5a2.5 2.5 0 0 1 4.98 0zM.25 8.25h4.5V24h-4.5V8.25zM8.25 8.25h4.31v2.15h.06c.6-1.14 2.07-2.34 4.26-2.34 4.56 0 5.4 3 5.4 6.9V24h-4.5v-6.94c0-1.66-.03-3.79-2.31-3.79-2.31 0-2.67 1.8-2.67 3.67V24h-4.5V8.25z"/></svg></a>
           </div>
         </div>
       </div>

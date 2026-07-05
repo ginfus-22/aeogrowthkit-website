@@ -694,24 +694,24 @@
       </div>
       <div class="recover-faq-list">
         <div class="recover-faq-item">
-          <button class="recover-faq-q">How long does the audit take?<span class="recover-sign">+</span></button>
-          <div class="recover-faq-a"><div><p>The technical checks are quick. The full AI Mirror Test takes a while, because it fires 50 to 60 questions across four models and waits for the answers.</p></div></div>
+          <h3 class="recover-faq-question">How long does the audit take?</h3>
+          <div class="recover-faq-answer"><p>The technical checks are quick. The full AI Mirror Test takes a while, because it fires 50 to 60 questions across four models and waits for the answers.</p></div>
         </div>
         <div class="recover-faq-item">
-          <button class="recover-faq-q">Will I need a developer to apply the fixes?<span class="recover-sign">+</span></button>
-          <div class="recover-faq-a"><div><p>No. The fixes are cut-and-paste, written for your specific pages.</p></div></div>
+          <h3 class="recover-faq-question">Will I need a developer to apply the fixes?</h3>
+          <div class="recover-faq-answer"><p>No. The fixes are cut-and-paste, written for your specific pages.</p></div>
         </div>
         <div class="recover-faq-item">
-          <button class="recover-faq-q">What does the audit actually check?<span class="recover-sign">+</span></button>
-          <div class="recover-faq-a"><div><p>Your technical readiness, schema, crawler access, robots.txt and indexability, plus, on full access, where AI mentions you across the four models.</p></div></div>
+          <h3 class="recover-faq-question">What does the audit actually check?</h3>
+          <div class="recover-faq-answer"><p>Your technical readiness, schema, crawler access, robots.txt and indexability, plus, on full access, where AI mentions you across the four models.</p></div>
         </div>
         <div class="recover-faq-item">
-          <button class="recover-faq-q">What if I don't want to do the fixes myself?<span class="recover-sign">+</span></button>
-          <div class="recover-faq-a"><div><p>A full done-for-you service is available. <a href="contact.html" style="color:var(--accent);text-decoration:underline;text-underline-offset:3px;">Book a call</a> for a quote. It's separate from full access.</p></div></div>
+          <h3 class="recover-faq-question">What if I don't want to do the fixes myself?</h3>
+          <div class="recover-faq-answer"><p>A full done-for-you service is available. <a href="contact.html" style="color:var(--accent);text-decoration:underline;text-underline-offset:3px;">Book a call</a> for a quote. It's separate from full access.</p></div>
         </div>
         <div class="recover-faq-item">
-          <button class="recover-faq-q">What's included in the free audit versus full access?<span class="recover-sign">+</span></button>
-          <div class="recover-faq-a"><div><p>See the full breakdown on the <a href="pricing.html" style="color:var(--accent);text-decoration:underline;text-underline-offset:3px;">Pricing page</a>.</p></div></div>
+          <h3 class="recover-faq-question">What's included in the free audit versus full access?</h3>
+          <div class="recover-faq-answer"><p>See the full breakdown on the <a href="pricing.html" style="color:var(--accent);text-decoration:underline;text-underline-offset:3px;">Pricing page</a>.</p></div>
         </div>
       </div>
     </div>
@@ -719,37 +719,18 @@
 
   <style>
     .recover-faq-list { border-top: 1px solid var(--border); }
-    .recover-faq-item { border-bottom: 1px solid var(--border); }
-    .recover-faq-q {
-      width: 100%; text-align: left; background: none; border: none; cursor: pointer;
+    .recover-faq-item { border-bottom: 1px solid var(--border); padding: var(--s-5); }
+    .recover-faq-question {
       font-family: var(--serif); font-weight: 400; letter-spacing: -0.015em;
       font-size: var(--t-h4); color: var(--text); line-height: 1.4;
-      padding: var(--s-5) var(--s-5); display: flex; justify-content: space-between; align-items: center; gap: var(--s-4);
-      transition: color .15s ease;
+      margin: 0 0 var(--s-3);
     }
-    .recover-faq-q:hover { color: var(--accent); }
-    .recover-sign { color: var(--accent); font-family: var(--sans); font-size: 24px; line-height: 1; flex-shrink: 0; transition: transform .2s ease; }
-    .recover-faq-item.open .recover-sign { transform: rotate(45deg); }
-    .recover-faq-a {
+    .recover-faq-answer {
       font-family: var(--sans); font-size: var(--t-body); line-height: 1.7;
-      color: var(--text-2); display: grid; grid-template-rows: 0fr;
-      transition: grid-template-rows .25s ease;
+      color: var(--text-2);
     }
-    .recover-faq-item.open .recover-faq-a { grid-template-rows: 1fr; }
-    .recover-faq-a > div { overflow: hidden; }
-    .recover-faq-a p { margin: 0; padding: 0 var(--s-5) var(--s-5); }
+    .recover-faq-answer p { margin: 0; }
   </style>
-
-  <script>
-    document.querySelectorAll('.recover-faq-q').forEach(function(btn) {
-      btn.addEventListener('click', function() {
-        var item = btn.parentElement;
-        var isOpen = item.classList.contains('open');
-        document.querySelectorAll('.recover-faq-item.open').forEach(function(el) { el.classList.remove('open'); });
-        if (!isOpen) item.classList.add('open');
-      });
-    });
-  </script>
 
   <hr class="rule" />
 
