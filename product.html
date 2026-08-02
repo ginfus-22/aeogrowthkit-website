@@ -6,9 +6,7 @@
   <meta name="title" content="Product — AEO Growth Kit">
   <meta name="description" content="Three connected steps: Recover, Build and Maintain. Find out where you stand, build the content that closes the gaps, then track it every month. The AI Mirror Test ties all three together.">
   <title>Product — AEO Growth Kit</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@400;500;600;700&family=Spline+Sans+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="fonts.css">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -143,6 +141,88 @@
       .btn-coral { width: 100%; justify-content: center; }
     }
   </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Product",
+        "@id": "https://aeogrowthkit.com/#product",
+        "name": "AEO Growth Kit",
+        "description": "Three connected steps: Recover, Build and Maintain. Find out where you stand, build the content that closes the gaps, then track it every month. The AI Mirror Test ties all three together.",
+        "url": "https://aeogrowthkit.com/product",
+        "image": "https://aeogrowthkit.com/og-image.png",
+        "brand": {
+          "@type": "Brand",
+          "name": "AEO Growth Kit"
+        },
+        "category": "SaaS",
+        "offers": {
+          "@type": "Offer",
+          "name": "Full access — founding price",
+          "price": "99",
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/LimitedAvailability",
+          "url": "https://aeogrowthkit.com/pricing"
+        }
+      },
+      {
+        "@type": "ItemList",
+        "@id": "https://aeogrowthkit.com/product#steps",
+        "name": "The three steps of AEO Growth Kit",
+        "itemListOrder": "https://schema.org/ItemListOrderAscending",
+        "numberOfItems": 3,
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Recover",
+            "item": {
+              "@id": "https://aeogrowthkit.com/recover#service"
+            },
+            "url": "https://aeogrowthkit.com/recover"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Build",
+            "item": {
+              "@id": "https://aeogrowthkit.com/build#service"
+            },
+            "url": "https://aeogrowthkit.com/build"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Maintain",
+            "item": {
+              "@id": "https://aeogrowthkit.com/maintain#service"
+            },
+            "url": "https://aeogrowthkit.com/maintain"
+          }
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://aeogrowthkit.com/product#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://aeogrowthkit.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Product",
+            "item": "https://aeogrowthkit.com/product"
+          }
+        ]
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
 
@@ -313,12 +393,13 @@
       <div class="footer-section footer-newsletter">
         <h4 class="footer-title">Updates</h4>
         <p class="footer-desc">Subscribe for AEO tips and platform updates.</p>
-        <form class="newsletter-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-          <input type="hidden" name="form-name" value="contact">
+        <form class="newsletter-form" name="newsletter" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+          <input type="hidden" name="form-name" value="newsletter">
           <input type="hidden" name="bot-field">
           <input type="email" name="email" placeholder="your@email.com" required class="newsletter-input">
           <button type="submit" class="newsletter-btn">→</button>
         </form>
+        <p class="newsletter-consent">By subscribing you agree to receive occasional emails from AEO Growth Kit. Unsubscribe any time. See our <a href="privacy-policy.html">Privacy Policy</a>.</p>
       </div>
     </div>
 

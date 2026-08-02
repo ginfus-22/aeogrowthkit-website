@@ -6,9 +6,7 @@
   <meta name="title" content="Page not found — AEO Growth Kit">
   <meta name="description" content="That page isn't here. Head back to the AEO Growth Kit home page or run a free AI visibility audit.">
   <title>Page not found — AEO Growth Kit</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@400;500;600;700&family=Spline+Sans+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="fonts.css">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -168,12 +166,13 @@
       <div class="footer-section footer-newsletter">
         <h4 class="footer-title">Updates</h4>
         <p class="footer-desc">Subscribe for AEO tips and platform updates.</p>
-        <form class="newsletter-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-          <input type="hidden" name="form-name" value="contact">
+        <form class="newsletter-form" name="newsletter" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+          <input type="hidden" name="form-name" value="newsletter">
           <input type="hidden" name="bot-field">
           <input type="email" name="email" placeholder="your@email.com" required class="newsletter-input">
           <button type="submit" class="newsletter-btn">→</button>
         </form>
+        <p class="newsletter-consent">By subscribing you agree to receive occasional emails from AEO Growth Kit. Unsubscribe any time. See our <a href="privacy-policy.html">Privacy Policy</a>.</p>
       </div>
     </div>
 

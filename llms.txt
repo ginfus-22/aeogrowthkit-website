@@ -1,0 +1,35 @@
+# AEO Growth Kit
+
+> AEO Growth Kit measures whether ChatGPT, Claude, Perplexity and Gemini recommend your business, then helps you become the answer they give. Three connected steps — Recover, Build and Maintain — with the AI Mirror Test running through all of them.
+
+AEO Growth Kit is a self-serve Answer Engine Optimisation (AEO) platform. It is aimed at businesses that win customers online: B2B SaaS and software, consultants and professional services, EdTech and online education, e-commerce and retail, and healthcare, wellness and hospitality. Founded by Steve Gillson.
+
+The AI Mirror Test asks 50 to 60 questions your ideal customers would ask across ChatGPT, Claude, Perplexity and Gemini, then counts where you are named and where you are not. Voiceprint™ is the content engine inside Build: it writes in your voice, backed by research and citations, and publishes to WordPress.
+
+Pricing: one subscription for full access. Founding price is $99/mo, limited to the first 30 members and locked in as the price rises to $199 at launch. A free 5-page audit is available with no card required. Billing is month to month and can be cancelled at any time.
+
+## Product
+
+- [Product overview](https://aeogrowthkit.com/product): The three connected steps — Recover, Build and Maintain — and how the AI Mirror Test ties them together.
+- [Recover](https://aeogrowthkit.com/recover): A forensic technical AEO audit plus the AI Mirror Test, finding every gap stopping AI from reading you and handing you the exact fix.
+- [Build](https://aeogrowthkit.com/build): The Voiceprint™ content engine — your voice, opinions and real expertise, strengthened with research, citations and the schema AI reads.
+- [Maintain](https://aeogrowthkit.com/maintain): Re-run your Mirror Test monthly to watch your share of AI answers climb and catch new gaps before competitors fill them.
+- [The AI Mirror Test](https://aeogrowthkit.com/ai-mirror-test): One honest number for how often the four leading AI models name your business, measured the same way every time.
+
+## Pricing and getting started
+
+- [Pricing](https://aeogrowthkit.com/pricing): One subscription, full access. Founding price $99/mo for the first 30 members, rising to $199 at launch.
+- [Free AI visibility audit](https://audit.aeogrowthkit.com): A free 5-page audit — your AEO readiness score and cut-and-paste fixes for your top issues. No card required.
+- [Contact](https://aeogrowthkit.com/contact): Email steve@aeogrowthkit.com or book a 30-minute intro call.
+
+## About and background
+
+- [About](https://aeogrowthkit.com/about): Why AEO Growth Kit was built, and who it is for.
+- [FAQ](https://aeogrowthkit.com/faq): What AEO is, how it differs from SEO, what the AI Mirror Test and Voiceprint™ do, pricing, data handling and results timelines.
+- [Resources](https://aeogrowthkit.com/resources): Guides and articles on Answer Engine Optimisation.
+
+## Optional
+
+- [Privacy Policy](https://aeogrowthkit.com/privacy-policy)
+- [Terms of Service](https://aeogrowthkit.com/terms-of-service)
+- [Cookie Policy](https://aeogrowthkit.com/cookies-policy)

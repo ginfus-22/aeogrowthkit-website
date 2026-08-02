@@ -1,0 +1,72 @@
+/* Cookie consent banner — pairs with cookie-consent.js.
+   Not loaded by any page yet; see the header comment in cookie-consent.js. */
+
+.cc-banner {
+  position: fixed;
+  left: 50%;
+  bottom: 16px;
+  transform: translateX(-50%);
+  z-index: 9999;
+  width: min(680px, calc(100% - 32px));
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
+  padding: 18px 20px;
+  background: var(--surface, #16161a);
+  color: var(--text, #f2f2f2);
+  border: 1px solid var(--border, rgba(255, 255, 255, 0.14));
+  border-radius: var(--r-md, 8px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
+}
+
+.cc-text { flex: 1 1 320px; }
+
+.cc-title {
+  margin: 0 0 4px;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.cc-body {
+  margin: 0;
+  font-size: 0.82rem;
+  line-height: 1.55;
+  opacity: 0.85;
+}
+
+.cc-body a { text-decoration: underline; color: inherit; }
+
+.cc-actions {
+  display: flex;
+  gap: 10px;
+  flex: 0 0 auto;
+}
+
+/* Both buttons share one class on purpose: under CNIL guidance, refusing
+   must be as easy and as visually prominent as accepting. Do not restyle
+   one of these to look like the primary action. */
+.cc-btn {
+  font: inherit;
+  font-size: 0.82rem;
+  font-weight: 600;
+  padding: 10px 16px;
+  cursor: pointer;
+  color: var(--text, #f2f2f2);
+  background: transparent;
+  border: 1px solid var(--border-2, rgba(255, 255, 255, 0.28));
+  border-radius: var(--r-sm, 6px);
+}
+
+.cc-btn:hover { background: rgba(255, 255, 255, 0.07); }
+
+.cc-btn:focus-visible {
+  outline: 2px solid var(--accent, #c16e5b);
+  outline-offset: 2px;
+}
+
+@media (max-width: 560px) {
+  .cc-banner { flex-direction: column; align-items: stretch; }
+  .cc-actions { justify-content: stretch; }
+  .cc-btn { flex: 1; }
+}

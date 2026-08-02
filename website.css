@@ -655,3 +655,12 @@ a:hover {
     width: 100%;
   }
 }
+
+/* Newsletter consent notice */
+.newsletter-consent {
+  font-size: 0.75rem;
+  line-height: 1.5;
+  margin-top: 8px;
+  opacity: 0.7;
+}
+.newsletter-consent a { text-decoration: underline; }

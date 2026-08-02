@@ -6,9 +6,7 @@
   <meta name="title" content="The AI Mirror Test — AEO Growth Kit">
   <meta name="description" content="The AI Mirror Test puts your real buyer questions to four leading AI models and counts how often you're named. One honest number for where you stand, measured the same way every time.">
   <title>The AI Mirror Test — AEO Growth Kit</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@400;500;600;700&family=Spline+Sans+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="fonts.css">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -213,6 +211,68 @@
       .btn-coral { width: 100%; justify-content: center; }
     }
   </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "SoftwareApplication",
+        "name": "AI Mirror Test",
+        "url": "https://aeogrowthkit.com/ai-mirror-test",
+        "description": "The AI Mirror Test puts your real buyer questions to four leading AI models and counts how often you're named. One honest number for where you stand, measured the same way every time.",
+        "applicationCategory": "BusinessApplication",
+        "applicationSubCategory": "SEO and AI visibility tool",
+        "operatingSystem": "Web browser",
+        "browserRequirements": "Requires a modern web browser",
+        "publisher": {
+          "@id": "https://aeogrowthkit.com/#organization"
+        },
+        "offers": {
+          "@type": "Offer",
+          "name": "Free 5-page AI visibility audit",
+          "price": "0",
+          "priceCurrency": "USD",
+          "url": "https://aeogrowthkit.com/ai-mirror-test",
+          "availability": "https://schema.org/InStock"
+        },
+        "featureList": [
+          "Runs your buyer questions across ChatGPT, Claude, Perplexity and Gemini",
+          "Counts how often your business is named in AI answers",
+          "Turns the gaps it finds into a content plan",
+          "Re-runs monthly so you can track the trend"
+        ],
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://aeogrowthkit.com/ai-mirror-test"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://aeogrowthkit.com/ai-mirror-test#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://aeogrowthkit.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Product",
+            "item": "https://aeogrowthkit.com/product"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "The AI Mirror Test",
+            "item": "https://aeogrowthkit.com/ai-mirror-test"
+          }
+        ]
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
 
@@ -328,7 +388,7 @@
             <svg class="ico-line" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
           </div>
           <h3>Your gap analysis</h3>
-          <p>The questions where you're absent become a ranked list of what to fix. That list is the content gap analysis Build turns into briefs.</p>
+          <p>The questions where you're absent become a ranked list of what to fix. That list is the content gap analysis <a href="build.html">Build</a> turns into briefs.</p>
         </div>
       </div>
     </div>
@@ -400,7 +460,7 @@
         </a>
         <a href="contact.html" class="link-coral">Or book a call <span class="arr">→</span></a>
       </div>
-      <p class="cta-note">Start free with a 5-page audit. The full Mirror Test comes with full access.</p>
+      <p class="cta-note">Start free with a 5-page audit. The full Mirror Test comes with <a href="pricing.html">full access</a>.</p>
     </div>
   </section>
 
@@ -459,12 +519,13 @@
       <div class="footer-section footer-newsletter">
         <h4 class="footer-title">Updates</h4>
         <p class="footer-desc">Subscribe for AEO tips and platform updates.</p>
-        <form class="newsletter-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-          <input type="hidden" name="form-name" value="contact">
+        <form class="newsletter-form" name="newsletter" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+          <input type="hidden" name="form-name" value="newsletter">
           <input type="hidden" name="bot-field">
           <input type="email" name="email" placeholder="your@email.com" required class="newsletter-input">
           <button type="submit" class="newsletter-btn">→</button>
         </form>
+        <p class="newsletter-consent">By subscribing you agree to receive occasional emails from AEO Growth Kit. Unsubscribe any time. See our <a href="privacy-policy.html">Privacy Policy</a>.</p>
       </div>
     </div>
 
