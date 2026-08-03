@@ -97,6 +97,48 @@ French practice is to link mentions légales directly from the footer. It curren
 
 ---
 
+## 3b. Other repos — audit + app subdomains
+
+`audit.aeogrowthkit.com` and `app.aeogrowthkit.com` live in a **different repo**
+and were not touched by any of the work above. Both were checked live on 3 Aug 2026.
+
+### 🔴 #32 — `app.aeogrowthkit.com` is publicly crawlable and titled "Streamlit"
+Requesting `/robots.txt` returns the Streamlit app's HTML shell with a **200**, not
+a robots file — Streamlit's catch-all routes every path to the app. Google treats an
+HTML response as *no* robots.txt and crawls freely. The page title is the framework
+default, so if indexed the product appears in search results as **"Streamlit"** with
+no description.
+Fix: serve a real `/robots.txt` with `Disallow: /` (you control the Railway server),
+add `<meta name="robots" content="noindex, nofollow">`, and set a proper title via
+`st.set_page_config`. Do this **before** it gets indexed — removal afterwards is slower.
+
+### 🟠 #33 — `audit.aeogrowthkit.com` has no SEO or AEO markup at all
+It returns 200 with a reasonable `<title>` ("AI Visibility Audit — AEO Growth Kit")
+and **nothing else**: no meta description, no canonical, no Open Graph, no Twitter
+card, no JSON-LD, no robots.txt. It is a genuinely indexable, highest-intent landing
+page running bare — on a site whose product is AEO.
+Fix: give it the same treatment the main site received — description, canonical,
+OG + Twitter tags, and `WebApplication` or `SoftwareApplication` schema pointing back
+at the main Organization `@id` (`https://aeogrowthkit.com/#organization`) so the two
+resolve as one entity.
+
+### 🟡 #34 — Google Search Console property structure
+Verify `aeogrowthkit.com` as a **Domain** property via DNS TXT (Netlify DNS — the
+nameservers are `nsone.net`, and there are no existing TXT records to conflict with).
+Once that is verified, add URL-prefix properties for `https://aeogrowthkit.com/` and
+`https://audit.aeogrowthkit.com/` — they verify **automatically** under the domain
+property, cost nothing, and give each surface its own dashboard, alerts and row budget.
+A Domain property alone aggregates all subdomains into one view; filters do not persist.
+
+### 🟡 #35 — Decide how the lead magnet is actually measured
+GSC only reports Google organic. Most traffic to the audit tool arrives via the
+"Free Audit" link in the site nav — internal referrals, which never appear in GSC.
+Funnel questions (visits → audit started → completed → email captured → signup) need
+product analytics on the audit app, not Search Console. Decide which question is
+being asked before adding more properties.
+
+---
+
 ## 4. Content and growth
 
 ### 🟡 #23 — Build out Resources with real articles
@@ -180,6 +222,14 @@ grounds stronger than the audit's reasoning.
 - ✅ Output ownership (Terms §7) and AI-output disclaimer (§8) added — the biggest commercial gap
 - ✅ Commercial-use contradiction in old Terms §2 resolved; mentions légales added
 - ✅ Incident response plan and Art. 30 register written
+
+### 3 August 2026 — Metadata sweep
+- ✅ **Twitter Card tags added to all 17 pages** — there were none anywhere
+- ✅ `og:description` added where missing (privacy-policy, resources, terms-of-service)
+- ✅ `og:title` added to article-template; `og:type`, `og:site_name`, `og:image` added to 404
+- ✅ `og:locale`, `og:image:width/height/alt` and `twitter:image:alt` across the site
+- ✅ Fixed `<meta charset>` no longer being the first tag in 404.html's head
+- ✅ Confirmed: no duplicate descriptions, no canonical/og:url mismatches, all titles under 60 chars
 
 ### 3 August 2026 — Post-deploy audit round
 - ✅ Re-audit score **27 → 75**; urgent gaps 2 → **0**; 9 of 14 pages now score GOOD with zero gaps
