@@ -2,7 +2,7 @@
 
 **Owner:** Steve Gillson
 **Created:** 2 August 2026
-**Last updated:** 2 August 2026
+**Last updated:** 3 August 2026
 
 > Internal document. Not published to the website — it names unmet compliance
 > obligations and would be a gift to anyone probing the business.
@@ -114,6 +114,48 @@ Confirms the 12 original gaps plus the six MEDIUM items are closed, and catches 
 ### ⚪ #27 — Add more internal links as content grows
 FAQ went from 3 → 12 body links, which was the big win. `about.html` still has only one. Each new article is a fresh linking opportunity.
 
+### 🟠 #28 — Decide what happens to `article-template.html`
+The 3 Aug re-audit still flags it HIGH (no Article schema). It is `noindex` and
+robots-disallowed, but the tool crawls it anyway because **it is still linked from
+the Resources grid**. Adding Article schema is the wrong fix: the page carries
+placeholder copy and a fictional byline ("Jane Mitchell, Head of Strategy").
+Options: replace with a real article, or remove the card from `resources.html`.
+The second leaves Resources empty — see #15. Supersedes #19.
+
+### 🟡 #29 — Supply any other public profiles for `sameAs`
+Organization `sameAs` now carries the founder LinkedIn only. Entity
+disambiguation improves with more verified profiles: a company LinkedIn page,
+X, YouTube, Crunchbase, or a Google Business Profile. The French public register
+(annuaire-entreprises.data.gouv.fr) was tested and **redirect-loops**, so it was
+deliberately not used — adding a non-resolving URL is the same mistake the first
+audit made with `logo.png`.
+
+### 🟡 #30 — Submit the IndexNow key and ping the API
+Key file `05a1d682298c9e031ff9767ca63f432b.txt` is deployed at the site root.
+Once live, URLs can be submitted to https://api.indexnow.org/indexnow — this
+reaches Bing and Yandex, and Bing's index feeds some AI answer engines. Pairs
+with #24 (Bing Webmaster Tools).
+
+### ⚪ #31 — Identify the sitemap page the audit calls "not worth crawling"
+The 3 Aug audit flags 1 of 14 sitemap URLs without naming it. Likely a legal
+page or `/contact`. Including legal pages in a sitemap is standard and harmless,
+so this is low priority — but worth identifying before acting.
+
+---
+
+## 6. Deliberately rejected audit recommendations
+
+Recorded so they are not "fixed" by a future session. Each was declined on
+grounds stronger than the audit's reasoning.
+
+| Audit asked for | Why rejected |
+|---|---|
+| `aggregateRating` on SoftwareApplication | **No reviews exist.** Fabricated review markup violates Google's structured data policies and can trigger a manual action. In the EU, publishing unverified consumer reviews is an unfair commercial practice under the Omnibus Directive. The most dangerous suggestion in the report. |
+| `employee` on Organization | Steve is a sole trader with no employees. The property would be a false statement about the business. |
+| `potentialAction` / Sitelinks SearchBox on WebSite | The site has **no search feature**, so the declared endpoint would 404. Google also **retired the sitelinks search box rich result in November 2023** — it no longer renders. Declined twice now, in both audits. |
+| `BreadcrumbList` on the homepage | A breadcrumb trail on the site root points only at itself. All 13 non-root indexable pages already have one. |
+| `Article` schema on `article-template.html` | Placeholder content with a fictional byline. See #28. |
+
 ---
 
 ## 5. Completed
@@ -138,6 +180,15 @@ FAQ went from 3 → 12 body links, which was the big win. `about.html` still has
 - ✅ Output ownership (Terms §7) and AI-output disclaimer (§8) added — the biggest commercial gap
 - ✅ Commercial-use contradiction in old Terms §2 resolved; mentions légales added
 - ✅ Incident response plan and Art. 30 register written
+
+### 3 August 2026 — Post-deploy audit round
+- ✅ Re-audit score **27 → 75**; urgent gaps 2 → **0**; 9 of 14 pages now score GOOD with zero gaps
+- ✅ Confirmed the 2 Aug re-audit was reading **stale cached data** — it reported pre-deploy schema for /about and /pricing while the live site served the new markup
+- ✅ JSON-LD hoisted from 70–90% into `<head>` to 3–10%, above the inline CSS
+- ✅ Organization `sameAs` (founder LinkedIn) — the one legitimate HIGH finding
+- ✅ Product `sku` (AEOGK-FULL-ACCESS) on /pricing and /product
+- ✅ IndexNow key file deployed
+- ✅ Five audit recommendations declined on record — see §6
 
 ### 2 August 2026 — Privacy engineering
 - ✅ **Google Fonts self-hosted** — 18 woff2 files across all 17 pages, removing third-party IP transfer
