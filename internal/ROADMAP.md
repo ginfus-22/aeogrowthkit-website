@@ -139,6 +139,56 @@ being asked before adding more properties.
 
 ---
 
+## 3c. AEO depth — putting detail where machines actually read it
+
+Came out of a 3 Aug question: "is the meta description an opportunity to add more
+information to appeal to AI?" Short answer, no — see §6. But the instinct was right
+and aimed at the wrong tag. These four are where that effort actually pays.
+
+### 🟠 #36 — Expand the JSON-LD `description` fields
+Current lengths are 159–183 characters **only because they were copied verbatim from
+the meta descriptions**, which carry a display limit that schema does not. There is no
+truncation on a JSON-LD description; 300–500 characters of substantive detail is
+entirely reasonable, and unlike a meta tag this text is explicitly machine-readable
+rather than incidentally so.
+Pages: `index` (Organization), `recover` / `build` / `maintain` (Service),
+`ai-mirror-test` (SoftwareApplication), `pricing` / `product` (Product).
+Draft from existing page copy so nothing is invented.
+
+### 🟠 #37 — Add the schema fields built for describing a service properly
+The Service blocks currently carry 12 fields and none of the ones that actually
+describe the offer:
+
+| Field | What it captures |
+|---|---|
+| `serviceOutput` | What the customer receives from Recover / Build / Maintain |
+| `hasOfferCatalog` | Structured breakdown of what is included |
+| `featureList` | Currently only on the Mirror Test; belongs on the services too |
+| `audience` | Beyond the single line present now |
+| `about` / `mentions` | Explicit topic entities — ties the pages to "Answer Engine Optimisation" as a concept rather than just a phrase |
+
+### 🟡 #38 — Enrich `llms.txt`
+3.1KB and deliberately terse. This file exists **solely** to be read by AI agents:
+no truncation, no display constraint, no human audience. It is the single most
+under-exploited asset on the site and the literal answer to "where do I add more
+information to appeal to AI".
+
+### 🟡 #39 — Expand the thin pages
+Body word counts as of 3 Aug: `about` **347**, `maintain` **544**, `ai-mirror-test`
+636, `index` 771, `build` 1,024, `recover` 1,273. Body content is what an LLM reads
+when deciding whether to name you — the two under 600 are thin for pages you want
+cited. Related to #23 (real articles) and #15 (empty Resources).
+
+### ⚪ #40 — Decide on the six over-length meta descriptions
+`product` 188, `ai-mirror-test` 183, `index` 182, `recover` 179, `maintain` 168,
+`build` 162 — all truncated in Google results, which on the homepage clips the
+"Free visibility audit." CTA. Low stakes either way. Deliberately left alone because
+trimming means rewriting marketing copy, which is Steve's call. If trimmed, sync the
+matching JSON-LD descriptions so the two do not diverge — though see #36, which may
+make them diverge on purpose.
+
+---
+
 ## 4. Content and growth
 
 ### 🟡 #23 — Build out Resources with real articles
@@ -197,6 +247,7 @@ grounds stronger than the audit's reasoning.
 | `potentialAction` / Sitelinks SearchBox on WebSite | The site has **no search feature**, so the declared endpoint would 404. Google also **retired the sitelinks search box rich result in November 2023** — it no longer renders. Declined twice now, in both audits. |
 | `BreadcrumbList` on the homepage | A breadcrumb trail on the site root points only at itself. All 13 non-root indexable pages already have one. |
 | `Article` schema on `article-template.html` | Placeholder content with a fictional byline. See #28. |
+| Padding meta descriptions to "feed the AI" | Considered 3 Aug and rejected. Meta descriptions have **never** been a Google ranking factor (stated 2009, restated since); Google **rewrites 60–70% of them** anyway, more often the longer they are; keyword-stuffed descriptions are a recognised spam signal; and when an LLM cites a page it has fetched and is reading the **body**, not the meta tag. The right targets are #36–#39. |
 
 ---
 
