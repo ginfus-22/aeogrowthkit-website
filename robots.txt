@@ -2,7 +2,6 @@
 
 User-agent: *
 Allow: /
-Disallow: /article-template
 Disallow: /internal/
 Disallow: /case-studies
 

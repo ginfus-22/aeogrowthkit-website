@@ -27,6 +27,7 @@ Pricing: one subscription for full access. Founding price is $99/mo, limited to 
 - [About](https://aeogrowthkit.com/about): Why AEO Growth Kit was built, and who it is for.
 - [FAQ](https://aeogrowthkit.com/faq): What AEO is, how it differs from SEO, what the AI Mirror Test and Voiceprint™ do, pricing, data handling and results timelines.
 - [Resources](https://aeogrowthkit.com/resources): Guides and articles on Answer Engine Optimisation.
+- [Why your business doesn't show up in AI search results even when you rank on Google](https://aeogrowthkit.com/resources/ai-search-visibility-founders): Why Google rankings do not transfer to AI search, what AI engines actually retrieve, and how to audit your own AI visibility. Includes a five-question FAQ.
 
 ## Optional
 

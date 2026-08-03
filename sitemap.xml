@@ -2,72 +2,77 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://aeogrowthkit.com/</loc>
-    <lastmod>2026-08-02</lastmod>
+    <lastmod>2026-08-03</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://aeogrowthkit.com/product</loc>
-    <lastmod>2026-08-02</lastmod>
+    <lastmod>2026-08-03</lastmod>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://aeogrowthkit.com/recover</loc>
-    <lastmod>2026-08-02</lastmod>
+    <lastmod>2026-08-03</lastmod>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://aeogrowthkit.com/build</loc>
-    <lastmod>2026-08-02</lastmod>
+    <lastmod>2026-08-03</lastmod>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://aeogrowthkit.com/maintain</loc>
-    <lastmod>2026-08-02</lastmod>
+    <lastmod>2026-08-03</lastmod>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://aeogrowthkit.com/ai-mirror-test</loc>
-    <lastmod>2026-08-02</lastmod>
+    <lastmod>2026-08-03</lastmod>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://aeogrowthkit.com/pricing</loc>
-    <lastmod>2026-08-02</lastmod>
+    <lastmod>2026-08-03</lastmod>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://aeogrowthkit.com/faq</loc>
-    <lastmod>2026-08-02</lastmod>
+    <lastmod>2026-08-03</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://aeogrowthkit.com/about</loc>
-    <lastmod>2026-08-02</lastmod>
+    <lastmod>2026-08-03</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://aeogrowthkit.com/resources</loc>
-    <lastmod>2026-08-02</lastmod>
+    <lastmod>2026-08-03</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://aeogrowthkit.com/contact</loc>
-    <lastmod>2026-08-02</lastmod>
+    <lastmod>2026-08-03</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://aeogrowthkit.com/privacy-policy</loc>
-    <lastmod>2026-08-02</lastmod>
+    <lastmod>2026-08-03</lastmod>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://aeogrowthkit.com/terms-of-service</loc>
-    <lastmod>2026-08-02</lastmod>
+    <lastmod>2026-08-03</lastmod>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://aeogrowthkit.com/cookies-policy</loc>
-    <lastmod>2026-08-02</lastmod>
+    <lastmod>2026-08-03</lastmod>
     <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aeogrowthkit.com/resources/ai-search-visibility-founders</loc>
+    <lastmod>2026-08-03</lastmod>
+    <priority>0.8</priority>
   </url>
 </urlset>

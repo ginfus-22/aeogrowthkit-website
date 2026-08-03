@@ -167,9 +167,16 @@
       transform: translateY(-2px);
     }
     
+    .article-card-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
     .article-card-image {
       width: 100%;
       height: 180px;
+      overflow: hidden;
       background: var(--surface-2);
       border-bottom: 1px solid var(--border);
       display: flex;
@@ -279,164 +286,37 @@
     <span class="filter-label">Category:</span>
     <div class="filter-pills">
       <button class="filter-pill active" data-filter="all">All Articles</button>
-      <button class="filter-pill" data-filter="strategy">Strategy</button>
-      <button class="filter-pill" data-filter="optimization">Optimization</button>
-      <button class="filter-pill" data-filter="tools">Tools &amp; Resources</button>
-      <button class="filter-pill" data-filter="case-study">Case Studies</button>
+      <button class="filter-pill" data-filter="fundamentals">AI Search Fundamentals</button>
+      <button class="filter-pill" data-filter="getting-found">Getting Found</button>
+      <button class="filter-pill" data-filter="content-cited">Content That Gets Cited</button>
+      <button class="filter-pill" data-filter="measuring">Measuring &amp; Tracking</button>
     </div>
   </div>
   
   <div class="articles-grid">
-    <!-- Strategy Articles -->
-    <a href="article-template.html" class="article-card" data-category="strategy">
-      <div class="article-card-image">📊</div>
+    <a href="resources/ai-search-visibility-founders.html" class="article-card" data-category="fundamentals">
+      <div class="article-card-image">
+        <img src="images/ai-search-visibility-hero-sm.webp" width="600" height="400" loading="lazy"
+             alt="Founder looking at Google rankings on laptop with AI search results growing larger in background">
+      </div>
       <div class="article-card-content">
-        <div class="tag">Strategy</div>
-        <div class="title">How AI-Powered Search Is Reshaping Customer Discovery</div>
-        <div class="excerpt">Understanding the shift from traditional SEO to AI-Powered Entity Optimization and how your business can adapt.</div>
-        <div class="meta">
-          <span>May 15, 2024</span>
-          <span>8 min read</span>
-        </div>
+        <div class="tag">AI Search Fundamentals</div>
+        <div class="title">Why your business doesn't show up in AI search results even when you rank on Google</div>
+        <div class="excerpt">Ranking on Google doesn't mean AI search engines know you exist. Why AI visibility runs on different logic, and how to close the gap.</div>
+        <div class="article-card-meta"><time datetime="2026-08-03">3 August 2026</time> &middot; 9 min read</div>
       </div>
     </a>
     
-    <a href="#" class="article-card" data-category="strategy">
-      <div class="article-card-image">🎯</div>
-      <div class="article-card-content">
-        <div class="tag">Strategy</div>
-        <div class="title">The AEO Roadmap: Your 90-Day Plan</div>
-        <div class="excerpt">A step-by-step guide to implementing AI-Powered Entity Optimization for your business with measurable milestones.</div>
-        <div class="meta">
-          <span>May 10, 2024</span>
-          <span>12 min read</span>
-        </div>
-      </div>
-    </a>
     
-    <a href="#" class="article-card" data-category="strategy">
-      <div class="article-card-image">🔄</div>
-      <div class="article-card-content">
-        <div class="tag">Strategy</div>
-        <div class="title">AEO vs SEO: Understanding the New Landscape</div>
-        <div class="excerpt">A comprehensive comparison of traditional SEO and AI-Powered Entity Optimization to help you align your marketing strategy.</div>
-        <div class="meta">
-          <span>May 1, 2024</span>
-          <span>10 min read</span>
-        </div>
-      </div>
-    </a>
-    
-    <!-- Optimization Articles -->
-    <a href="#" class="article-card" data-category="optimization">
-      <div class="article-card-image">🏗️</div>
-      <div class="article-card-content">
-        <div class="tag">Optimization</div>
-        <div class="title">Building Your Entity Profile from Scratch</div>
-        <div class="excerpt">Learn how to create comprehensive, authoritative entity data that AI systems trust and reference when answering queries.</div>
-        <div class="meta">
-          <span>April 28, 2024</span>
-          <span>9 min read</span>
-        </div>
-      </div>
-    </a>
-    
-    <a href="#" class="article-card" data-category="optimization">
-      <div class="article-card-image">✅</div>
-      <div class="article-card-content">
-        <div class="tag">Optimization</div>
-        <div class="title">Entity Data Quality: Checklist and Best Practices</div>
-        <div class="excerpt">An actionable checklist to ensure your entity information is complete, accurate, and optimized for AI systems.</div>
-        <div class="meta">
-          <span>April 20, 2024</span>
-          <span>7 min read</span>
-        </div>
-      </div>
-    </a>
-    
-    <a href="#" class="article-card" data-category="optimization">
-      <div class="article-card-image">📈</div>
-      <div class="article-card-content">
-        <div class="tag">Optimization</div>
-        <div class="title">Measuring AEO Success: Key Metrics to Track</div>
-        <div class="excerpt">Understand which metrics matter most for AEO and how to set up tracking to measure your progress.</div>
-        <div class="meta">
-          <span>April 15, 2024</span>
-          <span>8 min read</span>
-        </div>
-      </div>
-    </a>
     
     <!-- Tools & Resources -->
-    <a href="#" class="article-card" data-category="tools">
-      <div class="article-card-image">🛠️</div>
-      <div class="article-card-content">
-        <div class="tag">Tools &amp; Resources</div>
-        <div class="title">AEO Tools Comparison Guide</div>
-        <div class="excerpt">Compare the leading platforms for monitoring and optimizing your entity across AI systems and knowledge bases.</div>
-        <div class="meta">
-          <span>April 10, 2024</span>
-          <span>11 min read</span>
-        </div>
-      </div>
-    </a>
     
-    <a href="#" class="article-card" data-category="tools">
-      <div class="article-card-image">📚</div>
-      <div class="article-card-content">
-        <div class="tag">Tools &amp; Resources</div>
-        <div class="title">The AEO Glossary: Key Terms Explained</div>
-        <div class="excerpt">A comprehensive glossary of AI-Powered Entity Optimization terminology to help you navigate the AEO landscape.</div>
-        <div class="meta">
-          <span>April 5, 2024</span>
-          <span>6 min read</span>
-        </div>
-      </div>
-    </a>
     
     <!-- Case Studies -->
-    <a href="#" class="article-card" data-category="case-study">
-      <div class="article-card-image">🎓</div>
-      <div class="article-card-content">
-        <div class="tag">Case Study</div>
-        <div class="title">EdTech Company Increases AI-Discovered Leads by 165%</div>
-        <div class="excerpt">How a B2B SaaS platform implemented AEO and saw dramatic improvements in organic discovery through AI search.</div>
-        <div class="meta">
-          <span>March 25, 2024</span>
-          <span>10 min read</span>
-        </div>
-      </div>
-    </a>
     
-    <a href="#" class="article-card" data-category="case-study">
-      <div class="article-card-image">🏪</div>
-      <div class="article-card-content">
-        <div class="tag">Case Study</div>
-        <div class="title">E-Commerce Brand Recovers Lost AI Search Visibility</div>
-        <div class="excerpt">A story of how incorrect entity data was impacting AI search visibility and the recovery process that followed.</div>
-        <div class="meta">
-          <span>March 20, 2024</span>
-          <span>9 min read</span>
-        </div>
-      </div>
-    </a>
     
-    <a href="#" class="article-card" data-category="case-study">
-      <div class="article-card-image">🏢</div>
-      <div class="article-card-content">
-        <div class="tag">Case Study</div>
-        <div class="title">B2B Services Firm Establishes Authority Through AEO</div>
-        <div class="excerpt">How a professional services firm used AEO to become the go-to source for expertise in their vertical.</div>
-        <div class="meta">
-          <span>March 15, 2024</span>
-          <span>11 min read</span>
-        </div>
-      </div>
-    </a>
   </div>
 </main>
-
-
 
 <script>
   // Simple filter functionality

@@ -2,7 +2,7 @@
 
 **Owner:** Steve Gillson
 **Created:** 2 August 2026
-**Last updated:** 3 August 2026
+**Last updated:** 3 August 2026 (article #1 published)
 
 > Internal document. Not published to the website — it names unmet compliance
 > obligations and would be a gift to anyone probing the business.
@@ -71,7 +71,7 @@ Where Railway, Auth0 and Stripe physically store data. Feeds #3 and the register
 ### 🟠 #14 — Add Netlify's full registered address to the mentions légales
 LCEN Art. 6 requires the host's name **and address**. Terms §1 currently names Netlify and Railway without full addresses. `TODO` comment marks the spot in `terms-of-service.html`.
 
-### 🟠 #15 — Fix the Resources page dead end
+### ✅ #15 — Fix the Resources page dead end *(done 3 Aug 2026)*
 `resources.html` links only to `article-template.html`, which is now `noindex`. The page therefore points at nothing indexable. Either publish real articles or reconsider linking it in the main nav.
 
 ### 🟠 #16 — Add `<main>` landmarks to four pages
@@ -83,7 +83,7 @@ LCEN Art. 6 requires the host's name **and address**. Terms §1 currently names 
 ### 🟡 #18 — Verify the free-audit cap is actually enforced
 Terms §3 states a fair-use limit of three free audits per email address. Confirm the app enforces it, since it is now a published commitment.
 
-### 🟡 #19 — Decide what `article-template.html` is for
+### ✅ #19 — Decide what `article-template.html` is for *(done 3 Aug 2026 — deleted)*
 Currently `noindex` because it carries placeholder content and a **fictional byline ("Jane Mitchell, Head of Strategy")** with a May 2024 date. It is still reachable from Resources if a human clicks through. Either replace with a real article or remove it from the Resources grid.
 
 ### 🟡 #20 — Keep `case-studies.html` dark until evidence exists
@@ -191,6 +191,15 @@ make them diverge on purpose.
 
 ## 4. Content and growth
 
+### 🟡 #41 — Add a "Related articles" block to article pages
+The template's related-articles section was dropped when the placeholders went, since
+there is only one article. Reinstate it once there are three or more — internal links
+between articles are a strong retrieval signal and currently the article is a leaf node.
+
+### 🟡 #42 — Second and third articles
+The taxonomy has four live categories and content in only one. "Getting Found" and
+"Measuring & Tracking" are the obvious next two, and both map to existing product pages.
+
 ### 🟡 #23 — Build out Resources with real articles
 The strongest AEO lever available. Every published article is another entity for the models to cite, and it fixes #15.
 
@@ -206,7 +215,7 @@ Confirms the 12 original gaps plus the six MEDIUM items are closed, and catches 
 ### ⚪ #27 — Add more internal links as content grows
 FAQ went from 3 → 12 body links, which was the big win. `about.html` still has only one. Each new article is a fresh linking opportunity.
 
-### 🟠 #28 — Decide what happens to `article-template.html`
+### ✅ #28 — Decide what happens to `article-template.html` *(done 3 Aug 2026 — deleted)*
 The 3 Aug re-audit still flags it HIGH (no Article schema). It is `noindex` and
 robots-disallowed, but the tool crawls it anyway because **it is still linked from
 the Resources grid**. Adding Article schema is the wrong fix: the page carries
@@ -273,6 +282,18 @@ grounds stronger than the audit's reasoning.
 - ✅ Output ownership (Terms §7) and AI-output disclaimer (§8) added — the biggest commercial gap
 - ✅ Commercial-use contradiction in old Terms §2 resolved; mentions légales added
 - ✅ Incident response plan and Art. 30 register written
+
+### 3 August 2026 — First real article published
+- ✅ `resources/ai-search-visibility-founders.html` live — sets the `/resources/<slug>` URL pattern for all future articles
+- ✅ Resources taxonomy rebuilt to reader-intent: AI Search Fundamentals / Getting Found / Content That Gets Cited / Measuring & Tracking (Case Studies held back — see #20)
+- ✅ **10 placeholder article cards removed**, including invented case-study results like "EdTech Company Increases AI-Discovered Leads by 165%"
+- ✅ `article-template.html` deleted — closes #19 and #28, and removes the fictional "Jane Mitchell" byline from the site
+- ✅ Resources dead end fixed — closes #15
+- ✅ Article schema: Article + FAQPage (5 Q&As) + BreadcrumbList, author Steve Gillson with LinkedIn `sameAs`, publisher by `@id`
+- ✅ Export defects corrected: deduplicated blockquotes, 4 broken links repaired, `quality_notes` and 2025 date dropped
+- ✅ Citations moved off expiring Vertex grounding redirects to permanent URLs; 527% stat re-attributed to Semrush reporting Previsible, with the 19-property sample size added
+- ✅ Hero image 2.9 MB PNG → 53 KB WebP (98% smaller) plus a 12 KB card thumbnail
+- ✅ Added to sitemap and `llms.txt`
 
 ### 3 August 2026 — Metadata sweep
 - ✅ **Twitter Card tags added to all 17 pages** — there were none anywhere
