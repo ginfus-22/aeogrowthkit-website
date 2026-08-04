@@ -2,14 +2,16 @@
 
 **Owner:** Steve Gillson
 **Created:** 2 August 2026
-**Last updated:** 3 August 2026 (article #1 published)
+**Last updated:** 4 August 2026
 
 > Internal document. Not published to the website — it names unmet compliance
 > obligations and would be a gift to anyone probing the business.
 >
 > **This file is the persistent record.** Anything not written here is lost
-> between sessions. When a task is done, move it to §5 with the date rather
-> than deleting it — the history is what stops work being redone.
+> between sessions. When a task is done, mark it ✅ in place with the date and
+> add a one-line entry to §5 — never delete it. Leaving finished tasks where
+> they sit preserves the context explaining why they mattered, and the history
+> is what stops work being redone.
 
 **Status key:** 🔴 blocking / legal obligation · 🟠 important · 🟡 worth doing · ⚪ optional
 
@@ -215,6 +217,51 @@ Confirms the 12 original gaps plus the six MEDIUM items are closed, and catches 
 ### ⚪ #27 — Add more internal links as content grows
 FAQ went from 3 → 12 body links, which was the big win. `about.html` still has only one. Each new article is a fresh linking opportunity.
 
+
+### 🟠 #43 — There is no gate between a push and the public site
+`netlify.toml` sets `publish = "."` with no build command, so every push to `main`
+uploads straight to production in roughly 60 seconds. No build, no tests, no
+validation — whatever lands in `main` is what visitors get.
+
+That was tolerable on a static site nobody touched. It is riskier now that articles
+arrive from an export tool which has already shipped duplicated blockquotes, four
+broken links, expiring citation URLs and an internal `quality_notes` line.
+
+Two options, either sufficient:
+- **(a)** push articles to a branch, check the Netlify deploy preview, then merge; or
+- **(b)** a ~20-line pre-push script asserting JSON-LD parses, no `href="#"`, no
+  `[Insert` / `[Confirm` / `quality_notes` strings, no orphan tags, and that every
+  relative path resolves.
+
+Those exact checks were run by hand on every commit across 2–3 Aug, and each one
+caught something at least once.
+
+### 🟠 #44 — Pre-publish checklist for content-tool exports
+More articles are coming from the same tool, so these recur until its authors ship
+fixes. Check every export for:
+
+- **Duplicated blocks** — every blockquote and experience callout appeared twice, verbatim.
+- **Broken links** — body text or `#` pasted into the `href` slot (four of them).
+- **Expiring citation URLs** — `vertexaisearch.cloud.google.com/grounding-api-redirect/…`
+  are temporary Google grounding redirects. Resolve to permanent URLs **while they still
+  work**, then confirm the destination actually says what the article claims.
+- **Aggregator-vs-primary attribution** — the 527% quote was Semrush's own section
+  heading, credited to Previsible (named in Semrush's body text), and linked to Semrush.
+  Rule of thumb: if the quoted string matches a heading on the linked page verbatim,
+  you are quoting the aggregator, not the source.
+- **Missing sample sizes** — "up 527%" was really 19 GA4 properties, 17k → 107k sessions.
+- **Internal fields leaking** — `quality_notes: "2 experience gap(s)…"` sat in the front matter.
+- **Date mismatches** — front matter said 2025 while `schema.json` said 2026. Reported to
+  the tool's authors on 3 Aug; confirm fixed on the next export before trusting either field.
+- **Oversized hero images** — 2.9 MB PNG. Convert to WebP (this one went to 53 KB).
+
+### 🟡 #45 — Read the published article end to end
+The experience passages carry the piece and were reformatted into callouts during
+publishing. Worth confirming they still sound like you, since they do the E-E-A-T
+work: the Bing-indexing client story, the "what founders say first" callout, and the
+Gemini observation.
+Live at https://aeogrowthkit.com/resources/ai-search-visibility-founders
+
 ### ✅ #28 — Decide what happens to `article-template.html` *(done 3 Aug 2026 — deleted)*
 The 3 Aug re-audit still flags it HIGH (no Article schema). It is `noindex` and
 robots-disallowed, but the tool crawls it anyway because **it is still linked from
@@ -241,22 +288,6 @@ with #24 (Bing Webmaster Tools).
 The 3 Aug audit flags 1 of 14 sitemap URLs without naming it. Likely a legal
 page or `/contact`. Including legal pages in a sitemap is standard and harmless,
 so this is low priority — but worth identifying before acting.
-
----
-
-## 6. Deliberately rejected audit recommendations
-
-Recorded so they are not "fixed" by a future session. Each was declined on
-grounds stronger than the audit's reasoning.
-
-| Audit asked for | Why rejected |
-|---|---|
-| `aggregateRating` on SoftwareApplication | **No reviews exist.** Fabricated review markup violates Google's structured data policies and can trigger a manual action. In the EU, publishing unverified consumer reviews is an unfair commercial practice under the Omnibus Directive. The most dangerous suggestion in the report. |
-| `employee` on Organization | Steve is a sole trader with no employees. The property would be a false statement about the business. |
-| `potentialAction` / Sitelinks SearchBox on WebSite | The site has **no search feature**, so the declared endpoint would 404. Google also **retired the sitelinks search box rich result in November 2023** — it no longer renders. Declined twice now, in both audits. |
-| `BreadcrumbList` on the homepage | A breadcrumb trail on the site root points only at itself. All 13 non-root indexable pages already have one. |
-| `Article` schema on `article-template.html` | Placeholder content with a fictional byline. See #28. |
-| Padding meta descriptions to "feed the AI" | Considered 3 Aug and rejected. Meta descriptions have **never** been a Google ranking factor (stated 2009, restated since); Google **rewrites 60–70% of them** anyway, more often the longer they are; keyword-stuffed descriptions are a recognised spam signal; and when an LLM cites a page it has fetched and is reading the **body**, not the meta tag. The right targets are #36–#39. |
 
 ---
 
@@ -318,3 +349,19 @@ grounds stronger than the audit's reasoning.
 - ✅ `case-studies.html` and `article-template.html` set to `noindex`
 - ✅ Consent banner built and documented, dormant by design
 - ✅ `/internal/*` blocked from public serving
+
+## 6. Deliberately rejected audit recommendations
+
+Recorded so they are not "fixed" by a future session. Each was declined on
+grounds stronger than the audit's reasoning.
+
+| Audit asked for | Why rejected |
+|---|---|
+| `aggregateRating` on SoftwareApplication | **No reviews exist.** Fabricated review markup violates Google's structured data policies and can trigger a manual action. In the EU, publishing unverified consumer reviews is an unfair commercial practice under the Omnibus Directive. The most dangerous suggestion in the report. |
+| `employee` on Organization | Steve is a sole trader with no employees. The property would be a false statement about the business. |
+| `potentialAction` / Sitelinks SearchBox on WebSite | The site has **no search feature**, so the declared endpoint would 404. Google also **retired the sitelinks search box rich result in November 2023** — it no longer renders. Declined twice now, in both audits. |
+| `BreadcrumbList` on the homepage | A breadcrumb trail on the site root points only at itself. All 13 non-root indexable pages already have one. |
+| `Article` schema on `article-template.html` | Placeholder content with a fictional byline. See #28. |
+| Padding meta descriptions to "feed the AI" | Considered 3 Aug and rejected. Meta descriptions have **never** been a Google ranking factor (stated 2009, restated since); Google **rewrites 60–70% of them** anyway, more often the longer they are; keyword-stuffed descriptions are a recognised spam signal; and when an LLM cites a page it has fetched and is reading the **body**, not the meta tag. The right targets are #36–#39. |
+
+---
