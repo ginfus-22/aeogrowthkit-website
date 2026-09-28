@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="title" content="Pricing — AEO Growth Kit">
-  <meta name="description" content="Start with a free AEO audit. Go self-serve with Full access at founding pricing, or hand it all over with Done for you.">
+  <meta name="description" content="Start with a free AEO audit. Go self-serve with Full access, or hand it all over with Done for you.">
   <title>Pricing — AEO Growth Kit</title>
   <script type="application/ld+json">
   {
@@ -35,15 +35,15 @@
           },
           {
             "@type": "Offer",
-            "name": "Full access — founding price",
-            "description": "Full access at founding pricing, limited to the first 30 members and locked in as the price rises to $199 at launch.",
-            "price": "99",
+            "name": "Full access",
+            "description": "Self-serve full access: whole-site audit, AI Mirror Test, weekly AI Overview tests and the Voiceprint™ content engine.",
+            "price": "199",
             "priceCurrency": "USD",
-            "availability": "https://schema.org/LimitedAvailability",
+            "availability": "https://schema.org/InStock",
             "url": "https://aeogrowthkit.com/pricing",
             "priceSpecification": {
               "@type": "UnitPriceSpecification",
-              "price": "99",
+              "price": "199",
               "priceCurrency": "USD",
               "unitCode": "MON",
               "billingDuration": 1,
@@ -103,14 +103,6 @@
               "@type": "Answer",
               "text": "Yes. Done for you is $600/mo: every fix applied, 4 articles a month written and published, weekly AI Overview tests and a monthly AI Mirror Test report. You just answer a few questions per article."
             }
-          },
-          {
-            "@type": "Question",
-            "name": "How many founding spots are there?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Founding pricing is limited to the first 30 members at $99/mo, locked as the price rises to $199 at launch."
-            }
           }
         ],
         "@id": "https://aeogrowthkit.com/pricing#faq"
@@ -144,7 +136,7 @@
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="AEO Growth Kit">
   <meta property="og:title" content="Pricing — AEO Growth Kit">
-  <meta property="og:description" content="Start with a free AEO audit. Go self-serve with Full access at founding pricing, or hand it all over with Done for you.">
+  <meta property="og:description" content="Start with a free AEO audit. Go self-serve with Full access, or hand it all over with Done for you.">
   <meta property="og:url" content="https://aeogrowthkit.com/pricing">
   <meta property="og:image" content="https://aeogrowthkit.com/og-image.png">
   <meta property="og:locale" content="en_GB">
@@ -153,7 +145,7 @@
   <meta property="og:image:alt" content="AEO Growth Kit — get cited by AI answer engines">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Pricing — AEO Growth Kit">
-  <meta name="twitter:description" content="Start with a free AEO audit. Go self-serve with Full access at founding pricing, or hand it all over with Done for you.">
+  <meta name="twitter:description" content="Start with a free AEO audit. Go self-serve with Full access, or hand it all over with Done for you.">
   <meta name="twitter:image" content="https://aeogrowthkit.com/og-image.png">
   <meta name="twitter:image:alt" content="AEO Growth Kit — get cited by AI answer engines">
   <link rel="stylesheet" href="aeo-ds.css">
@@ -201,7 +193,7 @@
       padding: var(--s-7) var(--s-6); display: flex; flex-direction: column;
       box-shadow: var(--sh-sm);
     }
-    .plan.founding { border: 1.5px solid var(--accent); }
+    .plan.featured { border: 1.5px solid var(--accent); }
     .plan-pill {
       position: absolute; top: -13px; left: var(--s-6);
       background: var(--accent); color: var(--on-accent);
@@ -272,18 +264,6 @@
     }
     .plan-fineprint a { color: var(--accent); text-decoration: none; }
     .plan-fineprint a:hover { text-decoration: underline; }
-
-    /* FOUNDING BAND */
-    .founding-band { background: var(--surface-2); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
-    .founding-band .wrap-720 { text-align: center; }
-    .founding-band h2 {
-      font-family: var(--serif); font-weight: 400; letter-spacing: -0.015em;
-      font-size: var(--t-h2); color: var(--text); margin: 0 0 var(--s-4);
-    }
-    .founding-band p {
-      font-family: var(--sans); font-size: var(--t-body-l); line-height: 1.7;
-      color: var(--text-2); margin: 0;
-    }
 
     /* COMPARE TABLE */
     .compare-head { text-align: center; margin-bottom: var(--s-6); }
@@ -383,7 +363,7 @@
 <section class="hero-v3">
   <div class="wrap-960">
     <h1 class="hero-h1">Your time is billable. Writing blogs isn't.</h1>
-    <p class="hero-subhead">Start with a free audit. Then go self-serve with Full access, or hand it all over with Done for you. Founding pricing while AEO Growth Kit is in beta.</p>
+    <p class="hero-subhead">Start with a free audit. Then go self-serve with Full access, or hand it all over with Done for you.</p>
     <div class="hero-actions">
       <a href="https://audit.aeogrowthkit.com" class="btn btn-primary btn-lg">Run my free audit</a>
       <a href="/contact" class="btn btn-lg btn-book-hero">Or book a call</a>
@@ -406,7 +386,7 @@
       <div class="plan">
         <h2 class="plan-name">Free</h2>
         <div class="plan-sub">AEO audit</div>
-        <div class="plan-price"><span class="price-amount" data-usd="0">$0</span></div>
+        <div class="plan-price"><span class="price-amount" data-usd="0" data-eur="0" data-gbp="0" data-aud="0">$0</span></div>
         <div class="plan-price-note">no card needed</div>
         <p class="plan-tagline">See where you stand with AI today.</p>
         <div class="plan-divider"></div>
@@ -420,14 +400,14 @@
         </div>
       </div>
 
-      <!-- CARD 2: FULL ACCESS (founding) -->
-      <div class="plan founding">
-        <span class="plan-pill">The Founding 30</span>
+      <!-- CARD 2: FULL ACCESS -->
+      <div class="plan featured">
         <h2 class="plan-name">Full access</h2>
-        <div class="plan-price"><span class="price-amount" data-usd="99">$99</span>/mo</div>
-        <div class="plan-price-note">founding rate, rising to <span class="price-amount-inline" data-usd="199">$199</span> at launch</div>
+        <div class="plan-sub">Self-serve</div>
+        <div class="plan-price"><span class="price-amount" data-usd="199" data-eur="179" data-gbp="149" data-aud="289">$199</span>/mo</div>
+        <div class="plan-price-note">month to month</div>
         <div class="plan-divider" style="margin-top: var(--s-5);"></div>
-        <div class="features-intro">Everything, one plan:</div>
+        <div class="features-intro">Everything included:</div>
         <ul class="feature-list">
           <li><span class="tick"><svg viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Whole-site audit with cut-and-paste fixes</span></li>
           <li><span class="tick"><svg viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>AI Mirror Test: 50–60 buyer questions across ChatGPT, Claude, Perplexity and Gemini</span></li>
@@ -437,7 +417,7 @@
           <li><span class="tick"><svg viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Monthly re-testing</span></li>
         </ul>
         <div class="plan-cta">
-          <a href="https://buy.stripe.com/9B63cx8SB0F1fpQetofUQ01" class="btn btn-primary btn-lg">Claim your founding spot</a>
+          <a href="https://buy.stripe.com/eVqbJ33yh87t1z0994fUQ03" class="btn btn-primary btn-lg">Get full access</a>
         </div>
       </div>
 
@@ -446,7 +426,7 @@
         <span class="plan-pill plan-pill-alt">Best for busy founders</span>
         <h2 class="plan-name">Done for you</h2>
         <div class="plan-sub">Your fractional AI SEO</div>
-        <div class="plan-price"><span class="price-amount" data-usd="600">$600</span>/mo</div>
+        <div class="plan-price"><span class="price-amount" data-usd="600" data-eur="525" data-gbp="450" data-aud="850">$600</span>/mo</div>
         <div class="plan-price-note">month to month</div>
         <p class="plan-tagline">I do it all. You answer a few questions per article.</p>
         <div class="plan-divider"></div>
@@ -464,14 +444,6 @@
       </div>
 
     </div>
-  </div>
-</section>
-
-<!-- 3. FOUNDING MEMBER BAND -->
-<section class="founding-band">
-  <div class="wrap-720">
-    <h2>The Founding 30</h2>
-    <p>While AEO Growth Kit is in beta, the first 30 members get full access at <span class="price-amount-inline" data-usd="99">$99</span>/mo, locked as the price rises to <span class="price-amount-inline" data-usd="199">$199</span> at launch. In return: your honest feedback, and permission to share your results as a case study. Once the 30 spots are gone, the rate goes to standard.</p>
   </div>
 </section>
 
@@ -572,10 +544,6 @@
       <div class="faq-item">
         <h3 class="faq-question">Can you just do it all for me?</h3>
         <div class="faq-answer"><p>Yes. Done for you is $600/mo: every fix applied, 4 articles a month written and published, weekly AI Overview tests and a monthly AI Mirror Test report. You just answer a few questions per article. <a href="/contact">Book a call</a> to get started.</p></div>
-      </div>
-      <div class="faq-item">
-        <h3 class="faq-question">How many founding spots are there?</h3>
-        <div class="faq-answer"><p>Founding pricing is limited to the first 30 members at <span class="price-amount-inline" data-usd="99">$99</span>/mo, locked as the price rises to <span class="price-amount-inline" data-usd="199">$199</span> at launch.</p></div>
       </div>
     </div>
   </div>

@@ -1,13 +1,11 @@
 (function () {
-  var RATES = { usd: 1, gbp: 0.78, eur: 0.92, aud: 1.52 }; // static approximate rates, cosmetic display only
+  // Prices are fixed per currency (data-usd, data-eur, ...) to match Stripe exactly.
   var SYMBOLS = { usd: '$', gbp: '£', eur: '€', aud: 'A$' };
 
   function render(currency) {
-    var nodes = document.querySelectorAll('.price-amount, .price-amount-inline');
-    nodes.forEach(function (el) {
-      var usdValue = parseFloat(el.getAttribute('data-usd'));
-      var converted = Math.round(usdValue * RATES[currency]);
-      el.textContent = SYMBOLS[currency] + converted;
+    document.querySelectorAll('.price-amount, .price-amount-inline').forEach(function (el) {
+      var value = el.getAttribute('data-' + currency);
+      if (value !== null) el.textContent = SYMBOLS[currency] + value;
     });
   }
 
