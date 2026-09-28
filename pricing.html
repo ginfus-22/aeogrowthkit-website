@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="title" content="Pricing — AEO Growth Kit">
-  <meta name="description" content="Start with a free AEO audit. When you're ready, one subscription unlocks full access at founding pricing.">
+  <meta name="description" content="Start with a free AEO audit. Go self-serve with Full access at founding pricing, or hand it all over with Done for you.">
   <title>Pricing — AEO Growth Kit</title>
   <script type="application/ld+json">
   {
@@ -15,7 +15,7 @@
         "@id": "https://aeogrowthkit.com/#product",
         "name": "AEO Growth Kit",
         "sku": "AEOGK-FULL-ACCESS",
-        "description": "One subscription for full access to AEO Growth Kit: the whole-site AEO audit, the full AI Mirror Test across ChatGPT, Claude, Perplexity and Gemini, and the Voiceprint™ content engine.",
+        "description": "Full access to AEO Growth Kit: the whole-site AEO audit, the full AI Mirror Test, weekly AI Overview tests and the Voiceprint™ content engine — or hand it all over with the Done for you tier.",
         "url": "https://aeogrowthkit.com/pricing",
         "image": "https://aeogrowthkit.com/og-image.png",
         "brand": {
@@ -49,6 +49,23 @@
               "billingDuration": 1,
               "billingIncrement": 1
             }
+          },
+          {
+            "@type": "Offer",
+            "name": "Done for you",
+            "description": "White-glove AEO service: every fix applied, articles written and published for you, weekly AI Overview tests and monthly AI Mirror Test reports.",
+            "price": "600",
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/InStock",
+            "url": "https://aeogrowthkit.com/pricing",
+            "priceSpecification": {
+              "@type": "UnitPriceSpecification",
+              "price": "600",
+              "priceCurrency": "USD",
+              "unitCode": "MON",
+              "billingDuration": 1,
+              "billingIncrement": 1
+            }
           }
         ]
       },
@@ -76,7 +93,7 @@
             "name": "What's in the free audit vs full access?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "The free audit covers up to 5 pages: your AEO readiness score and cut-and-paste fixes for your top issues. Full access is the whole-site audit, the full AI Mirror Test and the content engine."
+              "text": "The free audit covers up to 5 pages: your AEO readiness score and cut-and-paste fixes for your top issues. Full access is the whole-site audit, the full AI Mirror Test, weekly AI Overview tests and the content engine."
             }
           },
           {
@@ -84,7 +101,7 @@
             "name": "Can you just do it all for me?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Full access is self-serve, with cut-and-paste fixes you apply yourself. If you'd rather hand the whole thing over, a full done-for-you service is available. Book a call for a quote. It's separate from full access."
+              "text": "Yes. Done for you is $600/mo: every fix applied, 4 articles a month written and published, weekly AI Overview tests and a monthly AI Mirror Test report. You just answer a few questions per article."
             }
           },
           {
@@ -127,7 +144,7 @@
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="AEO Growth Kit">
   <meta property="og:title" content="Pricing — AEO Growth Kit">
-  <meta property="og:description" content="Start with a free AEO audit. When you're ready, one subscription unlocks full access at founding pricing.">
+  <meta property="og:description" content="Start with a free AEO audit. Go self-serve with Full access at founding pricing, or hand it all over with Done for you.">
   <meta property="og:url" content="https://aeogrowthkit.com/pricing">
   <meta property="og:image" content="https://aeogrowthkit.com/og-image.png">
   <meta property="og:locale" content="en_GB">
@@ -136,7 +153,7 @@
   <meta property="og:image:alt" content="AEO Growth Kit — get cited by AI answer engines">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Pricing — AEO Growth Kit">
-  <meta name="twitter:description" content="Start with a free AEO audit. When you're ready, one subscription unlocks full access at founding pricing.">
+  <meta name="twitter:description" content="Start with a free AEO audit. Go self-serve with Full access at founding pricing, or hand it all over with Done for you.">
   <meta name="twitter:image" content="https://aeogrowthkit.com/og-image.png">
   <meta name="twitter:image:alt" content="AEO Growth Kit — get cited by AI answer engines">
   <link rel="stylesheet" href="aeo-ds.css">
@@ -144,6 +161,7 @@
   <style>
     section { padding: var(--s-8) var(--s-5); }
     .wrap-960 { max-width: 960px; margin: 0 auto; }
+    .wrap-1140 { max-width: 1140px; margin: 0 auto; }
     .wrap-720 { max-width: 720px; margin: 0 auto; }
 
     /* HERO */
@@ -175,7 +193,7 @@
 
     /* CARDS */
     .plan-grid {
-      display: grid; grid-template-columns: 1fr 1fr; gap: var(--s-6); align-items: stretch;
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--s-6); align-items: stretch;
     }
     .plan {
       position: relative; background: var(--surface);
@@ -191,6 +209,7 @@
       letter-spacing: .08em; text-transform: uppercase;
       padding: 5px 13px; border-radius: var(--r-pill);
     }
+    .plan-pill-alt { background: var(--surface); color: var(--accent); border: 1px solid var(--accent); }
     .plan-name {
       font-family: var(--serif); font-weight: 400; letter-spacing: -0.015em;
       font-size: var(--t-h3); color: var(--text); margin: 0;
@@ -280,7 +299,7 @@
       letter-spacing: .1em; text-transform: uppercase; color: var(--text-2);
       text-align: left; padding: 0 var(--s-3) var(--s-4); border-bottom: 1px solid var(--border-2);
     }
-    .compare th.col, .compare td.col { text-align: center; width: 26%; }
+    .compare th.col, .compare td.col { text-align: center; width: 20%; }
     .compare td {
       padding: var(--s-4) var(--s-3); border-bottom: 1px solid var(--border);
       font-size: var(--t-body); color: var(--text); vertical-align: top;
@@ -329,7 +348,7 @@
       .plan-grid { grid-template-columns: 1fr; }
       section { padding: var(--s-7) var(--s-4); }
       .hero-v3 { padding: var(--s-7) var(--s-4) var(--s-6); }
-      .compare th.col, .compare td.col { width: 22%; }
+      .compare th.col, .compare td.col { width: 18%; }
     }
   </style>
 </head>
@@ -364,7 +383,7 @@
 <section class="hero-v3">
   <div class="wrap-960">
     <h1 class="hero-h1">Your time is billable. Writing blogs isn't.</h1>
-    <p class="hero-subhead">Start with a free audit and see exactly where you stand. When you're ready, one subscription unlocks everything: the full AI Mirror Test, the whole-site audit, and the content engine that gets you mentioned. One plan, full access, founding pricing while AEO Growth Kit is in beta.</p>
+    <p class="hero-subhead">Start with a free audit. Then go self-serve with Full access, or hand it all over with Done for you. Founding pricing while AEO Growth Kit is in beta.</p>
     <div class="hero-actions">
       <a href="https://audit.aeogrowthkit.com" class="btn btn-primary btn-lg">Run my free audit</a>
       <a href="/contact" class="btn btn-lg btn-book-hero">Or book a call</a>
@@ -374,7 +393,7 @@
 
 <!-- 2. PLAN CARDS -->
 <section style="padding-top: var(--s-6);">
-  <div class="wrap-960">
+  <div class="wrap-1140">
     <div class="currency-toggle" role="group" aria-label="Display currency">
       <button type="button" class="currency-btn is-active" data-currency="usd">$</button>
       <button type="button" class="currency-btn" data-currency="gbp">£</button>
@@ -389,12 +408,12 @@
         <div class="plan-sub">AEO audit</div>
         <div class="plan-price"><span class="price-amount" data-usd="0">$0</span></div>
         <div class="plan-price-note">no card needed</div>
-        <p class="plan-tagline">See where you stand with AI today. A quick audit of up to 5 key pages, with a readiness score and cut-and-paste fixes for your biggest issues.</p>
+        <p class="plan-tagline">See where you stand with AI today.</p>
         <div class="plan-divider"></div>
         <ul class="feature-list">
-          <li><span class="tick"><svg viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Technical audit of up to 5 pages: schema, crawler access, robots.txt, indexability</span></li>
+          <li><span class="tick"><svg viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Technical audit of up to 5 pages</span></li>
           <li><span class="tick"><svg viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Your AEO readiness score</span></li>
-          <li><span class="tick"><svg viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Cut-and-paste fixes for your top issues, ready to apply yourself</span></li>
+          <li><span class="tick"><svg viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Cut-and-paste fixes for your top issues</span></li>
         </ul>
         <div class="plan-cta">
           <a href="https://audit.aeogrowthkit.com" class="btn btn-secondary btn-lg">Run my free audit</a>
@@ -410,16 +429,38 @@
         <div class="plan-divider" style="margin-top: var(--s-5);"></div>
         <div class="features-intro">Everything, one plan:</div>
         <ul class="feature-list">
-          <li><span class="tick"><svg viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>The full forensic audit of your whole site, with cut-and-paste fixes for every issue, ready to apply yourself</span></li>
-          <li><span class="tick"><svg viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>The full AI Mirror Test: 50 to 60 buyer questions across ChatGPT, Claude, Perplexity and Google's Gemini</span></li>
-          <li><span class="tick"><svg viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Top Pages Audit for your existing content (connect Search Console and Analytics)</span></li>
-          <li><span class="tick"><svg viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong class="feat-lead">Voiceprint, the content engine.</strong><ul class="sub-list"><li>Learns your real voice from your transcripts and the style of your own website</li><li>Picks a differentiating angle</li><li>Writes a precise, useful answer with the AEO structure and schema the models reward</li><li>Runs it through an anti-AI-ism check so it still reads human</li><li>Uploads the draft straight into your WordPress (more CMS to follow)</li></ul></span></li>
-          <li><span class="tick"><svg viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Monthly re-testing so you can watch your visibility climb</span></li>
+          <li><span class="tick"><svg viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Whole-site audit with cut-and-paste fixes</span></li>
+          <li><span class="tick"><svg viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>AI Mirror Test: 50–60 buyer questions across ChatGPT, Claude, Perplexity and Gemini</span></li>
+          <li><span class="tick"><svg viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Weekly AI Overview test</span></li>
+          <li><span class="tick"><svg viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Top Pages Audit of your existing content</span></li>
+          <li><span class="tick"><svg viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Voiceprint: content in your voice, built for AI, published to WordPress</span></li>
+          <li><span class="tick"><svg viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Monthly re-testing</span></li>
         </ul>
         <div class="plan-cta">
           <a href="https://buy.stripe.com/9B63cx8SB0F1fpQetofUQ01" class="btn btn-primary btn-lg">Claim your founding spot</a>
         </div>
-        <p class="plan-fineprint">Want the whole thing done for you? A full done-for-you service is available. <a href="/contact">Book a call</a> for a quote. It's separate from full access.</p>
+      </div>
+
+      <!-- CARD 3: DONE FOR YOU -->
+      <div class="plan">
+        <span class="plan-pill plan-pill-alt">Best for busy founders</span>
+        <h2 class="plan-name">Done for you</h2>
+        <div class="plan-sub">Your fractional AI SEO</div>
+        <div class="plan-price"><span class="price-amount" data-usd="600">$600</span>/mo</div>
+        <div class="plan-price-note">month to month</div>
+        <p class="plan-tagline">I do it all. You answer a few questions per article.</p>
+        <div class="plan-divider"></div>
+        <div class="features-intro">Everything in Full access, plus:</div>
+        <ul class="feature-list">
+          <li><span class="tick"><svg viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Every fix applied for you</span></li>
+          <li><span class="tick"><svg viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>4 articles a month, written and published</span></li>
+          <li><span class="tick"><svg viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Weekly AI Overview test, reviewed for you</span></li>
+          <li><span class="tick"><svg viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Monthly AI Mirror Test report</span></li>
+          <li><span class="tick"><svg viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Direct strategy access</span></li>
+        </ul>
+        <div class="plan-cta">
+          <a href="/contact" class="btn btn-secondary btn-lg">Book a call</a>
+        </div>
       </div>
 
     </div>
@@ -436,9 +477,9 @@
 
 <!-- 4. COMPARE TABLE -->
 <section>
-  <div class="wrap-720">
+  <div class="wrap-960">
     <div class="compare-head">
-      <h2>Free vs Full access</h2>
+      <h2>Compare plans</h2>
     </div>
     <table class="compare">
       <thead>
@@ -446,42 +487,66 @@
           <th>&nbsp;</th>
           <th class="col">Free</th>
           <th class="col">Full access</th>
+          <th class="col">Done for you</th>
         </tr>
       </thead>
       <tbody>
         <tr>
           <td class="feat">Technical audit + cut-and-paste fixes</td>
-          <td class="col">Up to 5 pages</td>
-          <td class="col">Your whole site</td>
+          <td class="col">5 pages</td>
+          <td class="col">Whole site</td>
+          <td class="col">Whole site</td>
         </tr>
         <tr>
           <td class="feat">AEO readiness score</td>
           <td class="col"><span class="cell-tick"><svg viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></td>
           <td class="col"><span class="cell-tick"><svg viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></td>
+          <td class="col"><span class="cell-tick"><svg viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></td>
         </tr>
         <tr>
-          <td class="feat">Full AI Mirror Test (4 models)</td>
+          <td class="feat">AI Mirror Test (4 models)</td>
           <td class="col"><span class="cell-dash">—</span></td>
+          <td class="col"><span class="cell-tick"><svg viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></td>
+          <td class="col"><span class="cell-tick"><svg viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></td>
+        </tr>
+        <tr>
+          <td class="feat">Weekly AI Overview test</td>
+          <td class="col"><span class="cell-dash">—</span></td>
+          <td class="col"><span class="cell-tick"><svg viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></td>
           <td class="col"><span class="cell-tick"><svg viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></td>
         </tr>
         <tr>
           <td class="feat">Top Pages Audit</td>
           <td class="col"><span class="cell-dash">—</span></td>
           <td class="col"><span class="cell-tick"><svg viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></td>
+          <td class="col"><span class="cell-tick"><svg viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></td>
         </tr>
         <tr>
           <td class="feat">Voiceprint content engine</td>
           <td class="col"><span class="cell-dash">—</span></td>
+          <td class="col"><span class="cell-tick"><svg viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></td>
           <td class="col"><span class="cell-tick"><svg viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></td>
         </tr>
         <tr>
           <td class="feat">Monthly re-testing</td>
           <td class="col"><span class="cell-dash">—</span></td>
           <td class="col"><span class="cell-tick"><svg viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></td>
+          <td class="col"><span class="cell-tick"><svg viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></td>
+        </tr>
+        <tr>
+          <td class="feat">Fixes applied for you</td>
+          <td class="col"><span class="cell-dash">—</span></td>
+          <td class="col"><span class="cell-dash">—</span></td>
+          <td class="col"><span class="cell-tick"><svg viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></td>
+        </tr>
+        <tr>
+          <td class="feat">Articles written for you</td>
+          <td class="col"><span class="cell-dash">—</span></td>
+          <td class="col"><span class="cell-dash">—</span></td>
+          <td class="col">4/mo</td>
         </tr>
       </tbody>
     </table>
-    <p class="compare-note">Want it all done for you instead? A full done-for-you service is available. <a href="/contact">Book a call</a> for a quote.</p>
   </div>
 </section>
 
@@ -502,11 +567,11 @@
       </div>
       <div class="faq-item">
         <h3 class="faq-question">What's in the free audit vs full access?</h3>
-        <div class="faq-answer"><p>The free audit covers up to 5 pages: your AEO readiness score and cut-and-paste fixes for your top issues. Full access is the whole-site audit, the full AI Mirror Test and the content engine.</p></div>
+        <div class="faq-answer"><p>The free audit covers up to 5 pages: your AEO readiness score and cut-and-paste fixes for your top issues. Full access is the whole-site audit, the full AI Mirror Test, weekly AI Overview tests and the content engine.</p></div>
       </div>
       <div class="faq-item">
         <h3 class="faq-question">Can you just do it all for me?</h3>
-        <div class="faq-answer"><p>Full access is self-serve, with cut-and-paste fixes you apply yourself. If you'd rather hand the whole thing over, a full done-for-you service is available. Book a call for a quote. It's separate from full access.</p></div>
+        <div class="faq-answer"><p>Yes. Done for you is $600/mo: every fix applied, 4 articles a month written and published, weekly AI Overview tests and a monthly AI Mirror Test report. You just answer a few questions per article. <a href="/contact">Book a call</a> to get started.</p></div>
       </div>
       <div class="faq-item">
         <h3 class="faq-question">How many founding spots are there?</h3>
