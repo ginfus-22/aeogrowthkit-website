@@ -545,9 +545,10 @@ a:hover {
     margin-right: var(--s-2);
   }
 
-  /* hide the desktop CTA buttons — duplicated into the menu panel instead */
-  .btn-header-login,
-  .btn-header-cta { display: none; }
+  /* hide the desktop CTA buttons — duplicated into the menu panel instead.
+     Scoped to .header-right so it outranks the a.btn display rule. */
+  .header-right .btn-header-login,
+  .header-right .btn-header-cta { display: none; }
 
   /* the dropdown panel */
   nav.main-nav { width: auto; }

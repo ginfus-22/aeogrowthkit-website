@@ -432,6 +432,12 @@
       .btn-coral { width: 100%; justify-content: center; }
       .bigfig { font-size: 88px; }
     }
+  
+    /* Site-wide layout frame: 1120px of content with the same left edge on
+       every page. Long prose stays readable but aligns to that edge. */
+    .wrap { max-width: 1168px; padding: 0 var(--s-5); }
+    .wrap-720 { max-width: 768px; margin: 0 auto; padding: 0 var(--s-5); }
+    @media (max-width: 768px) { .wrap, .wrap-720 { padding-left: var(--s-4); padding-right: var(--s-4); } }
   </style>
 </head>
 <body>

@@ -281,6 +281,13 @@
       .cta-band .cta-row { flex-direction: column; align-items: center; }
       .btn-coral { width: 100%; justify-content: center; }
     }
+  
+    /* Site-wide layout frame: 1120px of content with the same left edge on
+       every page. Long prose stays readable but aligns to that edge. */
+    .wrap, .wrap-960, .wrap-720 { max-width: 1168px; padding: 0 var(--s-5); }
+    .wrap-720 > * { max-width: 720px; }
+    .cta-band .wrap-720 > * { margin-left: auto; margin-right: auto; }
+    @media (max-width: 768px) { .wrap, .wrap-960, .wrap-720 { padding-left: var(--s-4); padding-right: var(--s-4); } }
   </style>
 </head>
 <body>

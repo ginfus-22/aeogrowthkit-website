@@ -254,6 +254,13 @@
       .hero-chart { padding: var(--s-6) var(--s-5) var(--s-5); }
       .chart-now .big { font-size: 40px; }
     }
+  
+    /* Site-wide layout frame: 1120px of content with the same left edge on
+       every page. Long prose stays readable but aligns to that edge. */
+    .col-wide { max-width: none; margin: 0; }
+    .wrap { max-width: 1168px; padding: 0 var(--s-5); }
+    .prose-col { margin: 0; }
+    @media (max-width: 768px) { .wrap { padding-left: var(--s-4); padding-right: var(--s-4); } }
   </style>
 </head>
 <body>
@@ -357,7 +364,7 @@
   <section class="rsec" data-screen-label="What Maintain does">
     <div class="wrap">
       <div class="col-wide">
-        <h2 class="section-h2" style="text-align:center;">What Maintain does</h2>
+        <h2 class="section-h2">What Maintain does</h2>
         <div class="do-grid">
           <div class="do-card">
             <div class="do-ico">

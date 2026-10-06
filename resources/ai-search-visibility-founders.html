@@ -443,6 +443,12 @@
     .sources li { margin-bottom: 6px; opacity: 0.85; }
     .hero-figure { margin: 0 0 var(--s-5); }
     .hero-figure img { width: 100%; height: auto; display: block; }
+  
+    /* Site-wide layout frame: 1120px of content with the same left edge on
+       every page. Long prose stays readable but aligns to that edge. */
+    main { max-width: 1168px; padding-left: var(--s-5); padding-right: var(--s-5); }
+    main > * { max-width: 800px; }
+    @media (max-width: 768px) { main { padding-left: var(--s-4); padding-right: var(--s-4); } }
   </style>
 </head>
 <body>

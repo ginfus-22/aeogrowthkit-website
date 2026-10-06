@@ -247,6 +247,12 @@
       margin: var(--s-3) 0;
     }
     
+  
+    /* Site-wide layout frame: 1120px of content with the same left edge on
+       every page. Long prose stays readable but aligns to that edge. */
+    .page-hero { text-align: left; margin-left: 0; margin-right: 0; }
+    main { max-width: 1168px; padding-left: var(--s-5); padding-right: var(--s-5); }
+    @media (max-width: 768px) { main { padding-left: var(--s-4); padding-right: var(--s-4); } }
   </style>
 </head>
 <body>

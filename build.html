@@ -421,6 +421,11 @@
       .cta-row { width: 100%; }
       .btn-coral { width: 100%; justify-content: center; }
     }
+  
+    /* Site-wide layout frame: 1120px of content with the same left edge on
+       every page. Long prose stays readable but aligns to that edge. */
+    .wrap { max-width: 1168px; padding: 0 var(--s-5); }
+    @media (max-width: 768px) { .wrap { padding-left: var(--s-4); padding-right: var(--s-4); } }
   </style>
 </head>
 <body>
