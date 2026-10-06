@@ -174,12 +174,13 @@
     @media (min-width: 1024px) {
       .hero-v2 .container {
         display: grid;
-        grid-template-columns: 1.1fr 1fr;
+        grid-template-columns: 1fr 1.25fr;
         align-items: center;
         gap: var(--s-7);
       }
       .hero-v2 { padding-top: var(--s-8); padding-bottom: var(--s-8); }
       .hero-v2 .hero-ctas { margin-bottom: 0; }
+      .hero-v2 .hero-h1 { font-size: 48px; }
     }
     .hero-shot img {
       display: block;
@@ -187,13 +188,6 @@
       height: auto;
       border: 1px solid var(--border);
       border-radius: var(--r-lg);
-      box-shadow: var(--sh-md);
-    }
-    .hero-shot figcaption {
-      font-family: var(--sans);
-      font-size: var(--t-sm);
-      color: var(--text-2);
-      margin-top: var(--s-3);
     }
 
     .header-right {
@@ -771,10 +765,9 @@
     <figure class="hero-shot">
       <img src="images/mirror-test-results.webp"
            srcset="images/mirror-test-results-sm.webp 800w, images/mirror-test-results.webp 1400w"
-           sizes="(min-width: 1024px) 520px, 100vw"
+           sizes="(min-width: 1024px) 600px, 100vw"
            width="1400" height="788"
            alt="An AI Mirror Test report in AEO Growth Kit: mention rates for Claude, ChatGPT and Gemini, scores by topic, and the top three actions to take">
-      <figcaption>A real Mirror Test report: how often each AI names you, where you're weakest, and what to do next.</figcaption>
     </figure>
 
   </div>

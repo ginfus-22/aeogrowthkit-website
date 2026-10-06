@@ -50,26 +50,55 @@
       }
     });
 
-    // Click-to-stick dropdowns (desktop). Supplements the existing CSS
-    // :hover/:focus-within so a click on the caret keeps the dropdown open
-    // for precise sub-item selection, without a mouse-hover regression.
-    // Clicking the rest of the parent link still navigates normally.
+    // Click-to-open dropdowns (desktop). Hover menus vanished as the pointer
+    // moved towards a sub-item, so a click on the parent now opens the menu
+    // and it stays open until an outside click or Escape. On mobile the
+    // parent link navigates as normal (sub-items are already shown inline).
+    var isDesktop = function () { return window.innerWidth > 900; };
     var dropdowns = header.querySelectorAll('.nav-has-dropdown');
+    var closeAll = function () {
+      dropdowns.forEach(function (dd) {
+        dd.classList.remove('open');
+        var p = dd.querySelector('a');
+        if (p) p.setAttribute('aria-expanded', 'false');
+      });
+    };
     dropdowns.forEach(function (dd) {
-      var caret = dd.querySelector('.nav-caret');
-      if (!caret) return;
-      caret.addEventListener('click', function (e) {
+      var parent = dd.querySelector('a');
+      var menu = dd.querySelector('.nav-dropdown');
+      if (!parent || !menu) return;
+      parent.setAttribute('aria-haspopup', 'true');
+      parent.setAttribute('aria-expanded', 'false');
+
+      // The parent no longer navigates on desktop, so make sure its page is
+      // still one click away inside the menu.
+      var href = parent.getAttribute('href');
+      if (href && !menu.querySelector('a[href="' + href + '"]')) {
+        var li = document.createElement('li');
+        var a = document.createElement('a');
+        a.href = href;
+        a.textContent = 'Overview';
+        li.appendChild(a);
+        menu.insertBefore(li, menu.firstChild);
+      }
+
+      parent.addEventListener('click', function (e) {
+        if (!isDesktop()) return;
         e.preventDefault();
         e.stopPropagation();
-        var isOpen = dd.classList.contains('open');
-        dropdowns.forEach(function (other) { other.classList.remove('open'); });
-        if (!isOpen) dd.classList.add('open');
+        var wasOpen = dd.classList.contains('open');
+        closeAll();
+        if (!wasOpen) {
+          dd.classList.add('open');
+          parent.setAttribute('aria-expanded', 'true');
+        }
       });
     });
     document.addEventListener('click', function (e) {
-      if (!e.target.closest('.nav-has-dropdown')) {
-        dropdowns.forEach(function (dd) { dd.classList.remove('open'); });
-      }
+      if (!e.target.closest('.nav-has-dropdown')) closeAll();
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') closeAll();
     });
   }
 
