@@ -169,7 +169,17 @@
     }
 
     .hero-shot {
-      margin: var(--s-7) 0 0;
+      margin: 0;
+    }
+    @media (min-width: 1024px) {
+      .hero-v2 .container {
+        display: grid;
+        grid-template-columns: 1.1fr 1fr;
+        align-items: center;
+        gap: var(--s-7);
+      }
+      .hero-v2 { padding-top: var(--s-8); padding-bottom: var(--s-8); }
+      .hero-v2 .hero-ctas { margin-bottom: 0; }
     }
     .hero-shot img {
       display: block;
@@ -749,6 +759,7 @@
 <!-- HERO -->
 <section class="hero-v2">
   <div class="container">
+    <div class="hero-copy">
     <h1 class="hero-h1">Expert-in-the-loop content that AI actually cites.</h1>
     <p class="hero-subhead">AI can write. It can't know what you know. A few short questions pull out your expertise, we turn it into articles in your voice, then measure whether ChatGPT, Claude, Perplexity and Gemini start naming you.</p>
     <div class="hero-ctas">
@@ -756,13 +767,14 @@
       <a href="https://calendly.com/steve-aeogrowthkit/30min" class="btn btn-lg btn-book-hero">Or hand it over: book a call.</a>
     </div>
 
+    </div>
     <figure class="hero-shot">
-      <img src="images/voiceprint-your-take.webp"
-           srcset="images/voiceprint-your-take-sm.webp 800w, images/voiceprint-your-take.webp 1400w"
-           sizes="(max-width: 1160px) 100vw, 1120px"
-           width="1400" height="566"
-           alt="The Voiceprint 'Your take' screen in AEO Growth Kit, asking four questions that draw out the writer's own experience before the article is drafted">
-      <figcaption>Inside Voiceprint: four questions only you can answer. Your answers shape the article.</figcaption>
+      <img src="images/mirror-test-results.webp"
+           srcset="images/mirror-test-results-sm.webp 800w, images/mirror-test-results.webp 1400w"
+           sizes="(min-width: 1024px) 520px, 100vw"
+           width="1400" height="788"
+           alt="An AI Mirror Test report in AEO Growth Kit: mention rates for Claude, ChatGPT and Gemini, scores by topic, and the top three actions to take">
+      <figcaption>A real Mirror Test report: how often each AI names you, where you're weakest, and what to do next.</figcaption>
     </figure>
 
   </div>
