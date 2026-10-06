@@ -2,7 +2,7 @@
 
 **Owner:** Steve Gillson
 **Created:** 2 August 2026
-**Last updated:** 4 August 2026
+**Last updated:** 6 October 2026
 
 > Internal document. Not published to the website — it names unmet compliance
 > obligations and would be a gift to anyone probing the business.
@@ -291,7 +291,87 @@ so this is low priority — but worth identifying before acting.
 
 ---
 
+## 4b. Repositioning follow-up (from 6 Oct 2026)
+
+Positioning moved from "AEO tool" to **expert-in-the-loop content that AI
+cites**, Done for you as the lead offer, EdTech SaaS as the beachhead.
+Working docs: `internal/PAGE-MAP.md` (every page, with status),
+`internal/EDTECH-PAGE-DRAFT.md`, `internal/BRAND_VOICE.md` (Steve's voice; all
+copy follows it: British English, no em-dashes). These three are **local only**
+until #48 is done.
+
+### 🟠 #46 — Build the `/edtech` page
+Copy is drafted in `EDTECH-PAGE-DRAFT.md`. **Blocked on Steve:** replace the five
+placeholder "questions school buyers ask AI" with real ones (from the foundational
+content plan or client work). Then build the HTML on the site frame, and add it to
+the nav, footer, sitemap, `llms.txt` and schema. ScreenCoach (B2C EdTech, 53 → 95)
+goes on it as the proof point.
+
+### 🟠 #47 — Get Google to recrawl the new titles
+Every page title and description changed on 6 Oct. In GSC: submit the sitemap
+(closes #24), then URL Inspection → Request indexing for `/`, `/build`,
+`/ai-mirror-test`, `/pricing`. Then import the site into Bing Webmaster Tools
+(ChatGPT search leans on Bing's index). Baseline before the change: ~4
+impressions/month.
+
+### 🟠 #48 — Make the GitHub repo private
+`ginfus-22/aeogrowthkit-website` is **public**: this roadmap, the incident plan and
+the processing register are readable on GitHub (Netlify only blocks them on the
+website). GitHub → Settings → Danger Zone → Change visibility. Netlify keeps
+deploying. Afterwards, commit the three local `internal/` docs above so they are
+backed up.
+
+### 🟡 #49 — Finish the page map
+Open items in `PAGE-MAP.md`:
+- Homepage section reorder: slop problem first, how it works, Mirror Test as proof
+- About rewrite: 30 years sales and marketing, 9 in digital/SEO, 4 years at
+  Excelia, volunteer teaching in Nepal; the AI-slop-in-assignments origin story
+  (Steve confirmed it is close enough to true)
+- FAQ additions: "Is the content written by AI?", "How is this different from a
+  content agency?", "Why only four articles a month?", "Do you work with EdTech?"
+- Pricing: lead the Done for you card with "4 expert articles a month"
+- Schema `alternateName` "Answer Engine Optimization" (US spelling) and a
+  content-first rewrite of `llms.txt`
+
+### 🟡 #50 — First article on the new positioning
+Write it in the app, Steve's build-in-public register: "My AEO site got 4
+impressions a month. The problem wasn't SEO." True story: the fix was positioning,
+not technical SEO. Export the zip and convert it as with the first article
+(see #44).
+
+### ⚪ #51 — Voiceprint screenshot on the Build page
+`images/voiceprint-your-take.webp` (client name cropped out) is already in the
+repo, unused. It fits the "Your expertise, captured" section.
+
+### ⚪ #52 — Case studies follow-up
+Add the fuller ScreenCoach data when Steve has it. The page is still `noindex`
+from when it held placeholder results; it now shows only real ones (The Baht,
+ScreenCoach; Digital Adaption is real too and quoted on the homepage), so
+consider indexing it.
+
+### ⚪ #53 — Em-dashes in the app's own copy
+The Mirror Test report and the Voiceprint helper text use em-dashes, against
+Steve's voice rules. Fix in the app repo.
+
+### ⚪ #54 — Turn on Netlify deploy previews
+Site configuration → Build & deploy → Branches and deploy contexts: Deploy
+Previews "Any pull request", Branch deploys "All". Gives a preview link before
+anything reaches the live site. Partly answers #43.
+
+---
+
 ## 5. Completed
+
+### 6 October 2026 — Repositioning and layout
+- ✅ Every page title, meta description and matching JSON-LD rewritten query-first (e.g. "Expert Content Writing That AI Cites")
+- ✅ Homepage H1 "Expert-in-the-loop content that AI actually cites."; Mirror Test report screenshot in a two-column hero; Build and Product H1s rewritten
+- ✅ **Two unverified case studies removed** (EdTech platform, accounting firm); ScreenCoach card added
+- ✅ Top Pages Audit removed everywhere (product discontinued)
+- ✅ Mirror Test page reframed as a positioning appraisal (sentiment, unknown competitors)
+- ✅ Visible em-dashes removed site-wide; Resources "Entity Optimization" error fixed
+- ✅ One 1120px content frame on every page; Recover FAQ had no wrapper
+- ✅ Nav dropdowns open on click instead of vanishing on hover
+- ✅ **Every page scrolled sideways on phones**: header buttons were never hidden (a.btn outranked the rule)
 
 ### 2 August 2026 — SEO and schema
 - ✅ Organization, WebSite, WebPage schema on homepage (`@graph`, shared `@id`s)
